@@ -1,0 +1,33 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "filename" : "PantallaIniciaSesion iPadPro NavigationBar(2048 x 2732)-4.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "PantallaIniciaSesion iPadPro NavigationBar(2048 x 2732)-3.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "PantallaIniciaSesion iPadPro NavigationBar(2048 x 2732)-2.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "PantallaIniciaSesion iPadPro NavigationBar(2048 x 2732)-1.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "PantallaIniciaSesion iPadPro NavigationBar(2048 x 2732).png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

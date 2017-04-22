@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7DE45D69D8B159D10AE0BB17E36E6F6DBF3424D0" : 9223372036854775807,
+    "70B9EEAD6500C6228DF067EB162AF44BD142B2B5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7E950687-CD82-4DDA-A0D5-0880B981D577",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7DE45D69D8B159D10AE0BB17E36E6F6DBF3424D0" : "..\/MenuDeslizanteSwift",
+    "70B9EEAD6500C6228DF067EB162AF44BD142B2B5" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pinterestSwift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pinterestSwift.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DevWorms\/pinterestss-sdk-swift-3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "70B9EEAD6500C6228DF067EB162AF44BD142B2B5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DevWorms\/MenuDeslizanteSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7DE45D69D8B159D10AE0BB17E36E6F6DBF3424D0"
+    }
+  ]
+}

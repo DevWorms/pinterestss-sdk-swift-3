@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewControllerCompartir" customModule="CocinaMex" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonFB" destination="xRM-V2-ZG0" id="3xU-8T-ffN"/>
+                <outlet property="imageViewCompartir" destination="XSV-0A-bhn" id="NeL-72-8r8"/>
+                <outlet property="imageViewReceta" destination="hff-U2-YSg" id="v3i-7P-GNM"/>
+                <outlet property="popUpView" destination="lT8-T6-shb" id="7NM-Bj-7Vk"/>
+                <outlet property="view" destination="lT8-T6-shb" id="ZON-YA-bQJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tapGestureRecognizer id="E1j-xs-od8">
+            <connections>
+                <action selector="tapView:" destination="-1" id="QWc-36-lIP"/>
+            </connections>
+        </tapGestureRecognizer>
+        <view contentMode="scaleToFill" id="lT8-T6-shb">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67A-UL-Q2g">
+                    <rect key="frame" x="84" y="97" width="600" height="900"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-QJ-pqk" customClass="fondo">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRM-V2-ZG0">
+                            <rect key="frame" x="8" y="725" width="167" height="167"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="167" id="DpQ-qY-2Ra">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="167" id="qWq-vr-FMT">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                            </constraints>
+                            <state key="normal" image="facebook"/>
+                            <connections>
+                                <action selector="btnFacebook:" destination="-1" eventType="touchUpInside" id="mmb-Br-wY6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSF-4a-ehf">
+                            <rect key="frame" x="217" y="725" width="167" height="167"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="167" id="Nd8-8j-Ece">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="67" id="yQv-A1-rMe">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                            </constraints>
+                            <state key="normal" image="twitter"/>
+                            <connections>
+                                <action selector="btnTwitter:" destination="-1" eventType="touchUpInside" id="kx0-ul-8uY"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Visa" translatesAutoresizingMaskIntoConstraints="NO" id="hff-U2-YSg">
+                            <rect key="frame" x="8" y="21" width="584" height="344"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="344" id="9OJ-Y6-cQd">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="144"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="344"/>
+                                </constraint>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compartir" translatesAutoresizingMaskIntoConstraints="NO" id="XSV-0A-bhn">
+                            <rect key="frame" x="129" y="350" width="343" height="389"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="343" id="H6n-N3-sH1">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="343"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="389" id="ioe-nJ-bFt">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="389"/>
+                                </constraint>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cy-WJ-nhU">
+                            <rect key="frame" x="425" y="725" width="167" height="167"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="OR2-oE-wOX">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="67" id="Z8g-cz-YXb">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="167"/>
+                                </constraint>
+                            </constraints>
+                            <state key="normal" image="pinterest-1"/>
+                            <connections>
+                                <action selector="btnPinteres:" destination="-1" eventType="touchUpInside" id="tKb-bZ-HDG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bSq-QJ-pqk" firstAttribute="width" secondItem="67A-UL-Q2g" secondAttribute="width" id="2XN-Ka-DD0"/>
+                        <constraint firstItem="bSq-QJ-pqk" firstAttribute="centerY" secondItem="67A-UL-Q2g" secondAttribute="centerY" id="92Y-7a-eC7"/>
+                        <constraint firstItem="bSq-QJ-pqk" firstAttribute="centerX" secondItem="67A-UL-Q2g" secondAttribute="centerX" id="Dnn-ra-xhx"/>
+                        <constraint firstItem="xRM-V2-ZG0" firstAttribute="top" secondItem="67A-UL-Q2g" secondAttribute="top" constant="725" id="E9B-lA-SjP">
+                            <variation key="heightClass=regular-widthClass=compact" constant="340"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="725"/>
+                        </constraint>
+                        <constraint firstItem="rSF-4a-ehf" firstAttribute="top" secondItem="67A-UL-Q2g" secondAttribute="top" constant="725" id="EOA-lc-SYH">
+                            <variation key="heightClass=regular-widthClass=compact" constant="340"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="725"/>
+                        </constraint>
+                        <constraint firstItem="xRM-V2-ZG0" firstAttribute="leading" secondItem="67A-UL-Q2g" secondAttribute="leading" constant="8" id="EiY-uB-3d6"/>
+                        <constraint firstItem="hff-U2-YSg" firstAttribute="leading" secondItem="67A-UL-Q2g" secondAttribute="leading" constant="8" id="KfB-Oq-vyK"/>
+                        <constraint firstItem="XSV-0A-bhn" firstAttribute="centerX" secondItem="67A-UL-Q2g" secondAttribute="centerX" id="SVi-Jf-Rnb"/>
+                        <constraint firstItem="bSq-QJ-pqk" firstAttribute="height" secondItem="67A-UL-Q2g" secondAttribute="height" id="T9e-KO-Wf6"/>
+                        <constraint firstAttribute="trailing" secondItem="5cy-WJ-nhU" secondAttribute="trailing" constant="8" id="TJm-OA-Eva"/>
+                        <constraint firstItem="XSV-0A-bhn" firstAttribute="top" secondItem="67A-UL-Q2g" secondAttribute="top" constant="350" id="Uq6-ZL-OrD">
+                            <variation key="heightClass=regular-widthClass=compact" constant="185"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                        </constraint>
+                        <constraint firstItem="5cy-WJ-nhU" firstAttribute="top" secondItem="67A-UL-Q2g" secondAttribute="top" constant="725" id="W5Q-cd-fso">
+                            <variation key="heightClass=regular-widthClass=compact" constant="340"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="725"/>
+                        </constraint>
+                        <constraint firstItem="rSF-4a-ehf" firstAttribute="centerX" secondItem="67A-UL-Q2g" secondAttribute="centerX" id="b5S-8I-Lk6"/>
+                        <constraint firstAttribute="width" constant="670" id="cEO-Ee-jii">
+                            <variation key="heightClass=regular-widthClass=compact" constant="230"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                        </constraint>
+                        <constraint firstItem="hff-U2-YSg" firstAttribute="top" secondItem="67A-UL-Q2g" secondAttribute="top" constant="21" id="tHp-tR-nNS"/>
+                        <constraint firstAttribute="height" constant="924" id="vsg-am-kqT">
+                            <variation key="heightClass=regular-widthClass=compact" constant="424"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="900"/>
+                        </constraint>
+                        <constraint firstItem="hff-U2-YSg" firstAttribute="centerX" secondItem="67A-UL-Q2g" secondAttribute="centerX" id="wmj-we-Vh2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="67A-UL-Q2g" firstAttribute="centerX" secondItem="lT8-T6-shb" secondAttribute="centerX" id="auS-jP-6eX"/>
+                <constraint firstItem="67A-UL-Q2g" firstAttribute="centerY" secondItem="lT8-T6-shb" secondAttribute="centerY" id="gVb-dF-16a">
+                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                </constraint>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="E1j-xs-od8" appends="YES" id="IZq-KG-3gj"/>
+            </connections>
+            <point key="canvasLocation" x="874" y="401"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Visa" width="1000" height="380"/>
+        <image name="compartir" width="800" height="862"/>
+        <image name="facebook" width="512" height="512"/>
+        <image name="fondo" width="400" height="640"/>
+        <image name="pinterest-1" width="512" height="512"/>
+        <image name="twitter" width="512" height="512"/>
+    </resources>
+</document>

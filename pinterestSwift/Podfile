@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+target 'pinterestSwift' do
+	pod "PinterestSDK", :path => "../"
+	pod 'Parse'
+	pod 'ParseFacebookUtilsV4'
+	pod 'PinterestSDK', :path => "../"
+	pod 'Alamofire', '~> 4.2.0'
+	pod 'Fabric'
+	pod 'TwitterKit'
+end

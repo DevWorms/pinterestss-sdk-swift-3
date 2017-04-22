@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewControllerRecuperar" customModule="MenuDeslizante" customModuleProvider="target">
+            <connections>
+                <outlet property="popUpView" destination="1dl-BI-GRf" id="GIh-g6-LYs"/>
+                <outlet property="textfMail" destination="2vN-PL-pgw" id="eg5-lt-clS"/>
+                <outlet property="view" destination="1dl-BI-GRf" id="hLE-MQ-kyn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1dl-BI-GRf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSg-oc-Fel">
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="vzb-Iu-uHe"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="frida" translatesAutoresizingMaskIntoConstraints="NO" id="YBQ-uO-swP">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="156" id="qYV-WS-cnh"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vN-PL-pgw">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufy-Mo-ic0">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="Yzs-Va-5jq"/>
+                            </constraints>
+                            <state key="normal" image="recupera contraseña">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnEnviar:" destination="-1" eventType="touchUpInside" id="2Fa-aD-ySS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xa-q2-D3g">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="cancelar">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancelar:" destination="-1" eventType="touchUpInside" id="p70-Zu-2CF"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olvidaste tu contraseña" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-f3-sOd">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="US3-fs-t8P"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolitais" translatesAutoresizingMaskIntoConstraints="NO" id="0yT-fR-gE3">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="UyS-Ta-gxo"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="468" id="4km-3f-jdo"/>
+                        <constraint firstItem="YkP-f3-sOd" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="27" id="7TI-C0-p9Q"/>
+                        <constraint firstItem="Ufy-Mo-ic0" firstAttribute="leading" secondItem="vzb-Iu-uHe" secondAttribute="trailing" constant="-286.5" id="Cee-iV-rac"/>
+                        <constraint firstItem="Ufy-Mo-ic0" firstAttribute="top" secondItem="2vN-PL-pgw" secondAttribute="bottom" constant="34" id="E1i-RC-HS7"/>
+                        <constraint firstItem="2vN-PL-pgw" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="29" id="GeA-LB-8Kq"/>
+                        <constraint firstItem="YBQ-uO-swP" firstAttribute="top" secondItem="CSg-oc-Fel" secondAttribute="top" constant="45" id="GmE-13-2Mh"/>
+                        <constraint firstItem="YkP-f3-sOd" firstAttribute="top" secondItem="CSg-oc-Fel" secondAttribute="top" constant="8" id="KjE-v2-d8J"/>
+                        <constraint firstAttribute="trailing" secondItem="YkP-f3-sOd" secondAttribute="trailing" constant="28" id="Lp7-4J-kFq"/>
+                        <constraint firstItem="vzb-Iu-uHe" firstAttribute="centerY" secondItem="CSg-oc-Fel" secondAttribute="centerY" id="Om7-cX-F2j"/>
+                        <constraint firstItem="2vN-PL-pgw" firstAttribute="top" secondItem="YBQ-uO-swP" secondAttribute="bottom" constant="25" id="PNu-56-99S"/>
+                        <constraint firstItem="7Xa-q2-D3g" firstAttribute="top" secondItem="Ufy-Mo-ic0" secondAttribute="bottom" constant="83" id="PvJ-uX-AMr"/>
+                        <constraint firstItem="7Xa-q2-D3g" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="RD8-oX-xO6"/>
+                        <constraint firstItem="0yT-fR-gE3" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="131.50674546110577" id="Rd5-UO-fbk"/>
+                        <constraint firstItem="2vN-PL-pgw" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="SVd-cW-df3"/>
+                        <constraint firstItem="0yT-fR-gE3" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="Sg4-iP-kO2"/>
+                        <constraint firstItem="7Xa-q2-D3g" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="98" id="SuW-Ex-KCO"/>
+                        <constraint firstItem="2vN-PL-pgw" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="X4G-fd-iR6"/>
+                        <constraint firstItem="Ufy-Mo-ic0" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="Xds-eW-nU8"/>
+                        <constraint firstItem="Ufy-Mo-ic0" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="8" id="cvm-eN-M5H"/>
+                        <constraint firstItem="0yT-fR-gE3" firstAttribute="top" secondItem="Ufy-Mo-ic0" secondAttribute="bottom" constant="28" id="et1-pn-tpr"/>
+                        <constraint firstItem="YBQ-uO-swP" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="hDb-by-jxf"/>
+                        <constraint firstItem="YBQ-uO-swP" firstAttribute="leading" secondItem="CSg-oc-Fel" secondAttribute="leading" constant="80" id="l6R-qO-tSe"/>
+                        <constraint firstAttribute="width" constant="295" id="qDv-CW-NVM"/>
+                        <constraint firstItem="vzb-Iu-uHe" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="sG6-Xq-GJ2"/>
+                        <constraint firstItem="YkP-f3-sOd" firstAttribute="centerX" secondItem="CSg-oc-Fel" secondAttribute="centerX" id="w37-vM-F8h"/>
+                        <constraint firstItem="vzb-Iu-uHe" firstAttribute="height" secondItem="CSg-oc-Fel" secondAttribute="height" id="xLb-2T-6F7"/>
+                        <constraint firstItem="vzb-Iu-uHe" firstAttribute="width" secondItem="CSg-oc-Fel" secondAttribute="width" id="xy9-df-X0O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CSg-oc-Fel" firstAttribute="centerX" secondItem="1dl-BI-GRf" secondAttribute="centerX" id="6bw-61-IK6"/>
+                <constraint firstItem="CSg-oc-Fel" firstAttribute="top" secondItem="1dl-BI-GRf" secondAttribute="top" constant="82" id="Few-yc-75g"/>
+            </constraints>
+            <point key="canvasLocation" x="282.5" y="503.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bolitais" width="77" height="77"/>
+        <image name="cancelar" width="99" height="19"/>
+        <image name="fondo" width="400" height="640"/>
+        <image name="frida" width="246" height="316"/>
+        <image name="olvidaste tu contraseña" width="401" height="40"/>
+        <image name="recupera contraseña" width="487" height="49"/>
+    </resources>
+</document>
