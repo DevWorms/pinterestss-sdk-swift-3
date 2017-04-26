@@ -21,7 +21,7 @@ class RegalosTableViewController: UITableViewController {
     
     var elimando = false
     //Para almacenar el numero de recetas de ese menú
-    var numeroDeRecetasPorMenu = [PFObject:Int]()
+    var numeroDeRecetasPorMenu = [Int]()
     
     var imagesArray = [Int:UIImage]()
     
@@ -111,7 +111,7 @@ class RegalosTableViewController: UITableViewController {
         
         
         self.numeroDeRecetasPorMenu.removeAll()
-        self.numeroDeRecetasPorMenu = [PFObject:Int]()
+        self.numeroDeRecetasPorMenu = [Int]()
         
         let query = PFQuery(className: nombreTabla)
         //    query.cachePolicy = .CacheElseNetwork
@@ -137,7 +137,7 @@ class RegalosTableViewController: UITableViewController {
                         queryReceta.countObjectsInBackground {
                             (count, error) in
                             if error == nil {
-                                self.numeroDeRecetasPorMenu[item]=Int(count)
+                                self.numeroDeRecetasPorMenu.append(Int(count))
                                 if self.numeroDeRecetasPorMenu.count == self.itemsMenu.count{
                                     DispatchQueue.main.async {
                                         
@@ -368,11 +368,10 @@ class RegalosTableViewController: UITableViewController {
         
         let urlImagen = item["Url_Imagen"] as? String!
         
-        var numeroRecetas = 10
-        if let checkedNumeroRecetas: AnyObject? = self.numeroDeRecetasPorMenu[item] as AnyObject??{
-            if let _ = checkedNumeroRecetas as? NSNull{ numeroRecetas = 10 }
-            else { numeroRecetas = checkedNumeroRecetas as! Int } }
-        else { numeroRecetas = 10 }
+        var numeroRecetas  = self.numeroDeRecetasPorMenu[indexPath.row]
+        
+        
+        
         
         //let numeroRecetas = 2
         let nombre = (item["NombreMenu"] as? String)!

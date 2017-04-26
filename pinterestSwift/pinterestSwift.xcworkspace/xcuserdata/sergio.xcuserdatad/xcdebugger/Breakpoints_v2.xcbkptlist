@@ -33,6 +33,38 @@
             endingLineNumber = "309"
             landmarkName = "btnPinteres(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocinaMex.PopUpViewControllerCompartir.btnPinteres (Swift.AnyObject) -&gt; ()"
+                  moduleName = "CocinaMex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
+                  timestampString = "514865460.493776"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "309"
+                  endingLineNumber = "309"
+                  offsetFromSymbolStart = "2352">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocinaMex.PopUpViewControllerCompartir.(btnPinteres (Swift.AnyObject) -&gt; ()).(closure #2)"
+                  moduleName = "CocinaMex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
+                  timestampString = "514865460.495713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "309"
+                  endingLineNumber = "309"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -49,70 +81,6 @@
             endingLineNumber = "270"
             landmarkName = "btnPinteres(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CocinaMex.PopUpViewControllerCompartir.btnPinteres (Swift.AnyObject) -&gt; ()"
-                  moduleName = "CocinaMex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "514500823.453509"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "269"
-                  endingLineNumber = "269"
-                  offsetFromSymbolStart = "1428">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CocinaMex.PopUpViewControllerCompartir.(btnPinteres (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "CocinaMex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "514500823.456662"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/AppDelegate.swift"
-            timestampString = "513389988.859079"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/AppDelegate.swift"
-            timestampString = "513389988.859079"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
