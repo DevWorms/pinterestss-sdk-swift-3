@@ -42,12 +42,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "514865460.493776"
+                  timestampString = "515044699.93135"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "309"
                   endingLineNumber = "309"
-                  offsetFromSymbolStart = "2352">
+                  offsetFromSymbolStart = "3366">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "514865460.495713"
+                  timestampString = "515044699.934552"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "309"
                   endingLineNumber = "309"
-                  offsetFromSymbolStart = "220">
+                  offsetFromSymbolStart = "219">
                </Location>
             </Locations>
          </BreakpointContent>
