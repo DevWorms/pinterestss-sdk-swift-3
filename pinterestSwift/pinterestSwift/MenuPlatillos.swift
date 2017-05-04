@@ -64,20 +64,22 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
     var popViewController : PopUpViewControllerDescripcion!
     
     override func viewWillAppear(_ animated: Bool) {
+        
         //Image Background Navigation Bar
         
-        let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
-        
-        let nav = self.navigationController?.navigationBar
-        
-        nav?.tintColor = UIColor.white
-        
-        nav!.setBackgroundImage(navBackgroundImage, for:.default)
-        
+         let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
+         
+         let nav = self.navigationController?.navigationBar
+         
+         nav?.tintColor = UIColor.white
+         
+         nav!.setBackgroundImage(navBackgroundImage, for:.default)
+ 
         
         let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
         backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!], for: UIControlState())
         navigationItem.backBarButtonItem = backButton
+
         
                //Create the UIImage
         let image = UIImage(named: "fondorecetario")
@@ -112,6 +114,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         
         self.loadMenuInformation(labelMenuSeleccionado, nombreMenu: menuSeleccionado["NombreMenu"] as! String)
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+       
     }
     
     func consultarRecetasDeMenu()
@@ -598,6 +601,52 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
 
     }
     
+    /*override func viewWillDisappear(_ animated: Bool) {
+        let img = pantallaSizeWeight()
+        
+        navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        
+        navigationController?.navigationBar.tintColor = UIColor.black
+        
+        navigationController?.navigationBar.barStyle = UIBarStyle.default
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        
+        let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!], for: UIControlState())
+        navigationItem.backBarButtonItem = backButton
+    }
+    
+    func pantallaSizeWeight()->UIImage!{
+        var strPantalla = "fondofloresiphone5"
+        if (UIDevice.current.userInterfaceIdiom == .pad)
+        {
+            if (UIScreen.main.bounds.size.width >= 768 && UIScreen.main.bounds.size.width<2048){
+                strPantalla = "fondofloresipadmini"
+            }else{
+                strPantalla = "fondofloresipad"
+            }
+            
+        }
+        else
+        {
+            
+            if UIScreen.main.bounds.size.width > 320 {
+                if UIScreen.main.scale == 3 { //iphone 6 plus
+                    strPantalla = "fondofloresiphone6plus"
+                }
+                else{
+                    strPantalla = "fondofloresiphone6" //iphone 6
+                }
+            }
+        }
+        
+        
+        return UIImage(named: strPantalla)?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 15, 0, 15), resizingMode: UIImageResizingMode.stretch)
+        
+    }*/
+
     
     func loadCellInformationCache(_ imagenCell:UIImageView, urlString:String, nombreRecetaLabel:UILabel, nombreRecetaStr:String,  nivelRecetaImagen:UIImageView, nivelRecetaStr:String,  porcionesRecetaLabel:UILabel, porcionesRecetaStr:String,  tiempoRecetaLabel:UILabel, tiempoRecetaStr:String, imgReceta: UIImage)
     {

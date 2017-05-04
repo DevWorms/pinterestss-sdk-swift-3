@@ -42,7 +42,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "515564415.184849"
+                  timestampString = "515570305.319709"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "319"
@@ -57,7 +57,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergio/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PopUpViewControllerCompartir.swift"
-                  timestampString = "515564415.186324"
+                  timestampString = "515570305.323128"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "319"
@@ -112,6 +112,102 @@
             startingLineNumber = "78"
             endingLineNumber = "78"
             landmarkName = "btnEnviar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "btnContinuar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "requestProductData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "productsRequest(_:didReceive:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "deliverProduct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "restorePurchases(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PopUpViewControllerDescripcion.swift"
+            timestampString = "515570075.411347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "paymentQueueRestoreCompletedTransactionsFinished(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -92,17 +92,18 @@ class PlatillosViewController: UIViewController{
             }
         }
         
+        
+        let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
+        nav!.setBackgroundImage(navBackgroundImage, for:.default)
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
-        let nav = self.navigationController?.navigationBar
-        nav?.tintColor = UIColor.white
-        nav!.setBackgroundImage(navBackgroundImage, for:.default)
+       
         
         activityLoader.isHidden = false
         activityLoader.startAnimating()

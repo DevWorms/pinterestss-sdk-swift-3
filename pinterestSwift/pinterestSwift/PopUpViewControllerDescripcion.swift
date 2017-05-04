@@ -149,8 +149,10 @@ import Alamofire
     @IBAction func btnContinuar(_ sender: AnyObject) {
         //self.seguir();
         
-        let payment = SKPayment(product: productsArray[sender.tag])
-        SKPaymentQueue.default().add(payment)
+        if(productsArray.count > 0){
+            let payment = SKPayment(product: productsArray[sender.tag])
+            SKPaymentQueue.default().add(payment)
+        }
     }
     
     @IBAction func cancelar(_ sender: AnyObject) {

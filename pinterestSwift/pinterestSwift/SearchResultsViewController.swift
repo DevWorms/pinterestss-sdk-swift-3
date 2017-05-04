@@ -65,7 +65,9 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
         anything if we're being dismissed.
         */
         guard searchController.isActive else { return }
+        
         self.searchController = searchController
+        self.searchController.searchBar.placeholder = "buscar"
          filterString = searchController.searchBar.text
          //busqueda = searchController.searchBar.text
         
