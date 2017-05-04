@@ -113,6 +113,8 @@ import TwitterKit
         let link : FBSDKShareLinkContent = FBSDKShareLinkContent()
         
         
+        
+        
         let url = receta["Url_Imagen"] as! String
         link.contentTitle = "Frida te invita"
         link.contentDescription = "¡Esta receta me encanta!   \nDescarga la app"
@@ -126,8 +128,16 @@ import TwitterKit
         //button.alpha =*/
         //self.view.addSubview(button)
  
-        
-       FBSDKShareDialog.show(from: self, with: link, delegate: self)
+       let shared = FBSDKShareDialog()
+        shared.mode = FBSDKShareDialogMode.native
+        shared.shareContent = link
+        shared.delegate = self
+        shared.fromViewController = self
+        if (!shared.canShow()) {
+            // fallback presentation when there is no FB app
+            shared.mode = FBSDKShareDialogMode.feedBrowser
+        }
+       shared.show()
         //let button : FBSDKShareButton = FBSDKShareButton()
         //button.shareContent = content
         
