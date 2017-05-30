@@ -203,24 +203,17 @@ import TwitterKit
         print(sharer.debugDescription)
     }
     
-    
-    
     @IBAction func btnTwitter(_ sender: AnyObject) {
         
-        // Generate the image of the poem.
-        let poemImage = self.imageViewReceta.image
+        print("hola")
         
-        // Use the TwitterKit to create a Tweet composer.
-        let composer = TWTRComposer()
-        
-        composer.setURL(URL(string: "http://recetasmexicanas.mx"))
-        composer.setText("¡Me encanta esta receta!")
-        // Prepare the Tweet with the poem and image.
-        composer.setImage(poemImage)
-        // Present the composer to the user.
-        composer.show(from: self) { result in
-            if result == .done {
-                //print("Tweet composition completed.")
+        if (Twitter.sharedInstance().sessionStore.hasLoggedInUsers()) {
+            // App must have at least one logged-in user to compose a Tweet
+            let poemImage = self.imageViewReceta.image
+            
+            let composer = TWTRComposerViewController(initialText: "¡Me encanta esta receta! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
+            
+            self.present(composer, animated: true) {
                 if self.opcion != nil && self.opcion.lowercased() == "viral" {
                     let date = Date()
                     let calendar = Calendar.current
@@ -244,7 +237,7 @@ import TwitterKit
                     favorito.saveInBackground {
                         (success, error) in
                         if (success) {
-                    
+                            
                             self.context.menuSeleccionado = self.receta
                             self.context.imagenBusqueda = self.imageViewReceta.image
                             self.context.popAbierto = false;
@@ -255,14 +248,60 @@ import TwitterKit
                         }
                     }
                 }
-                
-
-                self.removeAnimate()
-                
-            } else if result == .cancelled {
-                // print("Tweet composition cancelled.")
+            }
+        } else {
+            
+            // Log in, and then check again
+            Twitter.sharedInstance().logIn { session, error in
+                if session != nil { // Log in succeeded
+                    let poemImage = self.imageViewReceta.image
+                    
+                    let composer = TWTRComposerViewController(initialText: "¡Me encanta esta receta! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
+                    //composer.delegate = self
+                    
+                    self.present(composer, animated: true) {
+                        if self.opcion != nil && self.opcion.lowercased() == "viral" {
+                            let date = Date()
+                            let calendar = Calendar.current
+                            let components = (calendar as NSCalendar).components([.day , .month , .year], from: date)
+                            
+                            let year =  components.year
+                            let month = components.month
+                            
+                            let trimestre = month!/3
+                            
+                            let trimestreR = Int(Double(trimestre) + 0.7)
+                            
+                            
+                            let favorito = PFObject(className:"Regalos")
+                            favorito["username"] = PFUser.current()
+                            favorito["Anio"] = year
+                            favorito["Mes"] = month
+                            favorito["Trimestre"] = trimestreR
+                            favorito["Recetario"] = self.receta
+                            
+                            favorito.saveInBackground {
+                                (success, error) in
+                                if (success) {
+                                    
+                                    self.context.menuSeleccionado = self.receta
+                                    self.context.imagenBusqueda = self.imageViewReceta.image
+                                    self.context.popAbierto = false;
+                                    self.context.performSegue(withIdentifier: "recetarios", sender: nil)
+                                }
+                                else{
+                                    
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    let alert = UIAlertController(title: "No Twitter Accounts Available", message: "You must log in before presenting a composer.", preferredStyle: .alert)
+                    self.present(alert, animated: false, completion: nil)
+                }
             }
         }
+        
     }
     
     @IBAction func btnPinteres(_ sender: AnyObject) {

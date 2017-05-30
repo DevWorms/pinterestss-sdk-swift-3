@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		458A19D1214E01B63CE98B35 /* Pods_pinterestSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088CB5126BDED22F056F3690 /* Pods_pinterestSwift.framework */; };
 		492E5F341E9578E600A75DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F331E9578E600A75DEC /* AppDelegate.swift */; };
 		492E5F491E9578E600A75DEC /* pinterestSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F481E9578E600A75DEC /* pinterestSwiftTests.swift */; };
 		492E5F541E9578E600A75DEC /* pinterestSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F531E9578E600A75DEC /* pinterestSwiftUITests.swift */; };
@@ -48,7 +47,6 @@
 		497C8B591E98872900868C78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B581E98872900868C78 /* Images.xcassets */; };
 		497C8B621E98877200868C78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B5E1E98877200868C78 /* LaunchScreen.xib */; };
 		497C8B631E98877200868C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B601E98877200868C78 /* Main.storyboard */; };
-		497C8B651E9887F500868C78 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C8B641E9887F500868C78 /* FBSDKCoreKit.framework */; };
 		497C8B671E98886F00868C78 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C8B661E98886F00868C78 /* FBSDKShareKit.framework */; };
 		497C8B6A1E9888D300868C78 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B691E9888D300868C78 /* SWRevealViewController.m */; };
 		499097A81E988D4F00FB5A35 /* PopUpViewControllerCompartir.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097A71E988D4F00FB5A35 /* PopUpViewControllerCompartir.xib */; };
@@ -56,6 +54,7 @@
 		499097AC1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */; };
 		499097AE1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */; };
 		49F9539A1E9B481A009E50EF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F953991E9B481A009E50EF /* StoreKit.framework */; };
+		E498B303570DC6C3B78DC422 /* Pods_CocinaMex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		088CB5126BDED22F056F3690 /* Pods_pinterestSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pinterestSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492E5F301E9578E600A75DEC /* CocinaMex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocinaMex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		492E5F331E9578E600A75DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		492E5F3F1E9578E600A75DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,23 +121,19 @@
 		497C8B581E98872900868C78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		497C8B5F1E98877200868C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		497C8B611E98877200868C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		497C8B641E9887F500868C78 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Library/Developer/Xcode/DerivedData/pinterestSwift-cbblhukzlnycbpcattwgqxgmlvfh/Build/Products/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		497C8B661E98886F00868C78 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		497C8B681E9888CC00868C78 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		497C8B691E9888D300868C78 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		498E54011E98802900C58D80 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		498E54041E9880C900C58D80 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		498E54061E9880E600C58D80 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		499097A71E988D4F00FB5A35 /* PopUpViewControllerCompartir.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewControllerCompartir.xib; sourceTree = "<group>"; };
 		499097A91E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewControllerDescripcion.xib; sourceTree = "<group>"; };
 		499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewControllerRecuperar.xib; sourceTree = "<group>"; };
 		499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewControllerRegistro.xib; sourceTree = "<group>"; };
 		499EB5DC1E957B1A00DF8A3B /* pinterestSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pinterestSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		49E5AD481E96F838005A3C03 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../../MenuDeslizanteSwift/MenuDeslizante/Fabric.framework; sourceTree = "<group>"; };
 		49F953981E9B4812009E50EF /* CocinaMex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CocinaMex.entitlements; sourceTree = "<group>"; };
 		49F953991E9B481A009E50EF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		8B8E412115B43AFA9EB10E5B /* Pods-pinterestSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinterestSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pinterestSwift/Pods-pinterestSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		A6F2D99254D42F9014924D9F /* Pods-pinterestSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinterestSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-pinterestSwift/Pods-pinterestSwift.release.xcconfig"; sourceTree = "<group>"; };
+		695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocinaMex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E461913766910B920393502 /* Pods-CocinaMex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.release.xcconfig"; sourceTree = "<group>"; };
+		A7183BC9363F273B69DA3BD8 /* Pods-CocinaMex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				497C8B671E98886F00868C78 /* FBSDKShareKit.framework in Frameworks */,
-				497C8B651E9887F500868C78 /* FBSDKCoreKit.framework in Frameworks */,
-				458A19D1214E01B63CE98B35 /* Pods_pinterestSwift.framework in Frameworks */,
 				49F9539A1E9B481A009E50EF /* StoreKit.framework in Frameworks */,
+				E498B303570DC6C3B78DC422 /* Pods_CocinaMex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +167,8 @@
 		237A9AB2A1FD7A6FFA98E2A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8B8E412115B43AFA9EB10E5B /* Pods-pinterestSwift.debug.xcconfig */,
-				A6F2D99254D42F9014924D9F /* Pods-pinterestSwift.release.xcconfig */,
+				A7183BC9363F273B69DA3BD8 /* Pods-CocinaMex.debug.xcconfig */,
+				7E461913766910B920393502 /* Pods-CocinaMex.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -279,12 +272,7 @@
 			children = (
 				49F953991E9B481A009E50EF /* StoreKit.framework */,
 				497C8B661E98886F00868C78 /* FBSDKShareKit.framework */,
-				497C8B641E9887F500868C78 /* FBSDKCoreKit.framework */,
-				498E54061E9880E600C58D80 /* TwitterKit.framework */,
-				498E54041E9880C900C58D80 /* TwitterCore.framework */,
-				498E54011E98802900C58D80 /* Fabric.framework */,
-				49E5AD481E96F838005A3C03 /* Fabric.framework */,
-				088CB5126BDED22F056F3690 /* Pods_pinterestSwift.framework */,
+				695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,7 +290,7 @@
 				492E5F2E1E9578E600A75DEC /* Resources */,
 				5503C0CB8E71217353AF3340 /* [CP] Embed Pods Frameworks */,
 				3300CFF19D68A86C87D9B1C4 /* [CP] Copy Pods Resources */,
-				498E54081E9883DC00C58D80 /* ShellScript */,
+				3B8E5D591EDE1FF100AA7DDC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -363,7 +351,7 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = V7DJ56B5TU;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -452,10 +440,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinterestSwift/Pods-pinterestSwift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		498E54081E9883DC00C58D80 /* ShellScript */ = {
+		3B8E5D591EDE1FF100AA7DDC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinterestSwift/Pods-pinterestSwift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		692207CA09AB92EDD3EF9058 /* [CP] Check Pods Manifest.lock */ = {
@@ -505,13 +493,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492E5F341E9578E600A75DEC /* AppDelegate.swift in Sources */,
 				497C8B4A1E98870900868C78 /* PrincipalTableViewCell.swift in Sources */,
 				497C8B511E98870900868C78 /* SearchControllerBaseViewController.swift in Sources */,
 				497C8B6A1E9888D300868C78 /* SWRevealViewController.m in Sources */,
 				497C8B331E98870900868C78 /* Constantes.swift in Sources */,
 				497C8B371E98870900868C78 /* MenuController.swift in Sources */,
 				497C8B4F1E98870900868C78 /* RegalosTableViewController.swift in Sources */,
-				492E5F341E9578E600A75DEC /* AppDelegate.swift in Sources */,
 				497C8B321E98870900868C78 /* ConsejosTableViewController.swift in Sources */,
 				497C8B311E98870900868C78 /* ConsejosTableViewCell.swift in Sources */,
 				497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */,
@@ -692,11 +680,12 @@
 		};
 		492E5F591E9578E600A75DEC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B8E412115B43AFA9EB10E5B /* Pods-pinterestSwift.debug.xcconfig */;
+			baseConfigurationReference = A7183BC9363F273B69DA3BD8 /* Pods-CocinaMex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CocinaMex.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = V7DJ56B5TU;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -713,13 +702,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = pinterestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27094068-2d61-403a-9d7f-edfdccd9bf83";
-				PROVISIONING_PROFILE_SPECIFIER = "development cocinamexicana";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pinterestSwift/pinterestSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -728,11 +717,12 @@
 		};
 		492E5F5A1E9578E600A75DEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6F2D99254D42F9014924D9F /* Pods-pinterestSwift.release.xcconfig */;
+			baseConfigurationReference = 7E461913766910B920393502 /* Pods-CocinaMex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CocinaMex.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = V7DJ56B5TU;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -749,13 +739,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = pinterestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27094068-2d61-403a-9d7f-edfdccd9bf83";
-				PROVISIONING_PROFILE_SPECIFIER = "development cocinamexicana";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pinterestSwift/pinterestSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

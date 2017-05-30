@@ -114,15 +114,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         PFAnalytics.trackAppOpened(launchOptions: launchOptions)
         
         
-        Fabric.with([Twitter.self])
-
+        //Fabric.with([Twitter.self])
+        
+        Twitter.sharedInstance().start(withConsumerKey: "MMWC6DUWHTHQHoa10u4ZU0tRh", consumerSecret: "teJtkCAvVvcLQoba6JTMdzTG53YuuWyTolBJ0CDFxaLO8vmdMa")
         
         return FBSDKApplicationDelegate.sharedInstance().application(application,     didFinishLaunchingWithOptions: launchOptions)
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
-    {
-        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url,    options: options)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if Twitter.sharedInstance().application(app, open: url, options: options) {
+            return true
+        } else if FBSDKApplicationDelegate.sharedInstance().application(app, open: url,    options: options) {
+        
+        }
+        
+        return false
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
