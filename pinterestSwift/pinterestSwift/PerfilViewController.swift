@@ -9,7 +9,6 @@
 import UIKit
 import Parse
 import FBSDKCoreKit
-//import ParseTwitterUtils
 import ParseFacebookUtilsV4
 import TwitterKit
 import Alamofire
@@ -45,7 +44,6 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     let productIdentifiers = Set(["CocinaMexicanaRecetasFaciles"])
     var product: SKProduct?
     var productsArray = Array<SKProduct>()
-  
     
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var imageViewProfile: UIImageView!
@@ -65,7 +63,6 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     @IBOutlet weak var bCerrarSesion: UIButton!
     @IBOutlet weak var bCancelarSuscripcion: UIButton!
     
-    
     var btnPresionado = false
     var tarjetaObjeto:PFObject!
     var clienteObjeto:PFObject!
@@ -75,14 +72,13 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SKPaymentQueue.default().add(self)
+        //SKPaymentQueue.default().add(self)
         
         self.lEstatus.alpha = 0
         
         // Do any additional setup after loading the view, typically from a nib.
         self.loadingAction.startAnimating()
         self.loadingAction.isHidden = false
-        //self.bTarjeta.hidden = true
         self.bEliminarTarjeta.isHidden = true
         self.bCancelarSuscripcion.isHidden = true
         
@@ -99,55 +95,23 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             
             nav!.setBackgroundImage(navBackgroundImage, for:.default)
 
-            
             revealViewController().rightViewRevealWidth = 150
             //    extraButton.target = revealViewController()
             //    extraButton.action = "rightRevealToggle:"
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
-            /*let user = PFUser.currentUser()
-            
-            if user == nil{
-                self.performSegueWithIdentifier("login", sender: nil)
-            }
-            */
-            
             if PFUser.current() != nil {
                 
                 if PFFacebookUtils.isLinked(with: PFUser.current()!){
                     getFBUserData()
-                }
-                /*else if PFTwitterUtils.isLinkedWithUser(PFUser.currentUser()!) {
-                    getTWUserData()
-
-                }*/
-                else if(PFUser.current() != nil){
+                } else if(PFUser.current() != nil){
                      getParseUserData()
                     
                 }
             }
-            /*else {
-                
-                let sesion = Twitter.sharedInstance().session()
-                if sesion != nil{
-                  
-                    if sesion != nil{
-                        getTWUserData(sesion!)
-                    }
-                }
-                else{
-                    self.performSegueWithIdentifier("login", sender: nil)
-                }
-            }*/
-            
         }
-        
-        
-       
     }
-    
-    
     
     func getFBUserData(){
         if((FBSDKAccessToken.current()) != nil){
@@ -199,72 +163,6 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             task.resume()
     }
     
-    func getTWUserData(){
-        
-        /*ParseUser parseUser = ParseUser.getCurrentUser()
-        
-        
-        Map<String,Map> authObject = parseUser.getMap("authData");
-        Map<String,String> fbParseLoginData =  (Map<String,String>)    authObject.get("facebook");
-        
-        String parseFacebookId = (String)fbParseLoginData.get("id");
-        
-        String parseFacebookAuthData = (String)fbParseLoginData.get("access_token");
-       *///"369477"
-        
-      /*  Twitter.sharedInstance().APIClient.loadUserWithID((PFTwitterUtils.twitter()?.userId)!)
-            {
-                (user, error) -> Void in
-                
-                if( user != nil )
-                {
-                    
-                    print( user!.profileImageURL )
-                   // self.lCorreoElectronico.text = "@" + user?.profileImageLargeURL
-                    self.lCorreoElectronico.hidden = true
-                    self.loadTwProfileImage((user?.profileImageLargeURL)!)
-                    self.consultarCliente()
-                }
-        }*/
-
-    }
-    
-    func loadTwProfileImage(_ url:String){
-        
-        let imgURL: URL = URL(string: url)!
-        let request: URLRequest = URLRequest(url: imgURL)
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: {
-            (data, response, error) -> Void in
-            
-            if (error == nil && data != nil)
-            {
-                func display_image()
-                {
-                    self.imageViewProfile.image = UIImage(data: data!)
-                    
-                    
-                    UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                        
-                        self.imageViewProfile.alpha = 100
-                        self.lCorreoElectronico.alpha = 100
-                        self.bCerrarSesion.alpha = 100
-                        
-                        }, completion: nil)
-                    
-                }
-                
-                DispatchQueue.main.async(execute: display_image)
-            }
-            
-        })
-        
-        task.resume()
-        
-        
-    }
-    
     func getParseUserData(){
         
         self.lCorreoElectronico.text = PFUser.current()!.email
@@ -293,28 +191,12 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         
     }
     
-    
-    
     @IBAction func cerrarSesion(_ sender: AnyObject) {
         
-       // let sesion = nil//Twitter.sharedInstance().session()
-        
-       // if sesion == nil{
-            
-            PFUser.logOutInBackground { (error) -> Void in
+       PFUser.logOutInBackground { (error) -> Void in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
                 self.present( vc! , animated: true, completion: nil)
-        //    }
-            
         }
-        
-      /*  else{
-            let sessionStore = Twitter.sharedInstance().sessionStore
-            sessionStore.logOutUserID(sesion!.userID)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
-            self.present( vc! , animated: true, completion: nil)
-        }
-        */
     }
     
     override func didReceiveMemoryWarning() {
@@ -325,12 +207,13 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     func restorePurchases() {
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
+        
     }
     
     @available(iOS 3.0, *)
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
-        for transaction in transactions as! [SKPaymentTransaction] {
+        for transaction in transactions {
             
             switch transaction.transactionState {
                 
@@ -343,20 +226,24 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             case SKPaymentTransactionState.failed:
                 print("Transaction Failed")
                 SKPaymentQueue.default().finishTransaction(transaction)
+                
+            case SKPaymentTransactionState.restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                SKPaymentQueue.default().remove(self)
             default:
                 break
             }
         }
     }
     
-    func productsRequest(_ request: SKProductsRequest!, didReceive response: SKProductsResponse!) {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         
         var products = response.products
         
         if (products.count != 0) {
             for i in 0 ..< products.count
             {
-                self.product = products[i] as? SKProduct
+                self.product = products[i]
                 self.productsArray.append(product!)
             }
             /*self.viewDidLoad()
@@ -366,7 +253,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             print("No products found")
         }
         print(response.description)
-        let productos = response.invalidProductIdentifiers
+        //let productos = response.invalidProductIdentifiers
         
         for product in 0 ..< products.count
         {
@@ -374,7 +261,6 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         }
     }
 
-    
     func deliverProduct(_ transaction:SKPaymentTransaction) {
         
         if transaction.payment.productIdentifier == "com.brianjcoleman.testiap1"
@@ -406,9 +292,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         }
     }
     
-
-    
-    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue!) {
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         print("Transactions Restored")
         
         // var purchasedItemIDS = Array()
@@ -443,15 +327,15 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 // Unlock Feature
             }
             
-            
+            if transaction.transactionState == SKPaymentTransactionState.restored {
+                SKPaymentQueue.default().finishTransaction(transaction)
+                SKPaymentQueue.default().remove(self)
+            }
         }
         
-        /*var alert = UIAlertView(title: "Thank You", message: "Your purchase(s) were restored.", delegate: nil, cancelButtonTitle: "OK")
-        alert.show()*/
     }
 
-    
-    func consultarCliente(){
+    func consultarCliente() {
         self.lEstatus.alpha = 0
         
         
@@ -580,68 +464,9 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                     print("Receiving receipt from App Store failed: \(response.result)")
                 }
         }
-
-        /*
-        let query = PFQuery(className: "Clientes")
-        query.whereKey("username", equalTo: PFUser.current()!)
-
-        query.findObjectsInBackground {
-            (clientes, error) in
-            // comments now contains the comments for myPost
-            
-            if error == nil {
-                
-                //Si hay un cliente recupera su clientID y sale del metodo
-                if let _ = clientes as [PFObject]? {
-                    if clientes?.count > 0 {
-                        for cliente in clientes! {
-                           self.clienteObjeto = cliente
-                            // This does not require a network access.
-                            let EstatusInscrito =  (cliente["Suscrito"] as? Bool)!
-                            //let clientId = (cliente["clientID"] as? String)!
-                            //UserDefaults.standard.setValue(clientId, forKey: guardarEnMemoria.clienteId)
-                            
-                            if EstatusInscrito {
-                                self.lEstatus.text = "Suscrito"
-                            }
-                            else{
-                                self.lEstatus.text = "Sin inscripción actual"
-                            }
-                            /*let codigo =  cliente["codigobarras"] as? String
-                            if codigo == nil || codigo!.isEmpty{
-             //                   self.imageViewBarCode.hidden = true
-               //                 self.lNumeroReferencia.hidden = true
-                            }
-                            else{
-                 //               self.imageViewBarCode.hidden = false
-                   //             self.lNumeroReferencia.hidden = false
-                     //           self.lNumeroReferencia.text = cliente["referenciaentienda"] as? String
-                                self.load_image(codigo!)
-                            }*/
-                            //self.consultarWallet(cliente)
-                            break
-                        }
-                    }
-                    else{
-                        self.loadingAction.stopAnimating()
-                        self.loadingAction.isHidden = true
-                    }
-                }
-                else{
-                    
-                    
-                }
-            }
-            else
-            {
-                print(error)
-            }
-        }*/
-
     }
     
-    func load_image(_ urlString:String)
-    {
+    func load_image(_ urlString:String) {
         let imgURL: URL = URL(string: urlString)!
         let request: URLRequest = URLRequest(url: imgURL)
         
@@ -668,9 +493,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         task.resume()
     }
 
-    
-    func consultarWallet(_ cliente: PFObject )
-    {
+    func consultarWallet(_ cliente: PFObject ) {
         let query = PFQuery(className:"Tarjetas")
         query.whereKey("cliente", equalTo: cliente)
         query.findObjectsInBackground {
@@ -1030,6 +853,4 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     }
   }
 
-    
-    
 }

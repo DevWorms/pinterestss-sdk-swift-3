@@ -48,22 +48,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         nav!.setBackgroundImage(navBackgroundImage, for:.default)
 
-        
-        
-        let user = PFUser.current()
-
-        let sesion = Twitter.sharedInstance().sessionStore
-        
-        if user != nil || sesion.session() != nil {
-            self.performSegue(withIdentifier: "Home", sender: nil)  
-        }
-        else
-        {
-            // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.
             textfMail.delegate = self
             textfPassword.delegate = self
-            
-        }
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -197,50 +184,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         })
         
-    }
-    
-    @IBAction func loginTwitter(_ sender: AnyObject) {
-       
-       /* PFTwitterUtils.logInWithBlock {
-            (user: PFUser?, error: NSError?) -> Void in
-            
-            let user = user
-            
-            if (user != nil) {
-                if user!.isNew {
-                    print("User signed up and logged in with Twitter!")
-                } else {
-                    print("User logged in with Twitter! " )
-                }
-                
-                self.performSegueWithIdentifier("Home", sender: nil)
-                
-            } else {
-                print("Uh oh. The user cancelled the Twitter login.")
-            }
-        }*/
-
-        
-        //Login nativo
-      /*  Twitter.sharedInstance().logInWithCompletion { session, error in
-            if (session != nil) {
-                print("signed in as \(session!.userName)");
-                
-                // Swift
-                let store = Twitter.sharedInstance().sessionStore
-                self.performSegueWithIdentifier("Home", sender: nil)
-
-            } else {
-                print("error: \(error!.localizedDescription)");
-            }
-        }*/
-       
-        
-    }
-    
-    @IBAction func saltarLogin(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: "Home", sender: nil)
-
     }
     
     func abrirVentanaPopRegistro(){

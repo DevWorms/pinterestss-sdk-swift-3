@@ -34,8 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         Parse.initialize(with: configuration)
         
-        let vc : UIViewController
+        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
+        let vc : UIViewController
         
         let tutorial: Bool? = UserDefaults.standard.bool(forKey: "tutorial")
         
@@ -49,13 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.window?.rootViewController = vc
         }
         
- 
-       
-        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+        let user = PFUser.current()
         
-        
-        
-        
+        if user != nil {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Home")
+            self.window?.rootViewController = vc
+        }
         
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.background {
@@ -100,21 +101,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             application.registerForRemoteNotifications(matching: [.badge , .alert , .sound])
         }*/
         
-        
-        
-        
-        
-        
-
-        
-        
         PFFacebookUtils.facebookLoginManager().loginBehavior = FBSDKLoginBehavior.systemAccount
         
         
         PFAnalytics.trackAppOpened(launchOptions: launchOptions)
-        
-        
-        //Fabric.with([Twitter.self])
         
         Twitter.sharedInstance().start(withConsumerKey: "MMWC6DUWHTHQHoa10u4ZU0tRh", consumerSecret: "teJtkCAvVvcLQoba6JTMdzTG53YuuWyTolBJ0CDFxaLO8vmdMa")
         
