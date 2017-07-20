@@ -54,12 +54,7 @@ class RegalosTableViewController: UITableViewController {
                 
                 if PFFacebookUtils.isLinked(with: PFUser.current()!){
                     usuario = true
-                }
-               /* else if PFTwitterUtils.isLinkedWithUser(PFUser.currentUser()!) {
-                    usuario = true
-                    
-                }*/
-                else if PFUser.current() != nil{
+                } else if PFUser.current() != nil{
                     usuario = true
                     
                 }
@@ -83,10 +78,7 @@ class RegalosTableViewController: UITableViewController {
             else{
                 consultarFavoritos()
             }
-            
-            
         }
-        
         
         let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
         
@@ -95,8 +87,6 @@ class RegalosTableViewController: UITableViewController {
         nav?.tintColor = UIColor.white
         
         nav!.setBackgroundImage(navBackgroundImage, for:.default)
-        
-        
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "fondorecetario"))
         
@@ -246,26 +236,46 @@ class RegalosTableViewController: UITableViewController {
         return true
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
+        
+        //para ver todas las fuentes instalas
+        /*for family: String in UIFont.familyNames
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names)")
+            }
+        }*/
+        
+        if self.itemsMenu.count == 0 {
+            
+            let noDataLabel = UILabel.init(frame: CGRect(x: 10, y: 0, width: tableView.bounds.width-20, height: tableView.bounds.height))
+            noDataLabel.numberOfLines = 0
+            noDataLabel.font = UIFont(name: "AvenirNext-Bold", size: 28)
+            noDataLabel.textColor = #colorLiteral(red: 0.9450579286, green: 0.4093458652, blue: 0.4025487006, alpha: 1)
+            noDataLabel.textAlignment = .center
+            noDataLabel.text = "Vé al paquete #VIRAL, comparte nuestra app y gana recetas gratis!"
+            
+            tableView.backgroundView?.addSubview( noDataLabel )
+            
+        } else {
+            tableView.backgroundView = UIImageView(image: UIImage(named: "fondorecetario"))
+        }
+        
         return self.itemsMenu.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PrincipalTableViewCell
-        
         self.recetaSeleccionada = itemsMenu[indexPath.row]
         
         self.performSegue(withIdentifier: "recetarios", sender: nil)
-       
-        
         
     }
-    func loadCellInformation(_ imagenCell:UIImageView, numeroLabelView:UILabel, urlString:String, numeroRedecetas:Int, tipoMenuLabel:UILabel, nombreMenu:String, rowIndex:Int)
-    {
+    
+    func loadCellInformation(_ imagenCell:UIImageView, numeroLabelView:UILabel, urlString:String, numeroRedecetas:Int, tipoMenuLabel:UILabel, nombreMenu:String, rowIndex:Int) {
         
         if self.imagesArray.count <= rowIndex {
             
@@ -275,8 +285,6 @@ class RegalosTableViewController: UITableViewController {
             
             self.cargarImagenesMemoria(imagenCell, numeroLabelView: numeroLabelView, urlString:urlString, numeroRedecetas: numeroRedecetas , tipoMenuLabel: tipoMenuLabel, nombreMenu: nombreMenu, rowIndex:  rowIndex)
         }
-        
-        
     }
     
     func cargarImagenesMemoria(_ imagenCell:UIImageView, numeroLabelView:UILabel, urlString:String, numeroRedecetas:Int, tipoMenuLabel:UILabel, nombreMenu:String, rowIndex:Int){
@@ -368,19 +376,11 @@ class RegalosTableViewController: UITableViewController {
         
         let urlImagen = item["Url_Imagen"] as? String!
         
-        var numeroRecetas  = self.numeroDeRecetasPorMenu[indexPath.row]
+        let numeroRecetas  = self.numeroDeRecetasPorMenu[indexPath.row]
         
-        
-        
-        
-        //let numeroRecetas = 2
         let nombre = (item["NombreMenu"] as? String)!
         
         self.loadCellInformation(cell.postImageView, numeroLabelView:  cell.lNumeroRecetas, urlString:urlImagen!, numeroRedecetas: numeroRecetas , tipoMenuLabel: cell.nombreLabelMenu, nombreMenu: nombre, rowIndex:  indexPath.row)
-        
-        
-
-        
         
         return cell
     }

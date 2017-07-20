@@ -1232,7 +1232,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electronico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQf-jF-n8N">
                                 <rect key="frame" x="249" y="514" width="270" height="41"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" red="0.94505792860000004" green="0.40934586519999999" blue="0.40254870059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.94509803921568625" green="0.40784313725490196" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
@@ -2786,13 +2786,13 @@
         <image name="yatienescuenta" width="195" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ReD-sJ-kvu"/>
-        <segue reference="LXj-nS-J3B"/>
+        <segue reference="VRz-HO-Urq"/>
         <segue reference="ivt-eK-57Y"/>
         <segue reference="wUU-6O-a6c"/>
         <segue reference="CbS-EU-Vhq"/>
         <segue reference="mrh-qH-ct8"/>
         <segue reference="HQ8-sQ-cXz"/>
+        <segue reference="LXj-nS-J3B"/>
         <segue reference="kaK-Ag-mUd"/>
         <segue reference="WLe-SK-tft"/>
     </inferredMetricsTieBreakers>

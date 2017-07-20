@@ -112,12 +112,9 @@ import TwitterKit
         
         let link : FBSDKShareLinkContent = FBSDKShareLinkContent()
         
-        
-        
-        
         let url = receta["Url_Imagen"] as! String
-        link.contentTitle = "Frida te invita"
-        link.contentDescription = "¡Esta receta me encanta!   \nDescarga la app"
+        link.contentTitle = receta["Nombre"] as! String
+        link.contentDescription = "¡Cocina deliciosas y fáciles recetas con Frida!   \nDescarga la app"
         link.imageURL = URL(string: url)
         link.contentURL = URL(string: "http://recetasmexicanas.mx")
         
@@ -211,7 +208,7 @@ import TwitterKit
             // App must have at least one logged-in user to compose a Tweet
             let poemImage = self.imageViewReceta.image
             
-            let composer = TWTRComposerViewController(initialText: "¡Me encanta esta receta! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
+            let composer = TWTRComposerViewController(initialText: "¡Cocina deliciosas y fáciles recetas con Frida! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
             
             self.present(composer, animated: true) {
                 if self.opcion != nil && self.opcion.lowercased() == "viral" {
@@ -256,7 +253,7 @@ import TwitterKit
                 if session != nil { // Log in succeeded
                     let poemImage = self.imageViewReceta.image
                     
-                    let composer = TWTRComposerViewController(initialText: "¡Me encanta esta receta! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
+                    let composer = TWTRComposerViewController(initialText: "¡Cocina deliciosas y fáciles recetas con Frida! http://recetasmexicanas.mx", image: poemImage, videoURL:nil)
                     //composer.delegate = self
                     
                     self.present(composer, animated: true) {

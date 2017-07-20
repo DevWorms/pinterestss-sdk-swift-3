@@ -196,6 +196,22 @@ class FavoritosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
+        
+        if self.favoritos.count == 0 {
+            
+            let noDataLabel = UILabel.init(frame: CGRect(x: 10, y: 0, width: tableView.bounds.width-20, height: tableView.bounds.height))
+            noDataLabel.numberOfLines = 0
+            noDataLabel.font = UIFont(name: "AvenirNext-Bold", size: 28)
+            noDataLabel.textColor = #colorLiteral(red: 0.9450579286, green: 0.4093458652, blue: 0.4025487006, alpha: 1)
+            noDataLabel.textAlignment = .center
+            noDataLabel.text = "Aún no tienes nada que te guste."
+            
+            tableView.backgroundView?.addSubview( noDataLabel )
+            
+        } else {
+            tableView.backgroundView = UIImageView(image: UIImage(named: "fondorecetario"))
+        }
+        
         return self.favoritos.count
     }
     
