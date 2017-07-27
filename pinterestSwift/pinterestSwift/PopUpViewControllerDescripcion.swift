@@ -44,7 +44,7 @@ import Alamofire
         self.popUpView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         self.view.backgroundColor = UIColor.clear
       
-        let objParse = PFObject(className:"Clientes")
+        //let objParse = PFObject(className:"Clientes")
         
         
         SKPaymentQueue.default().add(self)
@@ -187,14 +187,14 @@ import Alamofire
             request.delegate = self
             request.start()
         } else {
-            var alert = UIAlertController(title: "In-App Purchases Not Enabled", message: "Please enable In App Purchase in Settings", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "In-App Purchases Not Enabled", message: "Please enable In App Purchase in Settings", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Settings", style: UIAlertActionStyle.default, handler: { alertAction in
                 alert.dismiss(animated: true, completion: nil)
                 
                 let url: URL? = URL(string: UIApplicationOpenSettingsURLString)
                 if url != nil
                 {
-                    UIApplication.shared.openURL(url!)
+                    UIApplication.shared.open(url!, options: [:], completionHandler: nil)
                 }
                 
             }))
@@ -212,7 +212,7 @@ import Alamofire
         if (products.count != 0) {
             for i in 0 ..< products.count
             {
-                self.product = products[i] as? SKProduct
+                self.product = products[i]
                 self.productsArray.append(product!)
             }
             /*self.viewDidLoad()
@@ -221,8 +221,7 @@ import Alamofire
         } else {
             print("No products found")
         }
-        print(response.description)
-        let productos = response.invalidProductIdentifiers
+        //print(response.description)
         
         for product in 0 ..< products.count
         {
@@ -234,7 +233,7 @@ import Alamofire
     @available(iOS 3.0, *)
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
-        for transaction in transactions as! [SKPaymentTransaction] {
+        for transaction in transactions {
             
             switch transaction.transactionState {
                 
@@ -328,8 +327,9 @@ import Alamofire
             
         }
         
-        var alert = UIAlertView(title: "Thank You", message: "Your purchase(s) were restored.", delegate: nil, cancelButtonTitle: "OK")
-        alert.show()
+        let vc_alert = UIAlertController(title: "Thank You", message: "Your purchase(s) were restored.", preferredStyle: .alert)
+        vc_alert.addAction(UIAlertAction(title: "OK", style: .cancel , handler: nil))
+        self.present(vc_alert, animated: true, completion: nil)
     }
     
 

@@ -104,8 +104,8 @@ import Parse
                 else{
                     
                     var mensaje = ""
-                    print(error?._code)
-                    print(error?.localizedDescription)
+                    //print(error?._code)
+                    //print(error?.localizedDescription)
                     if (error?._code == 125){
                         mensaje = "Correo inválido"
                     }else{

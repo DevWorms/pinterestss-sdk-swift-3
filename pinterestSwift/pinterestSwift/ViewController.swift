@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textfPassword.delegate = self
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
@@ -138,7 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if !PFFacebookUtils.isLinked(with: user) {
             PFFacebookUtils.linkUser(inBackground: user, withReadPermissions: nil, block: {
                 (succeeded, error) -> Void in
-                if (succeeded != nil) {
+                if (error == nil) {
                     print("Woohoo, the user is linked with Facebook!")
                 }
             })

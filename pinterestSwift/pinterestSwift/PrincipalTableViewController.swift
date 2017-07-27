@@ -151,7 +151,7 @@ class PrincipalTableViewController: UITableViewController {
                 }
                 else
                 {
-                    print(error)
+                    print(error!)
                 }
             }
         
@@ -244,7 +244,7 @@ class PrincipalTableViewController: UITableViewController {
                 }
                 else
                 {
-                    print(error)
+                    print(error!)
                 }
             }
 
@@ -314,14 +314,14 @@ class PrincipalTableViewController: UITableViewController {
         
         let urlImagen = item["Url_Imagen"] as? String!
         
-        print(item.objectId)
-        print(self.numeroDeRecetasPorMenu)
+        //print(item.objectId)
+        //print(self.numeroDeRecetasPorMenu)
         
         var numeroRecetas = 10
         
         
         
-        if let checkedNumeroRecetas: AnyObject? = self.numeroDeRecetasPorMenu[item] as AnyObject??{
+        if let checkedNumeroRecetas: AnyObject = self.numeroDeRecetasPorMenu[item] as AnyObject?{
             if let _ = checkedNumeroRecetas as? NSNull{ numeroRecetas = 10 }
             else { numeroRecetas = checkedNumeroRecetas as! Int } }
             else { numeroRecetas = 10 }

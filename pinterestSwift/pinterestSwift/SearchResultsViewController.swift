@@ -424,9 +424,8 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                     
                 }
             }
-            else
-            {
-                print(error)
+            else {
+                print(error!)
             }
         }
         
@@ -456,7 +455,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
         if popAbierto == false {
             popAbierto = true
         
-        print(cliente.objectId)
+        //print(cliente.objectId)
         let query = PFQuery(className: "Tarjetas")
         query.whereKey("cliente", equalTo: cliente)
         query.findObjectsInBackground {
@@ -531,7 +530,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
             }
             else
             {
-                print(error)
+                print(error!)
             }
         }
         }

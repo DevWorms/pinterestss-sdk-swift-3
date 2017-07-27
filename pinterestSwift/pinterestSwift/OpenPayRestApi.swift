@@ -147,10 +147,9 @@ class OpenPayRestApi{
                    // callBack(false)
                 } else {
 
-                    print(response?.description)
+                    //print(response?.description)
         
                     let resstr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                    print(resstr)
                     
                     if(resstr != "[]"){
                         do {
@@ -158,7 +157,7 @@ class OpenPayRestApi{
                     
                             
                             if array == nil{
-                                array = try (JSONSerialization.jsonObject(with: data!, options: []) as? NSArray)![0] as! NSDictionary
+                                array = try (JSONSerialization.jsonObject(with: data!, options: []) as? NSArray)![0] as? NSDictionary
                                 
                             }
                             

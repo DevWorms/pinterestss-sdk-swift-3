@@ -105,7 +105,7 @@ class RegistroViewController : UIViewController {
                     self.present(alertController, animated: true, completion: nil)
 
                     
-                    print(errorString)
+                    print(errorString!)
                     // Show the errorString somewhere and let the user try again.
                 } else {
                     
@@ -156,7 +156,7 @@ class RegistroViewController : UIViewController {
         if !PFFacebookUtils.isLinked(with: user) {
             PFFacebookUtils.linkUser(inBackground: user, withReadPermissions: nil, block: {
                 (succeeded, error) -> Void in
-                if (succeeded != nil) {
+                if (error == nil) {
                     print("Woohoo, the user is linked with Facebook!")
                 }
             })

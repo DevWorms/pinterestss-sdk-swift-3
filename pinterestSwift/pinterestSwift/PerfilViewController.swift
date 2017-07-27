@@ -569,7 +569,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
-                print(error)
+                print(error!)
                 self.loadingAction.stopAnimating()
                 self.loadingAction.isHidden = true
                 self.bCancelarSuscripcion.isHidden = true
@@ -588,9 +588,9 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             
             } else {
             
-                    print(response)
-                    let httpResponse = response as? HTTPURLResponse
-                    print(httpResponse)
+                    //print(response!)
+                    //let httpResponse = response as? HTTPURLResponse
+                    //print(httpResponse)
                     self.clienteObjeto["Suscrito"] = false
                     self.clienteObjeto["codigobarras"] = ""
                     self.clienteObjeto["idsuscripcion"] = ""
@@ -653,7 +653,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
             let session = URLSession.shared
             let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
                 if (error != nil) {
-                    print(error)
+                    //print(error)
                     self.loadingAction.stopAnimating()
                     self.loadingAction.isHidden = true
                     self.bCancelarSuscripcion.isHidden = true
@@ -671,12 +671,12 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                     
                 } else {
                     let httpResponse = response as? HTTPURLResponse
-                    print(httpResponse)
+                    //print(httpResponse)
                     
                     do {
                         
                         let resstr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                        print(resstr)
+                        //print(resstr)
                         
                         if resstr != ""{
                         let respuesta = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:AnyObject]
@@ -686,9 +686,9 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                         
                         if (error == nil){
                             
-                            print(response)
+                            //print(response)
                             let httpResponse = response as? HTTPURLResponse
-                            print(httpResponse)
+                            //print(httpResponse)
                             
                             self.tarjetaObjeto.deleteInBackground { (sucess, error) -> Void in
                                 

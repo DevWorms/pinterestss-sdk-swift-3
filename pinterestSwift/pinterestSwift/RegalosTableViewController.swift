@@ -160,7 +160,7 @@ class RegalosTableViewController: UITableViewController {
             }
             else
             {
-                print(error)
+                print(error!)
             }
         }
         
@@ -352,7 +352,7 @@ class RegalosTableViewController: UITableViewController {
         let menu = self.itemsMenu[indexPath.row]
         
         let item = menu.object(forKey: "Recetario") as! PFObject
-        print(item.objectId)
+        //print(item.objectId!)
         
 
         //ocultamos si es tipo menu viral el icono de postit

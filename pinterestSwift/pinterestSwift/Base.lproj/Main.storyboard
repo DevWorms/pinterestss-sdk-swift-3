@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qEa-es-q8U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qEa-es-q8U">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1372,39 +1372,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZ3-iu-bD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="-835"/>
-        </scene>
-        <!--Compartir Page Item Controller-->
-        <scene sceneID="0MD-i9-gB9">
-            <objects>
-                <viewController storyboardIdentifier="CompartirController" id="R0g-dP-eNm" customClass="CompartirPageItemController" customModule="CocinaMex" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6fb-65-mlG"/>
-                        <viewControllerLayoutGuide type="bottom" id="jyq-bI-QbE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="compartirController" id="e7Z-Qu-NRY">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oks-lx-44Q">
-                                <rect key="frame" x="20" y="20" width="728" height="984"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94308895420769234" green="0.94308895420769234" blue="0.94308895420769234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="Oks-lx-44Q" secondAttribute="leading" id="7eE-gW-LTg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Oks-lx-44Q" secondAttribute="trailing" id="HCt-eH-m7Y"/>
-                            <constraint firstItem="Oks-lx-44Q" firstAttribute="top" secondItem="6fb-65-mlG" secondAttribute="bottom" id="nUH-ft-rs7"/>
-                            <constraint firstItem="jyq-bI-QbE" firstAttribute="top" secondItem="Oks-lx-44Q" secondAttribute="bottom" constant="20" id="who-Ia-Igw"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="contentImageView" destination="Oks-lx-44Q" id="z0R-lc-Dgf"/>
-                        <outlet property="view" destination="e7Z-Qu-NRY" id="7om-IP-bdm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E0K-Fh-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="345" y="-835"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="RvW-c8-4g6">
@@ -2786,14 +2753,14 @@
         <image name="yatienescuenta" width="195" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VRz-HO-Urq"/>
         <segue reference="ivt-eK-57Y"/>
         <segue reference="wUU-6O-a6c"/>
         <segue reference="CbS-EU-Vhq"/>
-        <segue reference="mrh-qH-ct8"/>
-        <segue reference="HQ8-sQ-cXz"/>
         <segue reference="LXj-nS-J3B"/>
+        <segue reference="mrh-qH-ct8"/>
         <segue reference="kaK-Ag-mUd"/>
+        <segue reference="HQ8-sQ-cXz"/>
+        <segue reference="ReD-sJ-kvu"/>
         <segue reference="WLe-SK-tft"/>
     </inferredMetricsTieBreakers>
 </document>

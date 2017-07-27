@@ -141,7 +141,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
                 }
             } else {
                 // Log details of the failure
-                print("Error: \(error!) \(error!._userInfo)")
+                print("Error: \(error!) \(String(describing: error!._userInfo))")
             }
         }
     }
@@ -251,7 +251,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
     @available(iOS 3.0, *)
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
-        for transaction in transactions as! [SKPaymentTransaction] {
+        for transaction in transactions {
             
             switch transaction.transactionState {
                 
@@ -270,14 +270,14 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         }
     }
     
-    func productsRequest(_ request: SKProductsRequest!, didReceive response: SKProductsResponse!) {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         
         var products = response.products
         
         if (products.count != 0) {
             for i in 0 ..< products.count
             {
-                self.product = products[i] as? SKProduct
+                self.product = products[i]
                 self.productsArray.append(product!)
             }
             /*self.viewDidLoad()
@@ -287,7 +287,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
             print("No products found")
         }
         print(response.description)
-        let productos = response.invalidProductIdentifiers
+        //let productos = response.invalidProductIdentifiers
         
         for product in 0 ..< products.count
         {
@@ -518,7 +518,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
             self.abrirVentanaPop(self.precioPlan, suscripcion:  true, planId:  self.planId)
         }*/
         
-        print(cliente.objectId)
+        //print(cliente.objectId)
         let query = PFQuery(className: "Tarjetas")
         query.whereKey("cliente", equalTo: cliente)
         query.findObjectsInBackground {
@@ -593,7 +593,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
             }
             else
             {
-                print(error)
+                print(error!)
             }
         }
 

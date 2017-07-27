@@ -88,7 +88,7 @@ class PlatillosViewController: UIViewController{
             }
             else
             {
-                print(error)
+                print(error!)
             }
         }
         
@@ -441,7 +441,7 @@ class PlatillosViewController: UIViewController{
                 }
                 else
                 {
-                    print(error)
+                    print(error!)
                 }
             }
         }

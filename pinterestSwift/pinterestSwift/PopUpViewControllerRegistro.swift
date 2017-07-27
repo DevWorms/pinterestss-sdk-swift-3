@@ -98,7 +98,7 @@ import Parse
         user.signUpInBackground {
             (succeeded, error) in
             if let error = error {
-                let errorString = (error._userInfo as! [String:String])["error"]
+                //let errorString = (error._userInfo as! [String:String])["error"]
                 
                 if (error._code == 125){
                     // User needs to verify email address before continuing
@@ -112,7 +112,7 @@ import Parse
                     // Display alert
                     self.present(alertController, animated: true, completion: nil)
                 }
-                print(errorString)
+                //print(errorString)
                 // Show the errorString somewhere and let the user try again.
             } else {
                 

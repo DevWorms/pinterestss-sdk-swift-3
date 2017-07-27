@@ -197,7 +197,7 @@ import TwitterKit
     }
     
     open func sharerDidCancel(_ sharer: FBSDKSharing!) {
-        print(sharer.debugDescription)
+        print(sharer.debugDescription!)
     }
     
     @IBAction func btnTwitter(_ sender: AnyObject) {
@@ -306,11 +306,11 @@ import TwitterKit
       
     
         var url : NSString = receta["Url_Imagen"] as! String as NSString
-        var urlStr = url.addingPercentEscapes(using: String.Encoding.utf8.rawValue)!
-        let imgURL = URL(string: urlStr as String)!
+        var urlStr = url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed); //addingPercentEscapes(using: String.Encoding.utf8.rawValue)!
+        let imgURL = URL(string: urlStr!)!
         url = "http://recetasmexicanas.mx"
-        urlStr = url.addingPercentEscapes(using: String.Encoding.utf8.rawValue)!
-        let direccion  = URL(string: urlStr as String)!
+        urlStr = url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let direccion  = URL(string: urlStr!)!
         
         PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "Me encanta esta receta", from: self, withSuccess: {
             //print("successfully pinned pin")
@@ -351,7 +351,7 @@ import TwitterKit
             self.removeAnimate()
             
         }) { (error) in
-            print("pin it failed", error)
+            print("pin it failed", error!)
         }
        
     }
