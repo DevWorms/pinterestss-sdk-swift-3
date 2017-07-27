@@ -11,20 +11,15 @@
 		492E5F491E9578E600A75DEC /* pinterestSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F481E9578E600A75DEC /* pinterestSwiftTests.swift */; };
 		492E5F541E9578E600A75DEC /* pinterestSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F531E9578E600A75DEC /* pinterestSwiftUITests.swift */; };
 		497C8B301E98870900868C78 /* CompartirPageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B081E98870900868C78 /* CompartirPageItemController.swift */; };
-		497C8B311E98870900868C78 /* ConsejosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B091E98870900868C78 /* ConsejosTableViewCell.swift */; };
-		497C8B321E98870900868C78 /* ConsejosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0A1E98870900868C78 /* ConsejosTableViewController.swift */; };
 		497C8B331E98870900868C78 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0B1E98870900868C78 /* Constantes.swift */; };
 		497C8B341E98870900868C78 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0C1E98870900868C78 /* ContentViewController.swift */; };
 		497C8B351E98870900868C78 /* Errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0D1E98870900868C78 /* Errores.swift */; };
 		497C8B361E98870900868C78 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */; };
-		497C8B371E98870900868C78 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0F1E98870900868C78 /* MenuController.swift */; };
 		497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B101E98870900868C78 /* MenuDeslizanteController.swift */; };
 		497C8B391E98870900868C78 /* MenuPlatillos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B111E98870900868C78 /* MenuPlatillos.swift */; };
 		497C8B3A1E98870900868C78 /* MenuPlatillosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */; };
-		497C8B3B1E98870900868C78 /* ModeloTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B131E98870900868C78 /* ModeloTableViewController.swift */; };
 		497C8B3C1E98870900868C78 /* OpenPayRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B141E98870900868C78 /* OpenPayRestApi.swift */; };
 		497C8B3D1E98870900868C78 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B151E98870900868C78 /* PageItemController.swift */; };
-		497C8B3E1E98870900868C78 /* PasosConsejosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B161E98870900868C78 /* PasosConsejosViewController.swift */; };
 		497C8B3F1E98870900868C78 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B171E98870900868C78 /* PerfilViewController.swift */; };
 		497C8B401E98870900868C78 /* PlatillosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B181E98870900868C78 /* PlatillosViewController.swift */; };
 		497C8B411E98870900868C78 /* PopUpViewControllerCompartir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B191E98870900868C78 /* PopUpViewControllerCompartir.swift */; };
@@ -39,11 +34,8 @@
 		497C8B501E98870900868C78 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B281E98870900868C78 /* RegistroViewController.swift */; };
 		497C8B511E98870900868C78 /* SearchControllerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B291E98870900868C78 /* SearchControllerBaseViewController.swift */; };
 		497C8B521E98870900868C78 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2A1E98870900868C78 /* SearchResultsViewController.swift */; };
-		497C8B531E98870900868C78 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2B1E98870900868C78 /* TableViewCell.swift */; };
-		497C8B541E98870900868C78 /* TuCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2C1E98870900868C78 /* TuCuentaViewController.swift */; };
 		497C8B551E98870900868C78 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2D1E98870900868C78 /* TutorialViewController.swift */; };
 		497C8B561E98870900868C78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2E1E98870900868C78 /* ViewController.swift */; };
-		497C8B571E98870900868C78 /* ViralizacionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B2F1E98870900868C78 /* ViralizacionTableCell.swift */; };
 		497C8B591E98872900868C78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B581E98872900868C78 /* Images.xcassets */; };
 		497C8B621E98877200868C78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B5E1E98877200868C78 /* LaunchScreen.xib */; };
 		497C8B631E98877200868C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497C8B601E98877200868C78 /* Main.storyboard */; };
@@ -85,20 +77,15 @@
 		492E5F531E9578E600A75DEC /* pinterestSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinterestSwiftUITests.swift; sourceTree = "<group>"; };
 		492E5F551E9578E600A75DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497C8B081E98870900868C78 /* CompartirPageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompartirPageItemController.swift; sourceTree = "<group>"; };
-		497C8B091E98870900868C78 /* ConsejosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsejosTableViewCell.swift; sourceTree = "<group>"; };
-		497C8B0A1E98870900868C78 /* ConsejosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsejosTableViewController.swift; sourceTree = "<group>"; };
 		497C8B0B1E98870900868C78 /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		497C8B0C1E98870900868C78 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		497C8B0D1E98870900868C78 /* Errores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errores.swift; sourceTree = "<group>"; };
 		497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
-		497C8B0F1E98870900868C78 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		497C8B101E98870900868C78 /* MenuDeslizanteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDeslizanteController.swift; sourceTree = "<group>"; };
 		497C8B111E98870900868C78 /* MenuPlatillos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPlatillos.swift; sourceTree = "<group>"; };
 		497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPlatillosTableViewCell.swift; sourceTree = "<group>"; };
-		497C8B131E98870900868C78 /* ModeloTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeloTableViewController.swift; sourceTree = "<group>"; };
 		497C8B141E98870900868C78 /* OpenPayRestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPayRestApi.swift; sourceTree = "<group>"; };
 		497C8B151E98870900868C78 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
-		497C8B161E98870900868C78 /* PasosConsejosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasosConsejosViewController.swift; sourceTree = "<group>"; };
 		497C8B171E98870900868C78 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		497C8B181E98870900868C78 /* PlatillosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatillosViewController.swift; sourceTree = "<group>"; };
 		497C8B191E98870900868C78 /* PopUpViewControllerCompartir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewControllerCompartir.swift; sourceTree = "<group>"; };
@@ -113,11 +100,8 @@
 		497C8B281E98870900868C78 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		497C8B291E98870900868C78 /* SearchControllerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerBaseViewController.swift; sourceTree = "<group>"; };
 		497C8B2A1E98870900868C78 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		497C8B2B1E98870900868C78 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		497C8B2C1E98870900868C78 /* TuCuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuCuentaViewController.swift; sourceTree = "<group>"; };
 		497C8B2D1E98870900868C78 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		497C8B2E1E98870900868C78 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		497C8B2F1E98870900868C78 /* ViralizacionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViralizacionTableCell.swift; sourceTree = "<group>"; };
 		497C8B581E98872900868C78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		497C8B5F1E98877200868C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		497C8B611E98877200868C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +157,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3B63C9B31F2A787100758EEB /* menu hamburger */ = {
+			isa = PBXGroup;
+			children = (
+				497C8B691E9888D300868C78 /* SWRevealViewController.m */,
+				497C8B681E9888CC00868C78 /* SWRevealViewController.h */,
+			);
+			name = "menu hamburger";
+			sourceTree = "<group>";
+		};
+		3B63C9B41F2A789300758EEB /* Pop Ups */ = {
+			isa = PBXGroup;
+			children = (
+				499097A71E988D4F00FB5A35 /* PopUpViewControllerCompartir.xib */,
+				497C8B191E98870900868C78 /* PopUpViewControllerCompartir.swift */,
+				499097A91E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib */,
+				497C8B1A1E98870900868C78 /* PopUpViewControllerDescripcion.swift */,
+				499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */,
+				497C8B1D1E98870900868C78 /* PopUpViewControllerRecuperar.swift */,
+				499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */,
+				497C8B1E1E98870900868C78 /* PopUpViewControllerRegistro.swift */,
+			);
+			name = "Pop Ups";
+			sourceTree = "<group>";
+		};
 		492E5F271E9578E500A75DEC = {
 			isa = PBXGroup;
 			children = (
@@ -199,31 +207,20 @@
 		492E5F321E9578E600A75DEC /* pinterestSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3B63C9B41F2A789300758EEB /* Pop Ups */,
+				3B63C9B31F2A787100758EEB /* menu hamburger */,
 				497C8B081E98870900868C78 /* CompartirPageItemController.swift */,
-				497C8B091E98870900868C78 /* ConsejosTableViewCell.swift */,
-				497C8B0A1E98870900868C78 /* ConsejosTableViewController.swift */,
 				497C8B0B1E98870900868C78 /* Constantes.swift */,
 				497C8B0C1E98870900868C78 /* ContentViewController.swift */,
 				497C8B0D1E98870900868C78 /* Errores.swift */,
 				497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */,
-				497C8B0F1E98870900868C78 /* MenuController.swift */,
 				497C8B101E98870900868C78 /* MenuDeslizanteController.swift */,
 				497C8B111E98870900868C78 /* MenuPlatillos.swift */,
 				497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */,
-				497C8B131E98870900868C78 /* ModeloTableViewController.swift */,
 				497C8B141E98870900868C78 /* OpenPayRestApi.swift */,
 				497C8B151E98870900868C78 /* PageItemController.swift */,
-				497C8B161E98870900868C78 /* PasosConsejosViewController.swift */,
 				497C8B171E98870900868C78 /* PerfilViewController.swift */,
 				497C8B181E98870900868C78 /* PlatillosViewController.swift */,
-				499097A71E988D4F00FB5A35 /* PopUpViewControllerCompartir.xib */,
-				497C8B191E98870900868C78 /* PopUpViewControllerCompartir.swift */,
-				499097A91E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib */,
-				497C8B1A1E98870900868C78 /* PopUpViewControllerDescripcion.swift */,
-				499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */,
-				497C8B1D1E98870900868C78 /* PopUpViewControllerRecuperar.swift */,
-				499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */,
-				497C8B1E1E98870900868C78 /* PopUpViewControllerRegistro.swift */,
 				497C8B221E98870900868C78 /* PrincipalTableViewCell.swift */,
 				497C8B231E98870900868C78 /* PrincipalTableViewController.swift */,
 				497C8B241E98870900868C78 /* Product.swift */,
@@ -232,16 +229,11 @@
 				497C8B281E98870900868C78 /* RegistroViewController.swift */,
 				497C8B291E98870900868C78 /* SearchControllerBaseViewController.swift */,
 				497C8B2A1E98870900868C78 /* SearchResultsViewController.swift */,
-				497C8B2B1E98870900868C78 /* TableViewCell.swift */,
 				497C8B5E1E98877200868C78 /* LaunchScreen.xib */,
 				497C8B601E98877200868C78 /* Main.storyboard */,
-				497C8B2C1E98870900868C78 /* TuCuentaViewController.swift */,
 				497C8B2D1E98870900868C78 /* TutorialViewController.swift */,
 				497C8B2E1E98870900868C78 /* ViewController.swift */,
-				497C8B2F1E98870900868C78 /* ViralizacionTableCell.swift */,
 				492E5F331E9578E600A75DEC /* AppDelegate.swift */,
-				497C8B691E9888D300868C78 /* SWRevealViewController.m */,
-				497C8B681E9888CC00868C78 /* SWRevealViewController.h */,
 				497C8B581E98872900868C78 /* Images.xcassets */,
 				492E5F3F1E9578E600A75DEC /* Info.plist */,
 				499EB5DC1E957B1A00DF8A3B /* pinterestSwift-Bridging-Header.h */,
@@ -498,10 +490,7 @@
 				497C8B511E98870900868C78 /* SearchControllerBaseViewController.swift in Sources */,
 				497C8B6A1E9888D300868C78 /* SWRevealViewController.m in Sources */,
 				497C8B331E98870900868C78 /* Constantes.swift in Sources */,
-				497C8B371E98870900868C78 /* MenuController.swift in Sources */,
 				497C8B4F1E98870900868C78 /* RegalosTableViewController.swift in Sources */,
-				497C8B321E98870900868C78 /* ConsejosTableViewController.swift in Sources */,
-				497C8B311E98870900868C78 /* ConsejosTableViewCell.swift in Sources */,
 				497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */,
 				497C8B391E98870900868C78 /* MenuPlatillos.swift in Sources */,
 				497C8B4E1E98870900868C78 /* QuienesSomosViewController.swift in Sources */,
@@ -511,24 +500,19 @@
 				497C8B351E98870900868C78 /* Errores.swift in Sources */,
 				497C8B501E98870900868C78 /* RegistroViewController.swift in Sources */,
 				497C8B551E98870900868C78 /* TutorialViewController.swift in Sources */,
-				497C8B3B1E98870900868C78 /* ModeloTableViewController.swift in Sources */,
 				497C8B401E98870900868C78 /* PlatillosViewController.swift in Sources */,
 				497C8B4C1E98870900868C78 /* Product.swift in Sources */,
 				497C8B421E98870900868C78 /* PopUpViewControllerDescripcion.swift in Sources */,
-				497C8B571E98870900868C78 /* ViralizacionTableCell.swift in Sources */,
 				497C8B4B1E98870900868C78 /* PrincipalTableViewController.swift in Sources */,
 				497C8B521E98870900868C78 /* SearchResultsViewController.swift in Sources */,
 				497C8B451E98870900868C78 /* PopUpViewControllerRecuperar.swift in Sources */,
 				497C8B3C1E98870900868C78 /* OpenPayRestApi.swift in Sources */,
 				497C8B561E98870900868C78 /* ViewController.swift in Sources */,
-				497C8B531E98870900868C78 /* TableViewCell.swift in Sources */,
 				497C8B3D1E98870900868C78 /* PageItemController.swift in Sources */,
 				497C8B461E98870900868C78 /* PopUpViewControllerRegistro.swift in Sources */,
 				497C8B3F1E98870900868C78 /* PerfilViewController.swift in Sources */,
 				497C8B3A1E98870900868C78 /* MenuPlatillosTableViewCell.swift in Sources */,
 				497C8B301E98870900868C78 /* CompartirPageItemController.swift in Sources */,
-				497C8B3E1E98870900868C78 /* PasosConsejosViewController.swift in Sources */,
-				497C8B541E98870900868C78 /* TuCuentaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-class PrincipalTableViewController: ModeloTableViewController {
+class PrincipalTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
     //Para decirnos cual es la opcion que corresponde a cada posicion del menu
