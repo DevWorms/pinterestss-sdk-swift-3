@@ -56,7 +56,38 @@ class PrincipalTableViewController: UITableViewController {
     
     var popViewController: PopUpViewControllerCompartir!
     
+    var iMinSessions = 3
+    var iTryAgainSessions = 6
     
+    func rateMe() {
+        let neverRate = UserDefaults.standard.bool(forKey: "neverRate")
+        var numLaunches = UserDefaults.standard.integer(forKey: "numLaunches") + 1
+        
+        if (!neverRate && (numLaunches == iMinSessions || numLaunches >= (iMinSessions + iTryAgainSessions + 1)))
+        {
+            showRateMe()
+            numLaunches = iMinSessions + 1
+        }
+        UserDefaults.standard.set(numLaunches, forKey: "numLaunches")
+    }
+    
+    func showRateMe() {
+        let alert = UIAlertController(title: "Rate Us", message: "Thanks for using <APP NAME>", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Rate <APP NAME>", style: UIAlertActionStyle.default, handler: { alertAction in
+            
+            UIApplication.shared.open( URL(string: "itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=<iTUNES CONNECT APP ID>")! , options: [:], completionHandler: nil)
+            
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.default, handler: { alertAction in
+            UserDefaults.standard.set(true, forKey: "neverRate")
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Maybe Later", style: UIAlertActionStyle.default, handler: { alertAction in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -175,11 +206,9 @@ class PrincipalTableViewController: UITableViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
             
-            
-            
-            
-         
         }
+        
+        self.rateMe()
     }
     
     override func didReceiveMemoryWarning() {
