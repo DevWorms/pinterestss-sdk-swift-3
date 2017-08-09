@@ -13,31 +13,6 @@ import ParseFacebookUtilsV4
 import TwitterKit
 import Alamofire
 
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
-
 class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver  {
     let producto = "CocinaMexicanaRecetasFaciles"
     
@@ -72,7 +47,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().add(self)
         
         self.lEstatus.alpha = 0
         
@@ -106,11 +81,16 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 if PFFacebookUtils.isLinked(with: PFUser.current()!){
                     getFBUserData()
                 } else if(PFUser.current() != nil){
-                     getParseUserData()
+                    getParseUserData()
                     
                 }
             }
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func getFBUserData(){
@@ -127,6 +107,12 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 }
             })
         }
+    }
+    
+    func restorePurchases() {
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+        
     }
     
     func loadFBProfileImage(_ url:String){
@@ -168,10 +154,9 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
         self.lCorreoElectronico.text = PFUser.current()!.email
         self.imageViewProfile.image = UIImage(named: ("frida"))
         
-        func display_image()
-        {
+        DispatchQueue.main.async {
             UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-            
+                
                 self.imageViewProfile.alpha = 100
                 
                 self.lEstatus.alpha = 100
@@ -184,12 +169,142 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 self.consultarCliente()
                 
             }, completion: nil)
-            
         }
+    }
+    
+    func consultarCliente() {
         
-        DispatchQueue.main.async(execute: display_image)
+        self.lEstatus.alpha = 0
+        
+        let receiptURL = Bundle.main.appStoreReceiptURL
+        print(receiptURL!)
+        
+        do {
+            
+            
+            
+            let receipt = try Data(contentsOf: receiptURL!)
+            print(receipt)
+            
+            print("\n\n ******QUIERO SABER SI ESTOY AQUI****** \n\n")
+            
+            
+            
+            let requestContents: [String: Any] = [
+                "receipt-data": receipt.base64EncodedString(options: []),
+                "password": "b7f13ceae7454c23aba22b373352337b"
+            ]
+            
+            
+            let appleServer = receiptURL?.lastPathComponent == "sandboxReceipt" ? "sandbox" : "buy"
+            
+            let stringURL = "https://\(appleServer).itunes.apple.com/verifyReceipt"
+            
+            print("Loading user receipt: \(stringURL)...")
+            
+            _ = Alamofire.request(stringURL, method: .post, parameters: requestContents, encoding: JSONEncoding.default)
+                
+                .responseJSON { response in
+                    
+                    if let value = response.result.value as? NSDictionary {
+                        //  print(value)
+                        
+                        if let json = value["latest_receipt_info"] {
+                            
+                            var jsonStr = String(describing:json)
+                            jsonStr.remove(at: jsonStr.index(before: jsonStr.endIndex))
+                            jsonStr.remove(at: jsonStr.startIndex)
+                            jsonStr = jsonStr.replacingOccurrences(of: ";", with: ",")
+                            jsonStr = jsonStr.replacingOccurrences(of: "=", with: ":")
+                            jsonStr = jsonStr.replacingOccurrences(of: "quantity", with: "\"quantity\"")
+                            jsonStr = jsonStr.replacingOccurrences(of: self.producto, with: "\""+self.producto+"\"")
+                            jsonStr = jsonStr.replacingOccurrences(of: ",\n    }", with: "\n    }")
+                            jsonStr = " [ "+jsonStr+" ] "
+                            print(jsonStr)
+                            
+                            
+                            if let data = jsonStr.data(using: .utf8) {
+                                do {
+                                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
+                                        print(jsonArray.count)
+                                        let ultimaSubscripcion = jsonArray.last
+                                        if var dateString = ultimaSubscripcion?["expires_date"] as? String{
+                                            dateString = dateString.replacingOccurrences(of: "Etc/GMT", with: "")
+                                            print(dateString)
+                                            
+                                            let dateFormatter = DateFormatter()
+                                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Your date format
+                                            dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT") as TimeZone!
+                                            
+                                            let date = dateFormatter.date(from: dateString) //according to date format your date string
+                                            
+                                            let fechaActual =  NSDate()
+                                            
+                                            print(date ?? "", fechaActual) //Convert String to Date
+                                            
+                                            var suscrito = false
+                                            if date! < fechaActual as Date{
+                                                print("suscripcion esta expirada")
+                                                suscrito = false
+                                                
+                                            }
+                                            else{
+                                                print("suscripcion activa")
+                                                suscrito = true
+                                                
+                                            }
+                                            
+                                            if suscrito {
+                                                self.lEstatus.text = "Suscrito"
+                                                
+                                            }
+                                            else{
+                                                self.lEstatus.text = "Sin inscripción actual"
+                                                
+                                            }
+                                            
+                                            
+                                            func display_image()
+                                            {
+                                                
+                                                UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                                                    
+                                                    self.imageViewProfile.alpha = 100
+                                                    self.lEstatus.alpha = 100
+                                                    //self.lNombreUsuario.alpha = 100
+                                                    self.bCerrarSesion.alpha = 100
+                                                    self.lCorreoElectronico.alpha = 100
+                                                    self.loadingAction.stopAnimating()
+                                                    self.loadingAction.isHidden = true
+                                                    //self.consultarCliente()
+                                                }, completion: nil)
+                                                
+                                            }
+                                            
+                                            DispatchQueue.main.async(execute: display_image)
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                    
+                                } catch {
+                                    print(error.localizedDescription)
+                                }
+                            }
+                            
+                            
+                        }
+                    } else {
+                        print("Receiving receipt from App Store failed: \(response.result)")
+                    }
+            }
+        
+        } catch { print("Couldn't read receipt data with error: " + error.localizedDescription) }
+        
         
     }
+
     
     @IBAction func cerrarSesion(_ sender: AnyObject) {
         
@@ -197,17 +312,6 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login")
                 self.present( vc! , animated: true, completion: nil)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func restorePurchases() {
-        SKPaymentQueue.default().add(self)
-        SKPaymentQueue.default().restoreCompletedTransactions()
-        
     }
     
     @available(iOS 3.0, *)
@@ -332,140 +436,8 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                 SKPaymentQueue.default().remove(self)
             }
         }
-        
     }
 
-    func consultarCliente() {
-        self.lEstatus.alpha = 0
-        
-        
-        let receiptURL = Bundle.main.appStoreReceiptURL
-        
-        let receipt = NSData(contentsOf: receiptURL!)
-        
-        let requestContents: [String: Any] = [
-            
-            "receipt-data": receipt!.base64EncodedString(options: []),
-            
-            "password": "b7f13ceae7454c23aba22b373352337b"
-            
-        ]
-        
-        
-        let appleServer = receiptURL?.lastPathComponent == "sandboxReceipt" ? "sandbox" : "buy"
-        
-        
-        
-        let stringURL = "https://\(appleServer).itunes.apple.com/verifyReceipt"
-        
-        
-        
-        print("Loading user receipt: \(stringURL)...")
-        
-        
-        
-        _ = Alamofire.request(stringURL, method: .post, parameters: requestContents, encoding: JSONEncoding.default)
-            
-            .responseJSON { response in
-                
-                if let value = response.result.value as? NSDictionary {
-                    //  print(value)
-                    
-                    
-                    if let json = value["latest_receipt_info"] {
-                        
-                        
-                        
-                        var jsonStr = String(describing:json)
-                        jsonStr.remove(at: jsonStr.index(before: jsonStr.endIndex))
-                        jsonStr.remove(at: jsonStr.startIndex)
-                        jsonStr = jsonStr.replacingOccurrences(of: ";", with: ",")
-                        jsonStr = jsonStr.replacingOccurrences(of: "=", with: ":")
-                        jsonStr = jsonStr.replacingOccurrences(of: "quantity", with: "\"quantity\"")
-                        jsonStr = jsonStr.replacingOccurrences(of: self.producto, with: "\""+self.producto+"\"")
-                        jsonStr = jsonStr.replacingOccurrences(of: ",\n    }", with: "\n    }")
-                        jsonStr = " [ "+jsonStr+" ] "
-                        print(jsonStr)
-                        
-                        
-                        if let data = jsonStr.data(using: .utf8) {
-                            do {
-                                if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
-                                    print(jsonArray.count)
-                                    let ultimaSubscripcion = jsonArray.last
-                                    if var dateString = ultimaSubscripcion?["expires_date"] as? String{
-                                        dateString = dateString.replacingOccurrences(of: "Etc/GMT", with: "")
-                                        print(dateString)
-                                        
-                                        let dateFormatter = DateFormatter()
-                                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Your date format
-                                        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT") as TimeZone!
-                                        
-                                        let date = dateFormatter.date(from: dateString) //according to date format your date string
-                                        
-                                        let fechaActual =  NSDate()
-                                        
-                                        print(date ?? "", fechaActual) //Convert String to Date
-                                        
-                                        var suscrito = false
-                                        if date! < fechaActual as Date{
-                                            print("suscripcion esta expirada")
-                                            suscrito = false
-                                            
-                                        }
-                                        else{
-                                            print("suscripcion activa")
-                                            suscrito = true
-
-                                        }
-                                        
-                                        if suscrito {
-                                            self.lEstatus.text = "Suscrito"
-                                           
-                                        }
-                                        else{
-                                            self.lEstatus.text = "Sin inscripción actual"
-                                            
-                                        }
-                                        
-                                        
-                                        func display_image()
-                                        {
-                                            
-                                            UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                                                
-                                                self.imageViewProfile.alpha = 100
-                                                self.lEstatus.alpha = 100
-                                                //self.lNombreUsuario.alpha = 100
-                                                self.bCerrarSesion.alpha = 100
-                                                self.lCorreoElectronico.alpha = 100
-                                                self.loadingAction.stopAnimating()
-                                                self.loadingAction.isHidden = true
-                                                //self.consultarCliente()
-                                            }, completion: nil)
-                                            
-                                        }
-                                        
-                                        DispatchQueue.main.async(execute: display_image)
-                                        
-                                    }
-                                    
-                                }
-                                
-                                
-                            } catch {
-                                print(error.localizedDescription)
-                            }
-                        }
-                        
-                        
-                    }
-                } else {
-                    print("Receiving receipt from App Store failed: \(response.result)")
-                }
-        }
-    }
-    
     func load_image(_ urlString:String) {
         let imgURL: URL = URL(string: urlString)!
         let request: URLRequest = URLRequest(url: imgURL)
@@ -515,7 +487,7 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
                     
                     
                     let tarjetaId = (card["tarjetaPrincipal"] as? String)!
-                    UserDefaults.standard.setValue(tarjetaId, forKey: guardarEnMemoria.tarjetaId)
+                    UserDefaults.standard.setValue(tarjetaId, forKey: "tarjetaId")
                     
 
                     
@@ -539,318 +511,90 @@ class PerfilViewController: UIViewController, SKProductsRequestDelegate, SKPayme
     }
     
     @IBAction func btnCancelarSuscripcion(_ sender: AnyObject) {
-    
-      
         
       if btnPresionado == false{
         self.btnPresionado = true
         self.loadingAction.startAnimating()
         self.loadingAction.isHidden = false
         
-        let headers = [
-            "content-type": "application/json",
-            "authorization": pagoOpenPay.auth,
-            "cache-control": "no-cache",
-            "postman-token": "be18bd94-8ab2-4c9f-03ac-c298ae52c8c5"
-        ]
+        self.clienteObjeto["Suscrito"] = false
+        self.clienteObjeto["codigobarras"] = ""
+        self.clienteObjeto["idsuscripcion"] = ""
+        self.clienteObjeto["caducidad"] = ""
+        self.clienteObjeto["transaction_id_tienda"] = ""
         
-        let clienteId = UserDefaults.standard.value(forKey: guardarEnMemoria.clienteId)! as? String
-        
-        let suscripcion =  (self.clienteObjeto["idsuscripcion"] as? String)!
-        
-        let  strUrl = pagoOpenPay.url+pagoOpenPay.merchantId+"/customers/"
-        let strParams = clienteId! + "/subscriptions/"+suscripcion
-        let request = NSMutableURLRequest(url: URL(string: strUrl+strParams)!,
-            cachePolicy: .useProtocolCachePolicy,
-            timeoutInterval: 10.0)
-        request.httpMethod = "DELETE"
-        request.allHTTPHeaderFields = headers
-        
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error!)
-                self.loadingAction.stopAnimating()
-                self.loadingAction.isHidden = true
-                self.bCancelarSuscripcion.isHidden = true
-                self.btnPresionado = false
-                let alertController = UIAlertController(title: "Error de cancelación",
-                    message: "La suscripción no puede darse de baja por el momento, intente mas tarde",
-                    preferredStyle: UIAlertControllerStyle.alert)
-                
-                alertController.addAction(UIAlertAction(title: "OK",
-                    style: UIAlertActionStyle.default,
-                    handler: nil))
-                
-                // Display alert
-                self.present(alertController, animated: true, completion: nil)
-                
+        self.clienteObjeto.saveInBackground(block: { (sucess, error) -> Void in
             
-            } else {
+            self.loadingAction.stopAnimating()
+            self.loadingAction.isHidden = true
+            self.bCancelarSuscripcion.isHidden = true
+            self.btnPresionado = false
+            let alertController = UIAlertController(title: "Suscripción cancelada",
+                                                    message: "La suscripción se dió de baja correctamente",
+                                                    preferredStyle: UIAlertControllerStyle.alert)
             
-                    //print(response!)
-                    //let httpResponse = response as? HTTPURLResponse
-                    //print(httpResponse)
-                    self.clienteObjeto["Suscrito"] = false
-                    self.clienteObjeto["codigobarras"] = ""
-                    self.clienteObjeto["idsuscripcion"] = ""
-                    self.clienteObjeto["caducidad"] = ""
-                    self.clienteObjeto["transaction_id_tienda"] = ""
-                        
-                    self.clienteObjeto.saveInBackground(block: { (sucess, error) -> Void in
-                            
-                    self.loadingAction.stopAnimating()
-                    self.loadingAction.isHidden = true
-                    self.bCancelarSuscripcion.isHidden = true
-                    self.btnPresionado = false
-                    let alertController = UIAlertController(title: "Suscripción cancelada",
-                            message: "La suscripción se dió de baja correctamente",
-                            preferredStyle: UIAlertControllerStyle.alert)
-                            
-                    alertController.addAction(UIAlertAction(title: "OK",
-                            style: UIAlertActionStyle.default,
-                            handler: nil))
-                            // Display alert
-                        self.present(alertController, animated: true, completion: nil)
-                            
-                        self.consultarCliente()
-                        
-                    })
-                
-                }
+            alertController.addAction(UIAlertAction(title: "OK",
+                                                    style: UIAlertActionStyle.default,
+                                                    handler: nil))
+            // Display alert
+            self.present(alertController, animated: true, completion: nil)
+            
+            self.consultarCliente()
+            
         })
         
-        dataTask.resume()
       }
     }
     
     @IBAction func btnEliminarTarjeta(_ sender: AnyObject) {
         
         if self.btnPresionado == false{
+            
             btnPresionado = true
         
-        self.loadingAction.startAnimating()
-        self.loadingAction.isHidden = false
+            self.loadingAction.startAnimating()
+            self.loadingAction.isHidden = false
             
-            
-            let headers = [
-                "content-type": "application/json",
-                "authorization": pagoOpenPay.auth,
-                "cache-control": "no-cache",
-                "postman-token": "9528190e-c10d-887a-3588-55fce902c283"
-            ]
-            let clienteId = UserDefaults.standard.value(forKey: guardarEnMemoria.clienteId)! as? String
-            let tarjeId = UserDefaults.standard.value(forKey: guardarEnMemoria.tarjetaId)! as? String
-            
-            let strUrl =  pagoOpenPay.url+pagoOpenPay.merchantId+"/customers/"+clienteId!+"/cards/"+tarjeId!
-            
-            let request = NSMutableURLRequest(url: URL(string:strUrl)!,
-                                              cachePolicy: .useProtocolCachePolicy,
-                                              timeoutInterval: 10.0)
-            request.httpMethod = "DELETE"
-            request.allHTTPHeaderFields = headers
-            
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-                if (error != nil) {
-                    //print(error)
+            self.tarjetaObjeto.deleteInBackground { (sucess, error) -> Void in
+                
+                
+                func refresh()
+                    
+                {
                     self.loadingAction.stopAnimating()
                     self.loadingAction.isHidden = true
-                    self.bCancelarSuscripcion.isHidden = true
-                    let alertController = UIAlertController(title: "Error de eliminacion",
-                        message: "La tarjeta no puede darse de baja por el momento, intente mas tarde",
-                        preferredStyle: UIAlertControllerStyle.alert)
+                    self.btnPresionado = false
+                    self.lHolderName.isHidden = true
+                    self.lBrandName.isHidden = true
+                    self.lCardNumber.isHidden = true
+                    //              self.lMensaje.hidden = true
+                    
+                    self.bEliminarTarjeta.isHidden = true
+                    self.bTarjeta.isHidden = true
+                    self.btnPresionado = false
+                    
+                    let alertController = UIAlertController(title: "Tarjeta Borrada",
+                                                            message: "La tarjeta no se recuerda para este cliente",
+                                                            preferredStyle: UIAlertControllerStyle.alert)
                     
                     alertController.addAction(UIAlertAction(title: "OK",
-                        style: UIAlertActionStyle.default,
-                        handler: nil))
-                    
+                                                            style: UIAlertActionStyle.default,
+                                                            handler: nil))
                     // Display alert
                     self.present(alertController, animated: true, completion: nil)
                     
+                    self.consultarCliente()
                     
-                } else {
-                    let httpResponse = response as? HTTPURLResponse
-                    //print(httpResponse)
                     
-                    do {
-                        
-                        let resstr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                        //print(resstr)
-                        
-                        if resstr != ""{
-                        let respuesta = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:AnyObject]
-                        
-                        
-                        let error = (respuesta["error_code"])
-                        
-                        if (error == nil){
-                            
-                            //print(response)
-                            let httpResponse = response as? HTTPURLResponse
-                            //print(httpResponse)
-                            
-                            self.tarjetaObjeto.deleteInBackground { (sucess, error) -> Void in
-                                
-                                
-                                func refresh()
-                                    
-                                {
-                                    self.loadingAction.stopAnimating()
-                                    self.loadingAction.isHidden = true
-                                    self.btnPresionado = false
-                                    self.lHolderName.isHidden = true
-                                    self.lBrandName.isHidden = true
-                                    self.lCardNumber.isHidden = true
-                                    //              self.lMensaje.hidden = true
-                                    
-                                    self.bEliminarTarjeta.isHidden = true
-                                    self.bTarjeta.isHidden = true
-                                    self.btnPresionado = false
-                                    
-                                    let alertController = UIAlertController(title: "Tarjeta Borrada",
-                                        message: "La tarjeta no se recuerda para este cliente",
-                                        preferredStyle: UIAlertControllerStyle.alert)
-                                    
-                                    alertController.addAction(UIAlertAction(title: "OK",
-                                        style: UIAlertActionStyle.default,
-                                        handler: nil))
-                                    // Display alert
-                                    self.present(alertController, animated: true, completion: nil)
-                                    
-                                    self.consultarCliente()
-                                    
-                                    
-                                    
-                                }
-                                
-                                DispatchQueue.main.async(execute: refresh)
-                                
-                            }
-                            
-                        }else{
-                            
-                            if error as? Int == 1005{
-                                self.tarjetaObjeto.deleteInBackground { (sucess, error) -> Void in
-                                    
-                                    
-                                    func refresh()
-                                        
-                                    {
-                                        self.loadingAction.stopAnimating()
-                                        self.loadingAction.isHidden = true
-                                        self.btnPresionado = false
-                                        self.lHolderName.isHidden = true
-                                        self.lBrandName.isHidden = true
-                                        self.lCardNumber.isHidden = true
-                                        //              self.lMensaje.hidden = true
-                                        
-                                        self.bEliminarTarjeta.isHidden = true
-                                        self.bTarjeta.isHidden = true
-                                        self.btnPresionado = false
-                                        
-                                        let alertController = UIAlertController(title: "Tarjeta Borrada",
-                                            message: "La tarjeta no se recuerda para este cliente",
-                                            preferredStyle: UIAlertControllerStyle.alert)
-                                        
-                                        alertController.addAction(UIAlertAction(title: "OK",
-                                            style: UIAlertActionStyle.default,
-                                            handler: nil))
-                                        // Display alert
-                                        self.present(alertController, animated: true, completion: nil)
-                                        
-                                        self.consultarCliente()
-                                        
-                                        
-                                        
-                                    }
-                                    
-                                    DispatchQueue.main.async(execute: refresh)
-                                    
-                                }
-
-                            }
-                            else {
-                                func refresh()
-                                    
-                                {
-                                    self.loadingAction.stopAnimating()
-                                    self.loadingAction.isHidden = true
-                                    self.btnPresionado = false
-                            
-                                    if let err = error{
-                                        let alertController = UIAlertController(title: "Error de eliminacion",
-                                        message: Errores().getError(String(describing: err)),
-                                        preferredStyle: UIAlertControllerStyle.alert)
-                            
-                                        alertController.addAction(UIAlertAction(title: "OK",
-                                            style: UIAlertActionStyle.default,
-                                            handler: nil))
-                                        // Display alert
-                                        self.present(alertController, animated: true, completion: nil)
-                                    }
-                                }
-                                DispatchQueue.main.async(execute: refresh)
-
-                            }
-                        }
-                        }else{
-                            self.tarjetaObjeto.deleteInBackground { (sucess, error) -> Void in
-                                
-                                
-                                func refresh()
-                                    
-                                {
-                                    self.loadingAction.stopAnimating()
-                                    self.loadingAction.isHidden = true
-                                    self.btnPresionado = false
-                                    self.lHolderName.isHidden = true
-                                    self.lBrandName.isHidden = true
-                                    self.lCardNumber.isHidden = true
-                                    //              self.lMensaje.hidden = true
-                                    
-                                    self.bEliminarTarjeta.isHidden = true
-                                    self.bTarjeta.isHidden = true
-                                    self.btnPresionado = false
-                                    
-                                    let alertController = UIAlertController(title: "Tarjeta Borrada",
-                                        message: "La tarjeta no se recuerda para este cliente",
-                                        preferredStyle: UIAlertControllerStyle.alert)
-                                    
-                                    alertController.addAction(UIAlertAction(title: "OK",
-                                        style: UIAlertActionStyle.default,
-                                        handler: nil))
-                                    // Display alert
-                                    self.present(alertController, animated: true, completion: nil)
-                                    
-                                    self.consultarCliente()
-                                    
-                                    
-                                    
-                                }
-                                
-                                DispatchQueue.main.async(execute: refresh)
-                                
-                            }
-
-                        }
-                    }catch let error as NSError
-                    {
-                        self.loadingAction.stopAnimating()
-                        self.loadingAction.isHidden = true
-                        self.btnPresionado = false
-                        
-                        print(error)
-                    }
+                    
                 }
-            })
-            
-            dataTask.resume()
-        
-        
+                
+                DispatchQueue.main.async(execute: refresh)
+                
+            }
         
           
+        }
     }
-  }
 
 }

@@ -10,30 +10,6 @@ import UIKit
 import Parse
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
-//import ParseTwitterUtils
-//import  ParseFacebookUtilsV4
 
 class SearchResultsViewController: SearchControllerBaseViewController, UISearchResultsUpdating {
     // MARK: Types
@@ -344,12 +320,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                         
                         let clientId = (cliente["clientID"] as? String)!
                         
-                        UserDefaults.standard.setValue(clientId, forKey: guardarEnMemoria.clienteId)
-                        
-                        
-                        
-                        OpenPayRestApi.consultarSuscripcion(cliente)
-                        
+                        UserDefaults.standard.setValue(clientId, forKey: "clienteId")
                         
                         
                         // This does not require a network access.
@@ -466,7 +437,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                 
                 //Si hay un cliente recupera su clientID y sale del metodo
                 if let _ = tarjetas as [PFObject]? {
-                    if(tarjetas?.count>0){
+                    if((tarjetas?.count)!>0){
                         for _ in tarjetas! {
                         /*
                             self.popViewControllerWallet = PopUpViewControllerWallet(nibName: "PopUpViewControllerWallet", bundle: nil)

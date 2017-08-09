@@ -9,35 +9,7 @@
 
 import UIKit
 import Parse
-
 import ParseFacebookUtilsV4
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
-//import ParseTwitterUtils
-//import ParseFacebookUtilsV4
 
 class PlatillosViewController: UIViewController{
     @IBOutlet weak var imageViewReceta: UIImageView!
@@ -77,7 +49,7 @@ class PlatillosViewController: UIViewController{
             if error == nil {
                 
                 //Revisa si ese cliente tiene esa receta para mandar un mensaje de error al tratar de añadirla de nuevo
-                if recetas != nil && recetas?.count>0 {
+                if recetas != nil && (recetas?.count)!>0 {
                     self.imgButtonLike.image = UIImage(named: "like release")
                 }
                 else{
@@ -102,9 +74,7 @@ class PlatillosViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
+
         activityLoader.isHidden = false
         activityLoader.startAnimating()
         
@@ -113,16 +83,10 @@ class PlatillosViewController: UIViewController{
         let pangesture = UIPanGestureRecognizer(target: self, action: #selector(PlatillosViewController.dragview(_:)))
         contenidoDeLaRecetaView.addGestureRecognizer(pangesture)
         self.posicionInicialContenedor = CGFloat(0.0)
-        
-        
-        
-        
-
        
     }
 
-    func dragview(_ panGestureRecognizer:UIPanGestureRecognizer)
-    {
+    func dragview(_ panGestureRecognizer:UIPanGestureRecognizer) {
         let touchlocation = panGestureRecognizer.velocity(in: self.view)
         
         if  self.posicionInicialContenedor == CGFloat(0){
@@ -171,14 +135,10 @@ class PlatillosViewController: UIViewController{
         }
         
         DispatchQueue.main.async(execute: display_image)
-        
 
     }
 
-    
-    
-    func loadRecetaInformation()
-    {
+    func loadRecetaInformation() {
         func display_image()
         {
             
@@ -233,15 +193,11 @@ class PlatillosViewController: UIViewController{
         }
         
         DispatchQueue.main.async(execute: display_image)
-
-        
-        
        
     }
     
     
-    func pantallaSizeCuerpo()->CGFloat!
-    {
+    func pantallaSizeCuerpo()->CGFloat! {
         var strPantalla = 15 //iphone 5
         if (UIDevice.current.userInterfaceIdiom == .pad)
         {
@@ -262,8 +218,7 @@ class PlatillosViewController: UIViewController{
         return CGFloat(strPantalla)
     }
     
-    func pantallaSizeScroll()->CGFloat!
-    {
+    func pantallaSizeScroll()->CGFloat! {
         var strPantalla = 0 //iphone 5
         if (UIDevice.current.userInterfaceIdiom == .pad)
         {
@@ -284,9 +239,7 @@ class PlatillosViewController: UIViewController{
         return CGFloat(strPantalla)
     }
 
-    
-    func pantallaSizeTitulo()->CGFloat!
-    {
+    func pantallaSizeTitulo()->CGFloat! {
         var strPantalla = 20 //iphone 5
         if (UIDevice.current.userInterfaceIdiom == .pad)
         {
@@ -306,8 +259,6 @@ class PlatillosViewController: UIViewController{
         }
         return CGFloat(strPantalla)
     }
-    
-
     
     func cargarImagen(_ url:String){
         
@@ -385,7 +336,7 @@ class PlatillosViewController: UIViewController{
                 if error == nil {
                 
                     //Revisa si ese cliente tiene esa receta para mandar un mensaje de error al tratar de añadirla de nuevo
-                    if recetas != nil && recetas?.count>0 {
+                    if recetas != nil && (recetas?.count)!>0 {
                  
                         // The object has been saved.
                         let alertController = UIAlertController(title: "¡Esta receta ya fue añadida!",
@@ -453,20 +404,5 @@ class PlatillosViewController: UIViewController{
         self.popViewController.showInView(self.view, animated: true, receta: self.objReceta, imagenReceta: self.imageViewReceta.image!)
         
     }
-    
-    /*
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "viralizarUno"{
-            
-        }
-        
-    }
-*/
-
-    
-    
     
 }

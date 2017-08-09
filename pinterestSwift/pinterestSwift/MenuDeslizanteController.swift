@@ -61,11 +61,5 @@ class MenuDeslizanteController: UITableViewController {
             }
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        
-      
-        
-    }
 
 }

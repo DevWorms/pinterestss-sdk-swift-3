@@ -10,14 +10,11 @@
 		492E5F341E9578E600A75DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F331E9578E600A75DEC /* AppDelegate.swift */; };
 		492E5F491E9578E600A75DEC /* pinterestSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F481E9578E600A75DEC /* pinterestSwiftTests.swift */; };
 		492E5F541E9578E600A75DEC /* pinterestSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E5F531E9578E600A75DEC /* pinterestSwiftUITests.swift */; };
-		497C8B331E98870900868C78 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0B1E98870900868C78 /* Constantes.swift */; };
 		497C8B341E98870900868C78 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0C1E98870900868C78 /* ContentViewController.swift */; };
-		497C8B351E98870900868C78 /* Errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0D1E98870900868C78 /* Errores.swift */; };
 		497C8B361E98870900868C78 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */; };
 		497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B101E98870900868C78 /* MenuDeslizanteController.swift */; };
 		497C8B391E98870900868C78 /* MenuPlatillos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B111E98870900868C78 /* MenuPlatillos.swift */; };
 		497C8B3A1E98870900868C78 /* MenuPlatillosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */; };
-		497C8B3C1E98870900868C78 /* OpenPayRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B141E98870900868C78 /* OpenPayRestApi.swift */; };
 		497C8B3D1E98870900868C78 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B151E98870900868C78 /* PageItemController.swift */; };
 		497C8B3F1E98870900868C78 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B171E98870900868C78 /* PerfilViewController.swift */; };
 		497C8B401E98870900868C78 /* PlatillosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497C8B181E98870900868C78 /* PlatillosViewController.swift */; };
@@ -75,14 +72,11 @@
 		492E5F4F1E9578E600A75DEC /* pinterestSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinterestSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		492E5F531E9578E600A75DEC /* pinterestSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinterestSwiftUITests.swift; sourceTree = "<group>"; };
 		492E5F551E9578E600A75DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		497C8B0B1E98870900868C78 /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		497C8B0C1E98870900868C78 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		497C8B0D1E98870900868C78 /* Errores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errores.swift; sourceTree = "<group>"; };
 		497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
 		497C8B101E98870900868C78 /* MenuDeslizanteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDeslizanteController.swift; sourceTree = "<group>"; };
 		497C8B111E98870900868C78 /* MenuPlatillos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPlatillos.swift; sourceTree = "<group>"; };
 		497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPlatillosTableViewCell.swift; sourceTree = "<group>"; };
-		497C8B141E98870900868C78 /* OpenPayRestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPayRestApi.swift; sourceTree = "<group>"; };
 		497C8B151E98870900868C78 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		497C8B171E98870900868C78 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		497C8B181E98870900868C78 /* PlatillosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatillosViewController.swift; sourceTree = "<group>"; };
@@ -207,14 +201,11 @@
 			children = (
 				3B63C9B41F2A789300758EEB /* Pop Ups */,
 				3B63C9B31F2A787100758EEB /* menu hamburger */,
-				497C8B0B1E98870900868C78 /* Constantes.swift */,
 				497C8B0C1E98870900868C78 /* ContentViewController.swift */,
-				497C8B0D1E98870900868C78 /* Errores.swift */,
 				497C8B0E1E98870900868C78 /* FavoritosTableViewController.swift */,
 				497C8B101E98870900868C78 /* MenuDeslizanteController.swift */,
 				497C8B111E98870900868C78 /* MenuPlatillos.swift */,
 				497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */,
-				497C8B141E98870900868C78 /* OpenPayRestApi.swift */,
 				497C8B151E98870900868C78 /* PageItemController.swift */,
 				497C8B171E98870900868C78 /* PerfilViewController.swift */,
 				497C8B181E98870900868C78 /* PlatillosViewController.swift */,
@@ -486,7 +477,6 @@
 				497C8B4A1E98870900868C78 /* PrincipalTableViewCell.swift in Sources */,
 				497C8B511E98870900868C78 /* SearchControllerBaseViewController.swift in Sources */,
 				497C8B6A1E9888D300868C78 /* SWRevealViewController.m in Sources */,
-				497C8B331E98870900868C78 /* Constantes.swift in Sources */,
 				497C8B4F1E98870900868C78 /* RegalosTableViewController.swift in Sources */,
 				497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */,
 				497C8B391E98870900868C78 /* MenuPlatillos.swift in Sources */,
@@ -494,7 +484,6 @@
 				497C8B341E98870900868C78 /* ContentViewController.swift in Sources */,
 				497C8B411E98870900868C78 /* PopUpViewControllerCompartir.swift in Sources */,
 				497C8B361E98870900868C78 /* FavoritosTableViewController.swift in Sources */,
-				497C8B351E98870900868C78 /* Errores.swift in Sources */,
 				497C8B501E98870900868C78 /* RegistroViewController.swift in Sources */,
 				497C8B551E98870900868C78 /* TutorialViewController.swift in Sources */,
 				497C8B401E98870900868C78 /* PlatillosViewController.swift in Sources */,
@@ -503,7 +492,6 @@
 				497C8B4B1E98870900868C78 /* PrincipalTableViewController.swift in Sources */,
 				497C8B521E98870900868C78 /* SearchResultsViewController.swift in Sources */,
 				497C8B451E98870900868C78 /* PopUpViewControllerRecuperar.swift in Sources */,
-				497C8B3C1E98870900868C78 /* OpenPayRestApi.swift in Sources */,
 				497C8B561E98870900868C78 /* ViewController.swift in Sources */,
 				497C8B3D1E98870900868C78 /* PageItemController.swift in Sources */,
 				497C8B461E98870900868C78 /* PopUpViewControllerRegistro.swift in Sources */,

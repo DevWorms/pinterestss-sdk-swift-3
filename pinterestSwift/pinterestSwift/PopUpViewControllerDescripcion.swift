@@ -205,8 +205,7 @@ import Alamofire
         }
     }
     
-    func productsRequest(_ request: SKProductsRequest!, didReceive response: SKProductsResponse!) {
-        
+    public func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         var products = response.products
         
         if (products.count != 0) {
@@ -216,19 +215,17 @@ import Alamofire
                 self.productsArray.append(product!)
             }
             /*self.viewDidLoad()
-            self.viewWillAppear(true)
-            */
+             self.viewWillAppear(true)
+             */
         } else {
             print("No products found")
         }
         //print(response.description)
         
-        for product in 0 ..< products.count
-        {
+        for product in 0 ..< products.count {
             print("Product not found: \(product)")
         }
     }
-    
     
     @available(iOS 3.0, *)
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
@@ -289,7 +286,7 @@ import Alamofire
     }
     
     
-    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue!) {
+    public func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         print("Transactions Restored")
         
         // var purchasedItemIDS = Array()
@@ -331,8 +328,5 @@ import Alamofire
         vc_alert.addAction(UIAlertAction(title: "OK", style: .cancel , handler: nil))
         self.present(vc_alert, animated: true, completion: nil)
     }
-    
-
-    
     
 }

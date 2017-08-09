@@ -35,9 +35,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Image Background Navigation Bar
         
         UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-        UserDefaults.standard.setValue("", forKey: guardarEnMemoria.clienteId)
+        UserDefaults.standard.setValue("", forKey: "clienteId")
         
-        UserDefaults.standard.setValue("", forKey: guardarEnMemoria.tarjetaId)
+        UserDefaults.standard.setValue("", forKey: "tarjetaId")
         
         
         let navBackgroundImage:UIImage! = UIImage(named: "bienvenidois")

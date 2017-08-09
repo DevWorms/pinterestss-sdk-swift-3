@@ -7,33 +7,8 @@
 //
 import UIKit
 import Parse
-
 import ParseFacebookUtilsV4
 import Alamofire
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
 
 //import ParseTwitterUtils
 //import ParseFacebookUtilsV4
@@ -46,15 +21,13 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
     var product: SKProduct?
     var productsArray = Array<SKProduct>()
     
-
-    
     //Esta variable viene desde menu principal y hace referencia a los menus que deben de comprarse
     
     var menuSeleccionado:PFObject!
     var recetaSeleccionada:PFObject!
     var imagenRecetaSeleccionada:UIImage!
     
-   // var popViewControllerWallet : PopUpViewControllerWallet!
+    // var popViewControllerWallet : PopUpViewControllerWallet!
     //var popViewControllerTarjeta : PopUpViewControllerTarjetas!
     var recetas = [PFObject]()
     var imagenes = [PFObject:UIImage]()
@@ -109,6 +82,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         self.popViewController.context = self
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,8 +91,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
        
     }
     
-    func consultarRecetasDeMenu()
-    {
+    func consultarRecetasDeMenu() {
         let query = PFQuery(className:"Recetas")
         query.whereKey("Menu", equalTo:self.menuSeleccionado)
         query.whereKey("Activada", equalTo:true)
@@ -146,8 +119,6 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         }
     }
     
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -161,7 +132,6 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         return 5
     }
     
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlatilloCell", for: indexPath) as! MenuPlatillosTableViewCell
@@ -169,7 +139,6 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         cargarContenido(cell, indexPath: indexPath)
         
         return cell
-        
     }
     
     func cargarContenido(_ cell: MenuPlatillosTableViewCell, indexPath:IndexPath ){
@@ -193,11 +162,9 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       // let cell = tableView.dequeueReusableCellWithIdentifier("PlatilloCell", forIndexPath: indexPath) as! MenuPlatillosTableViewCell
-        
-          self.recetaSeleccionada = self.recetas[indexPath.row]
-         imagenRecetaSeleccionada = imagenes[recetaSeleccionada];
-         abrirReceta(indexPath)
+        self.recetaSeleccionada = self.recetas[indexPath.row]
+        imagenRecetaSeleccionada = imagenes[recetaSeleccionada];
+        abrirReceta(indexPath)
     }
     
     func abrirReceta( _ indexPath:IndexPath ){
@@ -229,8 +196,6 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
                 alertController.addAction(UIAlertAction(title: "OK",
                     style: UIAlertActionStyle.default,
                     handler: nil))
-              
-                
             }
             else{
                 self.restorePurchases()
@@ -327,9 +292,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         }
     }
     
-    
-    
-    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue!) {
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         print("Transactions Restored")
         
         // var purchasedItemIDS = Array()
@@ -529,7 +492,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
                 
                 //Si hay un cliente recupera su clientID y sale del metodo
                 if let _ = tarjetas as [PFObject]? {
-                    if(tarjetas?.count>0){
+                    if((tarjetas?.count)!>0){
                         for _ in tarjetas! {
                        
                    /*         self.popViewControllerWallet = PopUpViewControllerWallet(nibName: "PopUpViewControllerWallet", bundle: nil)

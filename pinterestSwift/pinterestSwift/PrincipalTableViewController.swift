@@ -8,30 +8,6 @@
 
 import UIKit
 import Parse
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
 
 class PrincipalTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -255,7 +231,7 @@ class PrincipalTableViewController: UITableViewController {
                     
                     //Si hay un cliente recupera su clientID y sale del metodo
                     if let _ = regalos as [PFObject]? {
-                       if regalos?.count > 0 {
+                       if (regalos?.count)! > 0 {
                             
                             self.performSegue(withIdentifier: "recetarios", sender: nil)
                         }
@@ -537,20 +513,9 @@ class PrincipalTableViewController: UITableViewController {
     
     // buscador
     
-    
-    
-    func abrirBuscador(){
-    
-        self.performSegue(withIdentifier: "buscador", sender: nil)
-        
-    }
-    
-    
-    
-    
     @IBAction func searchButtonClicked(_ button: UIBarButtonItem) {
 
-        abrirBuscador()
+        self.performSegue(withIdentifier: "buscador", sender: nil)
     }
 
     
