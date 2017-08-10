@@ -302,17 +302,12 @@ import TwitterKit
     }
     
     @IBAction func btnPinteres(_ sender: AnyObject) {
-       
-      
     
-        var url : NSString = receta["Url_Imagen"] as! String as NSString
-        var urlStr = url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed); //addingPercentEscapes(using: String.Encoding.utf8.rawValue)!
-        let imgURL = URL(string: urlStr!)!
-        url = "http://recetasmexicanas.mx"
-        urlStr = url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-        let direccion  = URL(string: urlStr!)!
+        let urlImg = receta["Url_Imagen"] as! String
+        let imgURL = URL(string: urlImg)!
+        let direccion  = URL(string: "http://recetasmexicanas.mx")!
         
-        PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "Me encanta esta receta", from: self, withSuccess: {
+        PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "¡Cocina deliciosas y fáciles recetas con Frida!", from: self, withSuccess: {
             //print("successfully pinned pin")
             if self.opcion != nil && self.opcion.lowercased() == "viral" {
                 
