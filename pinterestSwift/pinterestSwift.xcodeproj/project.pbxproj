@@ -42,6 +42,14 @@
 		499097AC1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */; };
 		499097AE1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */; };
 		49F9539A1E9B481A009E50EF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F953991E9B481A009E50EF /* StoreKit.framework */; };
+		563787191F5994C50098C12B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563787181F5994C50098C12B /* RootViewController.swift */; };
+		563787391F5F3BA40098C12B /* PaySuscriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */; };
+		5637873B1F5FFCC80098C12B /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637873A1F5FFCC80098C12B /* SubscriptionService.swift */; };
+		5637873D1F5FFD380098C12B /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637873C1F5FFD380098C12B /* Subscription.swift */; };
+		56572A971F56BD0800E5C224 /* SuscripcionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56572A961F56BD0800E5C224 /* SuscripcionViewController.swift */; };
+		567C07591F61410A006A459F /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07561F61410A006A459F /* PaidSubscription.swift */; };
+		567C075A1F61410A006A459F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07571F61410A006A459F /* Session.swift */; };
+		567C075B1F61410A006A459F /* SubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07581F61410A006A459F /* SubService.swift */; };
 		E498B303570DC6C3B78DC422 /* Pods_CocinaMex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +115,14 @@
 		499EB5DC1E957B1A00DF8A3B /* pinterestSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pinterestSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		49F953981E9B4812009E50EF /* CocinaMex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CocinaMex.entitlements; sourceTree = "<group>"; };
 		49F953991E9B481A009E50EF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		563787181F5994C50098C12B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaySuscriptionTableViewController.swift; sourceTree = "<group>"; };
+		5637873A1F5FFCC80098C12B /* SubscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		5637873C1F5FFD380098C12B /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		56572A961F56BD0800E5C224 /* SuscripcionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuscripcionViewController.swift; sourceTree = "<group>"; };
+		567C07561F61410A006A459F /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
+		567C07571F61410A006A459F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		567C07581F61410A006A459F /* SubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubService.swift; sourceTree = "<group>"; };
 		695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocinaMex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E461913766910B920393502 /* Pods-CocinaMex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.release.xcconfig"; sourceTree = "<group>"; };
 		A7183BC9363F273B69DA3BD8 /* Pods-CocinaMex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +222,9 @@
 				497C8B101E98870900868C78 /* MenuDeslizanteController.swift */,
 				497C8B111E98870900868C78 /* MenuPlatillos.swift */,
 				497C8B121E98870900868C78 /* MenuPlatillosTableViewCell.swift */,
+				567C07561F61410A006A459F /* PaidSubscription.swift */,
+				567C07571F61410A006A459F /* Session.swift */,
+				567C07581F61410A006A459F /* SubService.swift */,
 				497C8B151E98870900868C78 /* PageItemController.swift */,
 				497C8B171E98870900868C78 /* PerfilViewController.swift */,
 				497C8B181E98870900868C78 /* PlatillosViewController.swift */,
@@ -225,6 +244,11 @@
 				497C8B581E98872900868C78 /* Images.xcassets */,
 				492E5F3F1E9578E600A75DEC /* Info.plist */,
 				499EB5DC1E957B1A00DF8A3B /* pinterestSwift-Bridging-Header.h */,
+				56572A961F56BD0800E5C224 /* SuscripcionViewController.swift */,
+				563787181F5994C50098C12B /* RootViewController.swift */,
+				563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */,
+				5637873A1F5FFCC80098C12B /* SubscriptionService.swift */,
+				5637873C1F5FFD380098C12B /* Subscription.swift */,
 			);
 			path = pinterestSwift;
 			sourceTree = "<group>";
@@ -414,9 +438,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -442,9 +470,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseFacebookUtilsV4/ParseFacebookUtilsV4.framework",
+				"${BUILT_PRODUCTS_DIR}/PinterestSDK/PinterestSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseFacebookUtilsV4.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinterestSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,13 +504,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CocinaMex-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -475,17 +525,25 @@
 			files = (
 				492E5F341E9578E600A75DEC /* AppDelegate.swift in Sources */,
 				497C8B4A1E98870900868C78 /* PrincipalTableViewCell.swift in Sources */,
+				563787391F5F3BA40098C12B /* PaySuscriptionTableViewController.swift in Sources */,
 				497C8B511E98870900868C78 /* SearchControllerBaseViewController.swift in Sources */,
 				497C8B6A1E9888D300868C78 /* SWRevealViewController.m in Sources */,
+				563787191F5994C50098C12B /* RootViewController.swift in Sources */,
+				567C075B1F61410A006A459F /* SubService.swift in Sources */,
+				5637873B1F5FFCC80098C12B /* SubscriptionService.swift in Sources */,
 				497C8B4F1E98870900868C78 /* RegalosTableViewController.swift in Sources */,
 				497C8B381E98870900868C78 /* MenuDeslizanteController.swift in Sources */,
 				497C8B391E98870900868C78 /* MenuPlatillos.swift in Sources */,
 				497C8B4E1E98870900868C78 /* QuienesSomosViewController.swift in Sources */,
 				497C8B341E98870900868C78 /* ContentViewController.swift in Sources */,
+				5637873D1F5FFD380098C12B /* Subscription.swift in Sources */,
 				497C8B411E98870900868C78 /* PopUpViewControllerCompartir.swift in Sources */,
 				497C8B361E98870900868C78 /* FavoritosTableViewController.swift in Sources */,
 				497C8B501E98870900868C78 /* RegistroViewController.swift in Sources */,
+				567C07591F61410A006A459F /* PaidSubscription.swift in Sources */,
+				56572A971F56BD0800E5C224 /* SuscripcionViewController.swift in Sources */,
 				497C8B551E98870900868C78 /* TutorialViewController.swift in Sources */,
+				567C075A1F61410A006A459F /* Session.swift in Sources */,
 				497C8B401E98870900868C78 /* PlatillosViewController.swift in Sources */,
 				497C8B4C1E98870900868C78 /* Product.swift in Sources */,
 				497C8B421E98870900868C78 /* PopUpViewControllerDescripcion.swift in Sources */,
@@ -670,7 +728,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = pinterestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;
@@ -707,7 +765,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = pinterestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;

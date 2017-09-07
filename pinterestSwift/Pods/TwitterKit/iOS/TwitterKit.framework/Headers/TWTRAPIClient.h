@@ -234,7 +234,7 @@ typedef void (^TWTRRequestEmailCompletion)(NSString *_Nullable email, NSError *_
  *                    is unverified or you do not have the correct permissions to request the email address.
  *
  *  @note Requesting a user’s email address requires your application to be whitelisted by Twitter.
- *  To request access, please visit https://support.twitter.com/forms/platform
+ *  To request access, please visit the "Permissions" section for your app at https://apps.twitter.com/
  */
 - (void)requestEmailForCurrentUser:(TWTRRequestEmailCompletion)completion;
 

@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Composer interface to allow users to compose & send Tweets from
  *  inside an app.
  *
+ *  It is the developers' responsibility to ensure that there exists a
+ *  logged in Twitter user before creating a `TWTRComposerViewController`.
+ *
+ *  See: https://dev.twitter.com/twitterkit/ios/compose-tweets#presenting-a-basic-composer
+ *
  *  Initial Text
  *  If you wish to add default mentions to the Tweet, add them to the
  *  beginning of `initialText`.
@@ -30,12 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<TWTRComposerViewControllerDelegate> delegate;
 
 /**
- *  Create an empty composer view controller.
+ *  Create an empty composer view controller. The developer must handle ensuring
+ *  that a logged in Twitter user exists before creating this controller.
  */
 + (instancetype)emptyComposer;
 
 /**
  *  Initialize a composer with pre-filled text and an image or video attachment.
+ *  Requires a logged in Twitter user.
  *
  *  @param initialText (optional) Text with which to pre-fill the composer text.
  *  @param image (optional) Image to add as an attachment.
@@ -44,6 +51,17 @@ NS_ASSUME_NONNULL_BEGIN
  *  Note: Only one type of attachment (image or video) may be added.
  */
 - (instancetype)initWithInitialText:(nullable NSString *)initialText image:(nullable UIImage *)image videoURL:(nullable NSURL *)videoURL;
+
+/**
+ *  Initialize a composer with pre-filled text and an image or video attachment.
+ *
+ *  @param initialText (optional) Text with which to pre-fill the composer text.
+ *  @param image (required) Image (or preview image) to add as an attachment.
+ *  @param videoData (optional) NSData for video asset to add as an attachment.
+ *
+ *  Note: Preview image is required if videoData parameter is passed.
+ */
+- (instancetype)initWithInitialText:(nullable NSString *)initialText image:(nullable UIImage *)image videoData:(nullable NSData *)videoData;
 
 - (instancetype)init NS_UNAVAILABLE;
 

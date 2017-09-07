@@ -29,13 +29,13 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-                <string>twitterkit-MMWC6DUWHTHQHoa10u4ZU0tRh</string>
+				<string>twitterkit-MMWC6DUWHTHQHoa10u4ZU0tRh</string>
 				<string>fb880131518745577</string>
 				<string>pdk4815040272566075428</string>
 			</array>
 		</dict>
 	</array>
-    <key>CFBundleVersion</key>
+	<key>CFBundleVersion</key>
 	<string>11</string>
 	<key>Fabric</key>
 	<dict>
@@ -62,8 +62,8 @@
 	<string>Cocina Mexicana</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-        <string>twitter</string>
-        <string>twitterauth</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
 		<string>fbapi</string>
 		<string>fbapi20130214</string>
 		<string>fbapi20130410</string>

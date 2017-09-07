@@ -13,7 +13,7 @@ import Alamofire
 //import ParseTwitterUtils
 //import ParseFacebookUtilsV4
 
-class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+class MenuPlatillos: UITableViewController {
     
     let producto = "CocinaMexicanaRecetasFaciles"
     
@@ -40,13 +40,13 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         
         //Image Background Navigation Bar
         
-         let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
+         //let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
          
-         let nav = self.navigationController?.navigationBar
+         //let nav = self.navigationController?.navigationBar
          
-         nav?.tintColor = UIColor.white
+         //nav?.tintColor = UIColor.white
          
-         nav!.setBackgroundImage(navBackgroundImage, for:.default)
+         //nav!.setBackgroundImage(navBackgroundImage, for:.default)
  
         
         let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
@@ -167,9 +167,21 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         abrirReceta(indexPath)
     }
     
+    func presentCarrousel() {
+        let VC = storyboard?.instantiateViewController(withIdentifier: "vc") as! RootViewController
+        present(VC, animated: true, completion: nil)
+    }
+    
     func abrirReceta( _ indexPath:IndexPath ){
         
         if (self.menuSeleccionado["TipoMenu"] as AnyObject).lowercased == "pago"{
+            
+            if SubscriptionService.shared.currentSubscription != nil {
+                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
+            } else {
+                presentCarrousel()
+            }
+            
             var usuario = false
             if PFUser.current() != nil {
                 
@@ -198,7 +210,7 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
                     handler: nil))
             }
             else{
-                self.restorePurchases()
+                //self.restorePurchases()
                 //consultarSuscripcion()
             }
         }
@@ -208,257 +220,257 @@ class MenuPlatillos: UITableViewController, SKProductsRequestDelegate, SKPayment
         }
     }
     
-    func restorePurchases() {
-        SKPaymentQueue.default().add(self)
-        SKPaymentQueue.default().restoreCompletedTransactions()
-    }
+//    func restorePurchases() {
+//        SKPaymentQueue.default().add(self)
+//        SKPaymentQueue.default().restoreCompletedTransactions()
+//    }
+//    
+//    @available(iOS 3.0, *)
+//    public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+//        
+//        for transaction in transactions {
+//            
+//            switch transaction.transactionState {
+//                
+//            case SKPaymentTransactionState.purchased:
+//                print("Transaction Approved")
+//                print("Product Identifier: \(transaction.payment.productIdentifier)")
+//                self.deliverProduct(transaction)
+//                SKPaymentQueue.default().finishTransaction(transaction)
+//                
+//            case SKPaymentTransactionState.failed:
+//                print("Transaction Failed")
+//                SKPaymentQueue.default().finishTransaction(transaction)
+//            default:
+//                break
+//            }
+//        }
+//    }
+//    
+//    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+//        
+//        var products = response.products
+//        
+//        if (products.count != 0) {
+//            for i in 0 ..< products.count
+//            {
+//                self.product = products[i]
+//                self.productsArray.append(product!)
+//            }
+//            /*self.viewDidLoad()
+//             self.viewWillAppear(true)
+//             */
+//        } else {
+//            print("No products found")
+//        }
+//        print(response.description)
+//        //let productos = response.invalidProductIdentifiers
+//        
+//        for product in 0 ..< products.count
+//        {
+//            print("Product not found: \(product)")
+//        }
+//    }
     
-    @available(iOS 3.0, *)
-    public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        
-        for transaction in transactions {
-            
-            switch transaction.transactionState {
-                
-            case SKPaymentTransactionState.purchased:
-                print("Transaction Approved")
-                print("Product Identifier: \(transaction.payment.productIdentifier)")
-                self.deliverProduct(transaction)
-                SKPaymentQueue.default().finishTransaction(transaction)
-                
-            case SKPaymentTransactionState.failed:
-                print("Transaction Failed")
-                SKPaymentQueue.default().finishTransaction(transaction)
-            default:
-                break
-            }
-        }
-    }
     
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        
-        var products = response.products
-        
-        if (products.count != 0) {
-            for i in 0 ..< products.count
-            {
-                self.product = products[i]
-                self.productsArray.append(product!)
-            }
-            /*self.viewDidLoad()
-             self.viewWillAppear(true)
-             */
-        } else {
-            print("No products found")
-        }
-        print(response.description)
-        //let productos = response.invalidProductIdentifiers
-        
-        for product in 0 ..< products.count
-        {
-            print("Product not found: \(product)")
-        }
-    }
+//    func deliverProduct(_ transaction:SKPaymentTransaction) {
+//        
+//        if transaction.payment.productIdentifier == "com.brianjcoleman.testiap1"
+//        {
+//            print("Consumable Product Purchased")
+//            // Unlock Feature
+//        }
+//        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap2"
+//        {
+//            print("Non-Consumable Product Purchased")
+//            // Unlock Feature
+//        }
+//        else if transaction.payment.productIdentifier == "CocinaMexicanaRecetasFaciles"
+//        {
+//            print("Auto-Renewable Subscription Product Purchased")
+//            
+//            
+//            // Unlock Feature
+//        }
+//        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap4"
+//        {
+//            print("Free Subscription Product Purchased")
+//            // Unlock Feature
+//        }
+//        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap5"
+//        {
+//            print("Non-Renewing Subscription Product Purchased")
+//            // Unlock Feature
+//        }
+//    }
     
-    
-    func deliverProduct(_ transaction:SKPaymentTransaction) {
-        
-        if transaction.payment.productIdentifier == "com.brianjcoleman.testiap1"
-        {
-            print("Consumable Product Purchased")
-            // Unlock Feature
-        }
-        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap2"
-        {
-            print("Non-Consumable Product Purchased")
-            // Unlock Feature
-        }
-        else if transaction.payment.productIdentifier == "CocinaMexicanaRecetasFaciles"
-        {
-            print("Auto-Renewable Subscription Product Purchased")
-            
-            
-            // Unlock Feature
-        }
-        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap4"
-        {
-            print("Free Subscription Product Purchased")
-            // Unlock Feature
-        }
-        else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap5"
-        {
-            print("Non-Renewing Subscription Product Purchased")
-            // Unlock Feature
-        }
-    }
-    
-    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        print("Transactions Restored")
-        
-        // var purchasedItemIDS = Array()
-        for transaction:SKPaymentTransaction in queue.transactions {
-            
-            if transaction.payment.productIdentifier == "com.brianjcoleman.testiap1"
-            {
-                print("Consumable Product Purchased")
-                // Unlock Feature
-            }
-            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap2"
-            {
-                print("Non-Consumable Product Purchased")
-                // Unlock Feature
-            }
-            else if transaction.payment.productIdentifier == "CocinaMexicanaRecetasFaciles"
-            {
-                print("Auto-Renewable Subscription Product Purchased")
-                // Unlock Feature
-                
-                self.consultarSuscripcion()
-                //print(transaction.payment.rec)
-            }
-            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap4"
-            {
-                print("Free Subscription Product Purchased")
-                // Unlock Feature
-            }
-            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap5"
-            {
-                print("Non-Renewing Subscription Product Purchased")
-                // Unlock Feature
-            }
-            
-            
-        }
-        
-        /*var alert = UIAlertView(title: "Thank You", message: "Your purchase(s) were restored.", delegate: nil, cancelButtonTitle: "OK")
-         alert.show()*/
-    }
+//    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+//        print("Transactions Restored")
+//        
+//        // var purchasedItemIDS = Array()
+//        for transaction:SKPaymentTransaction in queue.transactions {
+//            
+//            if transaction.payment.productIdentifier == "com.brianjcoleman.testiap1"
+//            {
+//                print("Consumable Product Purchased")
+//                // Unlock Feature
+//            }
+//            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap2"
+//            {
+//                print("Non-Consumable Product Purchased")
+//                // Unlock Feature
+//            }
+//            else if transaction.payment.productIdentifier == "CocinaMexicanaRecetasFaciles"
+//            {
+//                print("Auto-Renewable Subscription Product Purchased")
+//                // Unlock Feature
+//                
+//                self.consultarSuscripcion()
+//                //print(transaction.payment.rec)
+//            }
+//            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap4"
+//            {
+//                print("Free Subscription Product Purchased")
+//                // Unlock Feature
+//            }
+//            else if transaction.payment.productIdentifier == "com.brianjcoleman.testiap5"
+//            {
+//                print("Non-Renewing Subscription Product Purchased")
+//                // Unlock Feature
+//            }
+//            
+//            
+//        }
+//        
+//        /*var alert = UIAlertView(title: "Thank You", message: "Your purchase(s) were restored.", delegate: nil, cancelButtonTitle: "OK")
+//         alert.show()*/
+//    }
     
 
     
     
-    func consultarSuscripcion(){
-        
-       /* let suscripcion = PagosIAP()
-        suscripcion.requestProductData()
-        suscripcion.isSubscripcionActiva(resultado: { (res) in
-            if(res){
-                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
-            }
-            else{
-                self.abrirVentanaPop()
-    
-            }
-            
-        })*/
-        
-            
-            
-            //NSDictionary *dictLatestReceiptsInfo = response[@"latest_receipt_info"];
-            //long expirationDateMs = [dictLatestReceiptsInfo valueForKeyPath:@"@max.expires_date_ms"];
-            
-        
-        let receiptURL = Bundle.main.appStoreReceiptURL
-        
-        let receipt = NSData(contentsOf: receiptURL!)
-        
-        let requestContents: [String: Any] = [
-        
-            "receipt-data": receipt!.base64EncodedString(options: []),
-            
-            "password": "b7f13ceae7454c23aba22b373352337b"
-            
-        ]
-            
-        
-        let appleServer = receiptURL?.lastPathComponent == "sandboxReceipt" ? "sandbox" : "buy"
-        
-        
-        
-        let stringURL = "https://\(appleServer).itunes.apple.com/verifyReceipt"
-        
-        
-        
-        print("Loading user receipt: \(stringURL)...")
-        
-        
-        
-        _ = Alamofire.request(stringURL, method: .post, parameters: requestContents, encoding: JSONEncoding.default)
-        
-            .responseJSON { response in
-            
-                if let value = response.result.value as? NSDictionary {
-                        //  print(value)
-                        
-                
-                    if let json = value["latest_receipt_info"] {
-                            
-                            
-                    
-                        var jsonStr = String(describing:json)
-                            jsonStr.remove(at: jsonStr.index(before: jsonStr.endIndex))
-                            jsonStr.remove(at: jsonStr.startIndex)
-                            jsonStr = jsonStr.replacingOccurrences(of: ";", with: ",")
-                            jsonStr = jsonStr.replacingOccurrences(of: "=", with: ":")
-                            jsonStr = jsonStr.replacingOccurrences(of: "quantity", with: "\"quantity\"")
-                            jsonStr = jsonStr.replacingOccurrences(of: self.producto, with: "\""+self.producto+"\"")
-                            jsonStr = jsonStr.replacingOccurrences(of: ",\n    }", with: "\n    }")
-                            jsonStr = " [ "+jsonStr+" ] "
-                            print(jsonStr)
-                            
-                            
-                            if let data = jsonStr.data(using: .utf8) {
-                                do {
-                                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
-                                        print(jsonArray.count)
-                                        let ultimaSubscripcion = jsonArray.last
-                                        if var dateString = ultimaSubscripcion?["expires_date"] as? String{
-                                            dateString = dateString.replacingOccurrences(of: "Etc/GMT", with: "")
-                                            print(dateString)
-                                            
-                                            let dateFormatter = DateFormatter()
-                                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Your date format
-                                            dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT") as TimeZone!
-                                            
-                                            let date = dateFormatter.date(from: dateString) //according to date format your date string
-                                            
-                                            let fechaActual =  NSDate()
-                                            
-                                            print(date ?? "", fechaActual) //Convert String to Date
-                                            
-                                            if date! < fechaActual as Date{
-                                                print("suscripcion esta expirada")
-                                                self.abrirVentanaPop()
-                                            }
-                                            else{
-                                                print("suscripcion activa")
-                                                
-                                                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
-                                            }
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                } catch {
-                                    print(error.localizedDescription)
-                                }
-                            }
-                            
-                            
-                        }
-                    } else {
-                        print("Receiving receipt from App Store failed: \(response.result)")
-                    }
-            }
-            
-            
-            
-            // let currentTime = NSDate().timeIntervalSince1970 let expired = currentTime > expiresTime
-        
-
-    }
+//    func consultarSuscripcion(){
+//        
+//       /* let suscripcion = PagosIAP()
+//        suscripcion.requestProductData()
+//        suscripcion.isSubscripcionActiva(resultado: { (res) in
+//            if(res){
+//                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
+//            }
+//            else{
+//                self.abrirVentanaPop()
+//    
+//            }
+//            
+//        })*/
+//        
+//            
+//            
+//            //NSDictionary *dictLatestReceiptsInfo = response[@"latest_receipt_info"];
+//            //long expirationDateMs = [dictLatestReceiptsInfo valueForKeyPath:@"@max.expires_date_ms"];
+//            
+//        
+//        let receiptURL = Bundle.main.appStoreReceiptURL
+//        
+//        let receipt = NSData(contentsOf: receiptURL!)
+//        
+//        let requestContents: [String: Any] = [
+//        
+//            "receipt-data": receipt!.base64EncodedString(options: []),
+//            
+//            "password": "b7f13ceae7454c23aba22b373352337b"
+//            
+//        ]
+//            
+//        
+//        let appleServer = receiptURL?.lastPathComponent == "sandboxReceipt" ? "sandbox" : "buy"
+//        
+//        
+//        
+//        let stringURL = "https://\(appleServer).itunes.apple.com/verifyReceipt"
+//        
+//        
+//        
+//        print("Loading user receipt: \(stringURL)...")
+//        
+//        
+//        
+//        _ = Alamofire.request(stringURL, method: .post, parameters: requestContents, encoding: JSONEncoding.default)
+//        
+//            .responseJSON { response in
+//            
+//                if let value = response.result.value as? NSDictionary {
+//                        //  print(value)
+//                        
+//                
+//                    if let json = value["latest_receipt_info"] {
+//                            
+//                            
+//                    
+//                        var jsonStr = String(describing:json)
+//                            jsonStr.remove(at: jsonStr.index(before: jsonStr.endIndex))
+//                            jsonStr.remove(at: jsonStr.startIndex)
+//                            jsonStr = jsonStr.replacingOccurrences(of: ";", with: ",")
+//                            jsonStr = jsonStr.replacingOccurrences(of: "=", with: ":")
+//                            jsonStr = jsonStr.replacingOccurrences(of: "quantity", with: "\"quantity\"")
+//                            jsonStr = jsonStr.replacingOccurrences(of: self.producto, with: "\""+self.producto+"\"")
+//                            jsonStr = jsonStr.replacingOccurrences(of: ",\n    }", with: "\n    }")
+//                            jsonStr = " [ "+jsonStr+" ] "
+//                            print(jsonStr)
+//                            
+//                            
+//                            if let data = jsonStr.data(using: .utf8) {
+//                                do {
+//                                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]{
+//                                        print(jsonArray.count)
+//                                        let ultimaSubscripcion = jsonArray.last
+//                                        if var dateString = ultimaSubscripcion?["expires_date"] as? String{
+//                                            dateString = dateString.replacingOccurrences(of: "Etc/GMT", with: "")
+//                                            print(dateString)
+//                                            
+//                                            let dateFormatter = DateFormatter()
+//                                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Your date format
+//                                            dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT") as TimeZone!
+//                                            
+//                                            let date = dateFormatter.date(from: dateString) //according to date format your date string
+//                                            
+//                                            let fechaActual =  NSDate()
+//                                            
+//                                            print(date ?? "", fechaActual) //Convert String to Date
+//                                            
+//                                            if date! < fechaActual as Date{
+//                                                print("suscripcion esta expirada")
+//                                                self.abrirVentanaPop()
+//                                            }
+//                                            else{
+//                                                print("suscripcion activa")
+//                                                
+//                                                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
+//                                            }
+//                                            
+//                                        }
+//                                        
+//                                    }
+//                                    
+//                                    
+//                                } catch {
+//                                    print(error.localizedDescription)
+//                                }
+//                            }
+//                            
+//                            
+//                        }
+//                    } else {
+//                        print("Receiving receipt from App Store failed: \(response.result)")
+//                    }
+//            }
+//            
+//            
+//            
+//            // let currentTime = NSDate().timeIntervalSince1970 let expired = currentTime > expiresTime
+//        
+//
+//    }
     
     func abrirVentana(_ cliente: PFObject){
         //let clienteId = cliente["clientID"] as? String

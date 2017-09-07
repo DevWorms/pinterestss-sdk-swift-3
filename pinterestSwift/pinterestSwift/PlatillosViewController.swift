@@ -65,10 +65,10 @@ class PlatillosViewController: UIViewController{
         }
         
         
-        let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
-        let nav = self.navigationController?.navigationBar
-        nav?.tintColor = UIColor.white
-        nav!.setBackgroundImage(navBackgroundImage, for:.default)
+        //let navBackgroundImage:UIImage! = UIImage(named: "bandasuperior")
+        //let nav = self.navigationController?.navigationBar
+        //nav?.tintColor = UIColor.white
+        //nav!.setBackgroundImage(navBackgroundImage, for:.default)
 
     }
     

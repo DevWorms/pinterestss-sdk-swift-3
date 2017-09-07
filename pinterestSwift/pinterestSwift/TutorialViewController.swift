@@ -17,10 +17,6 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pageController = UIPageControl.appearance()
-        pageController.pageIndicatorTintColor = UIColor.lightGray
-        pageController.currentPageIndicatorTintColor = UIColor.red
-        pageController.backgroundColor = UIColor.clear
 
         pageImages = NSArray(objects: "carrusel1","carrusel2","carrusel3")
         
