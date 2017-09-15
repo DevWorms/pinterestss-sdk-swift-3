@@ -48,8 +48,32 @@ class PerfilViewController: UIViewController  {
     
     var options: [Subscription]?
     
+    var suscri = SubscriptionService.shared.currentSubscription {
+        didSet {
+            updateDate()
+        }
+    }
+    
+    
+    @IBAction func cancelSubs(_ sender: Any) {
+        //UIApplication.shared.openURL(NSURL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions")! as URL)
+
+    }
+    
+    func updateDate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        if let sus = suscri {
+            if sus.expiresDate > sus.purchaseDate {
+                self.lEstatus.text = "Suscripcion activa hasta \(formatter.string(from: sus.expiresDate))"
+                self.bCancelarSuscripcion.isHidden = false
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        SubscriptionService.shared.restorePurchases()
         
         NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
         
@@ -70,14 +94,7 @@ class PerfilViewController: UIViewController  {
         //request.delegate = self
         //request.start()
         //SKPaymentQueue.default().add(self)
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        if let suscrip = SubscriptionService.shared.currentSubscription {
-            if suscrip.expiresDate > suscrip.purchaseDate {
-                self.lEstatus.text = "Suscripcion activa hasta \(formatter.string(from: suscrip.expiresDate))"
-                self.bCancelarSuscripcion.isHidden = false
-            }
-        }
+        
         
         
         self.lEstatus.alpha = 0
@@ -86,7 +103,6 @@ class PerfilViewController: UIViewController  {
         self.loadingAction.startAnimating()
         self.loadingAction.isHidden = true
         self.bEliminarTarjeta.isHidden = true
-        self.bCancelarSuscripcion.isHidden = true
         
         if revealViewController() != nil {
             //            revealViewController().rearViewRevealWidth = 62

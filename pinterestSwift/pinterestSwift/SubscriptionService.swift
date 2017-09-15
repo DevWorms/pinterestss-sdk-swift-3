@@ -15,6 +15,7 @@ class SubscriptionService: NSObject {
     static let optionsLoadedNotification = Notification.Name("SubscriptionServiceOptionsLoadedNotification")
     static let restoreSuccessfulNotification = Notification.Name("SubscriptionServiceRestoreSuccessfulNotification")
     static let purchaseSuccessfulNotification = Notification.Name("SubscriptionServiceRestoreSuccessfulNotification")
+    static let failNotification = Notification.Name("failNotification")
     let productIdentifier = "CocinaMexicanaRecetasFaciles"
     
     static let shared = SubscriptionService()

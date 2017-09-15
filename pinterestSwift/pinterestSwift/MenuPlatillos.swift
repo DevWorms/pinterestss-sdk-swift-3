@@ -47,7 +47,6 @@ class MenuPlatillos: UITableViewController {
          //nav?.tintColor = UIColor.white
          
          //nav!.setBackgroundImage(navBackgroundImage, for:.default)
- 
         
         let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
         backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!], for: UIControlState())
@@ -78,8 +77,8 @@ class MenuPlatillos: UITableViewController {
         
         consultarRecetasDeMenu()
         
-        self.popViewController = PopUpViewControllerDescripcion(nibName: "PopUpViewControllerDescripcion", bundle: nil)
-        self.popViewController.context = self
+        //self.popViewController = PopUpViewControllerDescripcion(nibName: "PopUpViewControllerDescripcion", bundle: nil)
+        //self.popViewController.context = self
         
     }
     
@@ -167,19 +166,15 @@ class MenuPlatillos: UITableViewController {
         abrirReceta(indexPath)
     }
     
-    func presentCarrousel() {
-        let VC = storyboard?.instantiateViewController(withIdentifier: "vc") as! RootViewController
-        present(VC, animated: true, completion: nil)
-    }
     
     func abrirReceta( _ indexPath:IndexPath ){
         
         if (self.menuSeleccionado["TipoMenu"] as AnyObject).lowercased == "pago"{
             
-            if SubscriptionService.shared.currentSubscription != nil {
-                self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
-            } else {
-                presentCarrousel()
+            if let fechaEx = SubscriptionService.shared.currentSubscription?.expiresDate {
+                if fechaEx > Date() {
+                    self.performSegue(withIdentifier: "PlatilloSegue", sender: nil)
+                }
             }
             
             var usuario = false

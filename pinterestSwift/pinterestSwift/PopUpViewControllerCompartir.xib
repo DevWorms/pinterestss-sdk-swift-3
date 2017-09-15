@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,17 +25,17 @@
             </connections>
         </tapGestureRecognizer>
         <view contentMode="scaleToFill" id="lT8-T6-shb">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67A-UL-Q2g">
-                    <rect key="frame" x="84" y="97" width="600" height="900"/>
+                    <rect key="frame" x="45" y="102" width="230" height="424"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-QJ-pqk" customClass="fondo">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                            <rect key="frame" x="0.0" y="0.0" width="230" height="424"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRM-V2-ZG0">
-                            <rect key="frame" x="8" y="725" width="167" height="167"/>
+                            <rect key="frame" x="8" y="340" width="67" height="67"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="167" id="DpQ-qY-2Ra">
                                     <variation key="heightClass=regular-widthClass=compact" constant="67"/>
@@ -52,7 +52,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSF-4a-ehf">
-                            <rect key="frame" x="217" y="725" width="167" height="167"/>
+                            <rect key="frame" x="82" y="340" width="67" height="67"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="167" id="Nd8-8j-Ece">
                                     <variation key="heightClass=regular-widthClass=compact" constant="67"/>
@@ -69,7 +69,7 @@
                             </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Visa" translatesAutoresizingMaskIntoConstraints="NO" id="hff-U2-YSg">
-                            <rect key="frame" x="8" y="21" width="584" height="344"/>
+                            <rect key="frame" x="8" y="21" width="214" height="144"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="344" id="9OJ-Y6-cQd">
                                     <variation key="heightClass=regular-widthClass=compact" constant="144"/>
@@ -78,7 +78,7 @@
                             </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compartir" translatesAutoresizingMaskIntoConstraints="NO" id="XSV-0A-bhn">
-                            <rect key="frame" x="129" y="350" width="343" height="389"/>
+                            <rect key="frame" x="15.5" y="185" width="200" height="150"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="343" id="H6n-N3-sH1">
                                     <variation key="heightClass=regular-widthClass=compact" constant="200"/>
@@ -91,7 +91,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cy-WJ-nhU">
-                            <rect key="frame" x="425" y="725" width="167" height="167"/>
+                            <rect key="frame" x="155" y="340" width="67" height="67"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="67" id="OR2-oE-wOX">
                                     <variation key="heightClass=regular-widthClass=compact" constant="67"/>

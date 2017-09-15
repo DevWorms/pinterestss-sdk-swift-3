@@ -12,6 +12,10 @@ import Parse
 class PrincipalTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
+    var backViewController = UIView()
+    var vista = UIView()
+
+
     //Para decirnos cual es la opcion que corresponde a cada posicion del menu
     
     var tipoMenu = ""
@@ -67,7 +71,8 @@ class PrincipalTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-       
+       SubscriptionService.shared.restorePurchases()
+        
         //Image Background Navigation Bar
         
         let img = pantallaSizeWeight()
@@ -169,6 +174,7 @@ class PrincipalTableViewController: UITableViewController {
      self.tableView.delegate = self
      
         self.tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(PrincipalTableViewController.fail), name: SubscriptionService.failNotification, object: nil)
         
         if revealViewController() != nil {
             //            revealViewController().rearViewRevealWidth = 62
@@ -192,6 +198,10 @@ class PrincipalTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func fail() {
+        showAlertDefault(title: "Error", message: "No se pudo procesar tu compra")
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -212,9 +222,23 @@ class PrincipalTableViewController: UITableViewController {
         
         let goto=(self.menuSeleccionado["TipoMenu"] as AnyObject).lowercased
 
-        if goto=="gratis" || goto=="pago"
+        if goto=="gratis"
         {
             self.performSegue(withIdentifier: "recetarios", sender: nil)
+        } else if goto == "pago" {
+            if let fechaEx = SubscriptionService.shared.currentSubscription?.expiresDate {
+                if fechaEx > Date() {
+                    self.performSegue(withIdentifier: "recetarios", sender: nil)
+                }
+            } else {
+                if UserDefaults.standard.bool(forKey: "carrouselSuscripcion") {
+                    showAlert(title: "Suscripcion", message: "Suscribete y obten acceso a información")
+                } else {
+                    UserDefaults.standard.set(true, forKey: "carrouselSuscripcion")
+                    presentCarrousel()
+                }
+            }
+
         }
         else if goto=="viral" && imagesArray.count > 0
         {
@@ -273,6 +297,104 @@ class PrincipalTableViewController: UITableViewController {
         }
         
         
+    }
+    
+    func presentCarrousel() {
+        
+        backViewController = UIView.init(frame:  CGRect(x: 0.0, y: 0.0, width: view.bounds.height, height: view.bounds.maxY) )//aView.bounds)
+        backViewController.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        vista = UIView.init(frame: CGRect(x: (view.bounds.width/6)*1, y: (view.bounds.height/8)*1, width: (view.bounds.width/6)*4, height: (view.bounds.height/8)*6))
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PrincipalTableViewController.tapGes))
+        backViewController.addGestureRecognizer(tap)
+        
+        vista.center = CGPoint(x: view.bounds.width/2, y: view.bounds.midY)
+        let VC = storyboard?.instantiateViewController(withIdentifier: "vc") as! RootViewController
+        self.addChildViewController(VC)
+        vista.addSubview(VC.view)
+        VC.didMove(toParentViewController: self)
+
+        VC.view.frame = vista.bounds
+        VC.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let width = NSLayoutConstraint(item: VC.view, attribute: .width, relatedBy: .equal, toItem: vista, attribute: .width, multiplier: 1.0, constant: 0)
+        let height = NSLayoutConstraint(item: VC.view, attribute: .height, relatedBy: .equal, toItem: vista, attribute: .height, multiplier: 1.0, constant: 0)
+        let top = NSLayoutConstraint(item: VC.view, attribute: .top, relatedBy: .equal, toItem: vista, attribute: .top, multiplier: 1.0, constant: 0)
+        let leading = NSLayoutConstraint(item: VC.view, attribute: .leading, relatedBy: .equal, toItem: vista, attribute: .leading, multiplier: 1.0, constant: 0)
+        
+        vista.addConstraint(width)
+        vista.addConstraint(height)
+        vista.addConstraint(top)
+        vista.addConstraint(leading)
+        
+        view.addSubview(backViewController)
+        view.addSubview(vista)
+        
+        self.popAbierto = true
+        self.tableView.isScrollEnabled = false
+        
+        showAnimate()
+        
+        
+        VC.statusView = { (value) in
+            if value {
+                self.removeAnimate()
+                if let suscrip = SubscriptionService.shared.options?.first {
+                    SubscriptionService.shared.purchase(subscription: suscrip)
+                }
+            }
+        }
+
+    }
+    
+    func tapGes() {
+        removeAnimate()
+    }
+    
+    func showAnimate()
+    {
+        vista.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        vista.alpha = 0.0;
+        UIView.animate(withDuration: 0.25, animations: {
+            self.vista.alpha = 1.0
+            self.vista.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        });
+    }
+    
+    func removeAnimate() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.vista.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.vista.alpha = 0.0;
+        }, completion:{(finished : Bool)  in
+            if (finished)
+            {
+                self.backViewController.removeFromSuperview()
+                self.vista.removeFromSuperview()
+                
+                self.popAbierto = false
+                self.tableView.isScrollEnabled = true
+                
+            }
+        });
+    }
+
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (action) in
+            if let suscrip = SubscriptionService.shared.options?.first {
+                SubscriptionService.shared.purchase(subscription: suscrip)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlertDefault(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

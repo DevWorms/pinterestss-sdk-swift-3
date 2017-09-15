@@ -232,13 +232,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
         print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: SubscriptionService.failNotification, object: nil)
+        }
     }
     
     func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
         print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
+        queue.finishTransaction(transaction)
     }
 
 }
+
 
 extension AppDelegate: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
