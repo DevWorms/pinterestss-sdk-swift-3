@@ -1452,7 +1452,7 @@ Paga en OXXO, con tarjeta de débito y crédito.</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="sUc-66-6ey"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1461,7 +1461,7 @@ Paga en OXXO, con tarjeta de débito y crédito.</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="jj0-mB-EZH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>

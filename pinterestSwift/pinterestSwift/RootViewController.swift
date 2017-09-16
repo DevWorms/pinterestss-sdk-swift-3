@@ -21,7 +21,7 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        boton.isHidden = true
+        //boton.isHidden = true
         pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController
         
         self.pageViewController?.dataSource = self
@@ -58,7 +58,7 @@ class RootViewController: UIViewController {
 extension RootViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        boton.isHidden = true
+        //boton.isHidden = true
         
         var index = (viewController as! SuscripcionViewController).pageIndex
         
@@ -69,15 +69,14 @@ extension RootViewController: UIPageViewControllerDataSource {
         index+=1
         
         if index == imagenes.count {
-            boton.isHidden = false
+        //    boton.isHidden = false
             return nil
-        
         }
         return self.viewControllerAtIndex(index: index)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        boton.isHidden = true
+        //boton.isHidden = true
 
         var index = (viewController as! SuscripcionViewController).pageIndex
         
@@ -85,9 +84,9 @@ extension RootViewController: UIPageViewControllerDataSource {
             return nil
         }
         
-        if index == imagenes.count {
-            boton.isHidden = false
-        }
+        //if index == imagenes.count {
+        //    boton.isHidden = false
+        //}
         
         index-=1
         

@@ -234,7 +234,6 @@ class PrincipalTableViewController: UITableViewController {
                 if UserDefaults.standard.bool(forKey: "carrouselSuscripcion") {
                     showAlert(title: "Suscripcion", message: "Suscribete y obten acceso a información")
                 } else {
-                    UserDefaults.standard.set(true, forKey: "carrouselSuscripcion")
                     presentCarrousel()
                 }
             }
@@ -303,12 +302,12 @@ class PrincipalTableViewController: UITableViewController {
         
         backViewController = UIView.init(frame:  CGRect(x: 0.0, y: 0.0, width: view.bounds.height, height: view.bounds.maxY) )//aView.bounds)
         backViewController.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        vista = UIView.init(frame: CGRect(x: (view.bounds.width/6)*1, y: (view.bounds.height/8)*1, width: (view.bounds.width/6)*4, height: (view.bounds.height/8)*6))
+        vista = UIView.init(frame: CGRect(x: (view.bounds.width/6)*1, y: ((view.bounds.height/8)*1), width: (view.bounds.width/6)*4, height: (view.bounds.height/8)*6))
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(PrincipalTableViewController.tapGes))
         backViewController.addGestureRecognizer(tap)
         
-        vista.center = CGPoint(x: view.bounds.width/2, y: view.bounds.midY)
+        vista.center = CGPoint(x: view.bounds.width/2, y: view.bounds.midY+32)
         let VC = storyboard?.instantiateViewController(withIdentifier: "vc") as! RootViewController
         self.addChildViewController(VC)
         vista.addSubview(VC.view)
@@ -340,6 +339,7 @@ class PrincipalTableViewController: UITableViewController {
         VC.statusView = { (value) in
             if value {
                 self.removeAnimate()
+                UserDefaults.standard.set(true, forKey: "carrouselSuscripcion")
                 if let suscrip = SubscriptionService.shared.options?.first {
                     SubscriptionService.shared.purchase(subscription: suscrip)
                 }
