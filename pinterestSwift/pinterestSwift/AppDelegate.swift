@@ -16,9 +16,11 @@ import TwitterKit
 import UserNotifications
 import StoreKit
 import Alamofire
+import Firebase
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
 
     let kPDKExampleFakeAppId = "4815040272566075428"
     var window: UIWindow?
@@ -168,7 +170,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             center.delegate = self
             center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
                 if error == nil{
-                    UIApplication.shared.registerForRemoteNotifications()
+                    Messaging.messaging().delegate = self
                 }
             }
         }
@@ -176,6 +178,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
             UIApplication.shared.registerForRemoteNotifications()
         }
+        
+        UIApplication.shared.registerForRemoteNotifications()
+        FirebaseApp.configure()
+        
     }
     
     @available(iOS 10.0, *)
@@ -264,6 +270,17 @@ extension AppDelegate: SKPaymentTransactionObserver {
                 handleDeferredState(for: transaction, in: queue)
             }
         }
+    }
+}
+
+extension AppDelegate: MessagingDelegate {
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print(remoteMessage.appData)
+    }
+    
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        
     }
 }
 

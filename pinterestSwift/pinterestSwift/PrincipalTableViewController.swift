@@ -302,7 +302,7 @@ class PrincipalTableViewController: UITableViewController {
         
         backViewController = UIView.init(frame:  CGRect(x: 0.0, y: 0.0, width: view.bounds.height, height: view.bounds.maxY) )//aView.bounds)
         backViewController.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        vista = UIView.init(frame: CGRect(x: (view.bounds.width/6)*1, y: ((view.bounds.height/8)*1), width: (view.bounds.width/6)*4, height: (view.bounds.height/8)*6))
+        vista = UIView.init(frame: CGRect(x: (view.bounds.width/8)*1, y: ((view.bounds.height/8)*1), width: (view.bounds.width/8)*6, height: (view.bounds.height/8)*6))
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(PrincipalTableViewController.tapGes))
         backViewController.addGestureRecognizer(tap)

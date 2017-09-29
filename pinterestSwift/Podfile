@@ -8,4 +8,6 @@ target 'CocinaMex' do
 	pod 'Alamofire', '~> 4.2.0'
 	pod 'Fabric'
 	pod 'TwitterKit'
+	pod 'Firebase/Core'
+	pod 'Firebase/Messaging'
 end
