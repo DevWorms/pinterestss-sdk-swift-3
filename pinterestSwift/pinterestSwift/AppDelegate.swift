@@ -280,7 +280,15 @@ extension AppDelegate: MessagingDelegate {
     }
     
     func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
-        
+        let current = PFUser.current()
+        current?.setValue("token_device", forKey: fcmToken)
+        current?.saveInBackground(block: { (success: Bool, error: Error?) in
+            if success {
+                print("Se guardo")
+            } else {
+                print("No se guardo")
+            }
+        })
     }
 }
 

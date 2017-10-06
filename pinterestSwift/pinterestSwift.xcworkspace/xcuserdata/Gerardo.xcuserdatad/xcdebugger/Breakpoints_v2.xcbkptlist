@@ -506,12 +506,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.857379"
+                  timestampString = "528981854.359446"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "219"
                   endingLineNumber = "219"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "68">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -521,12 +521,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.859542"
+                  timestampString = "528981854.361677"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "220"
                   endingLineNumber = "220"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -570,12 +570,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.868974"
+                  timestampString = "528981854.371269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
                   endingLineNumber = "221"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "40">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -585,12 +585,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.871134"
+                  timestampString = "528981854.373486"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "222"
                   endingLineNumber = "222"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "3">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -905,12 +905,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PerfilViewController.swift"
-                  timestampString = "528382705.876183"
+                  timestampString = "528981854.379094"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "144"
                   endingLineNumber = "144"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -920,12 +920,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PerfilViewController.swift"
-                  timestampString = "528382705.878353"
+                  timestampString = "528981854.381469"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
                   endingLineNumber = "145"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -985,12 +985,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.891769"
+                  timestampString = "528981854.395443"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "232"
                   endingLineNumber = "232"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "68">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1000,12 +1000,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528382705.894012"
+                  timestampString = "528981854.397818"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "233"
                   endingLineNumber = "233"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1049,12 +1049,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/MenuPlatillos.swift"
-                  timestampString = "528382705.90329"
+                  timestampString = "528981854.407725"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "174"
                   endingLineNumber = "174"
-                  offsetFromSymbolStart = "784">
+                  offsetFromSymbolStart = "1069">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1064,12 +1064,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/MenuPlatillos.swift"
-                  timestampString = "528382705.905449"
+                  timestampString = "528981854.41026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "174"
                   endingLineNumber = "174"
-                  offsetFromSymbolStart = "1084">
+                  offsetFromSymbolStart = "1504">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1337,12 +1337,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/RootViewController.swift"
-                  timestampString = "528382705.948265"
+                  timestampString = "528981854.470495"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1352,12 +1352,12 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/RootViewController.swift"
-                  timestampString = "528382705.950438"
+                  timestampString = "528981854.472748"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "88">
+                  offsetFromSymbolStart = "54">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1529,12 +1529,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/AppDelegate.swift"
-            timestampString = "528376390.211138"
+            timestampString = "528382743.230838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "messaging(_:didReceive:)"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "registerForRemoteNotification()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1545,12 +1545,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/AppDelegate.swift"
-            timestampString = "528382743.230838"
+            timestampString = "528981636.530611"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "registerForRemoteNotification()"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "messaging(_:didRefreshRegistrationToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/AppDelegate.swift"
+            timestampString = "528981637.91621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "messaging(_:didRefreshRegistrationToken:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocinaMex.AppDelegate.messaging (__ObjC.Messaging, didRefreshRegistrationToken : Swift.String) -&gt; ()"
+                  moduleName = "CocinaMex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
+                  timestampString = "528981854.531538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "285"
+                  endingLineNumber = "285"
+                  offsetFromSymbolStart = "374">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocinaMex.AppDelegate.(messaging (__ObjC.Messaging, didRefreshRegistrationToken : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "CocinaMex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
+                  timestampString = "528981854.53397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/AppDelegate.swift"
+            timestampString = "528981639.130994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "messaging(_:didRefreshRegistrationToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/AppDelegate.swift"
+            timestampString = "528981639.921399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "messaging(_:didRefreshRegistrationToken:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -66,7 +66,7 @@ class PerfilViewController: UIViewController  {
         if let sus = suscri {
             if sus.expiresDate > sus.purchaseDate {
                 self.lEstatus.text = "Suscripcion activa hasta \(formatter.string(from: sus.expiresDate))"
-                self.bCancelarSuscripcion.isHidden = false
+                //self.bCancelarSuscripcion.isHidden = false
             }
         }
     }
