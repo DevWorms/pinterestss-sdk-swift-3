@@ -6,6 +6,8 @@
 //  Copyright © 2016 sergio ivan lopez monzon. All rights reserved.
 //
 
+import Parse
+import FirebaseMessaging
 
 class MenuDeslizanteController: UITableViewController {
     
@@ -19,6 +21,27 @@ class MenuDeslizanteController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //push notification register token_device
+        let user = PFUser.current()
+        
+        if user != nil {
+            
+            let tokenFCM = Messaging.messaging().fcmToken
+            print("FCM token: \(tokenFCM ?? "no se encuentra el token")")
+            
+            user!["token_device"] = tokenFCM
+            
+            user?.saveInBackground(block: { (bool, error) in
+                if error == nil {
+                    print("se salvó el user")
+                    
+                } else {
+                    print("no se pudo salvar el user")
+                }
+            })
+            
+        }
         
         opciones[1] = ItemMenu(fondo: itemMenuFondoInicio)
         opciones[2] = ItemMenu(fondo: itemMenuFondoMeGustan)
