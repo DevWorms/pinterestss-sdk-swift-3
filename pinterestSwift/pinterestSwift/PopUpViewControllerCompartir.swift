@@ -312,9 +312,9 @@ import TwitterKit
         let direccion  = URL(string: "http://recetasmexicanas.mx")!
         
         PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "¡Cocina deliciosas y fáciles recetas con Frida!", from: self, withSuccess: {
-            print("successfully pinned pin")
+            //print("successfully pinned pin")
             if self.opcion != nil && self.opcion.lowercased() == "viral" {
-                print("es al inicio")
+                //print("es al inicio")
                 let date = Date()
                 let calendar = Calendar.current
                 
@@ -324,7 +324,6 @@ import TwitterKit
                 let trimestre = month/3
                 
                 let trimestreR = Int(Double(trimestre) + 0.7)
-                
                 
                 let favorito = PFObject(className:"Regalos")
                 favorito["username"] = PFUser.current()

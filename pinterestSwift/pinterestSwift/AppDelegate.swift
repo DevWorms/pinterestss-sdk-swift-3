@@ -127,6 +127,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return true
         } else if FBSDKApplicationDelegate.sharedInstance().application(app, open: url,    options: options) {
         
+        } else {
+            return PDKClient.sharedInstance().handleCallbackURL(url)
         }
         
         return false
