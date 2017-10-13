@@ -113,7 +113,11 @@ import TwitterKit
         let link : FBSDKShareLinkContent = FBSDKShareLinkContent()
         
         let url = receta["Url_Imagen"] as! String
-        link.contentTitle = receta["Nombre"] as! String
+        
+        if receta["Nombre"] != nil {
+            link.contentTitle = receta["Nombre"] as! String
+        }
+        
         link.contentDescription = "¡Cocina deliciosas y fáciles recetas con Frida!   \nDescarga la app"
         link.imageURL = URL(string: url)
         link.contentURL = URL(string: "http://recetasmexicanas.mx")
@@ -308,9 +312,9 @@ import TwitterKit
         let direccion  = URL(string: "http://recetasmexicanas.mx")!
         
         PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "¡Cocina deliciosas y fáciles recetas con Frida!", from: self, withSuccess: {
-            //print("successfully pinned pin")
+            print("successfully pinned pin")
             if self.opcion != nil && self.opcion.lowercased() == "viral" {
-                
+                print("es al inicio")
                 let date = Date()
                 let calendar = Calendar.current
                 
@@ -338,7 +342,7 @@ import TwitterKit
                         self.context.performSegue(withIdentifier: "recetarios", sender: nil)
                     }
                     else{
-                        
+                        print("pinterest pin it failed", error!)
                     }
                 }
             }
@@ -346,7 +350,7 @@ import TwitterKit
             self.removeAnimate()
             
         }) { (error) in
-            //print("pin it failed", error!)
+            print("pinterest pin it failed", error!)
         }
        
     }
