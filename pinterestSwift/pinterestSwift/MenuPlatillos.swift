@@ -15,9 +15,9 @@ import Alamofire
 
 class MenuPlatillos: UITableViewController {
     
-    let producto = "CocinaMexicanaRecetasFaciles"
+    let producto = "CocinaMexicanasRecetasFaciles"
     
-    let productIdentifiers = Set(["CocinaMexicanaRecetasFaciles"])
+    let productIdentifiers = Set(["CocinaMexicanasRecetasFaciles"])
     var product: SKProduct?
     var productsArray = Array<SKProduct>()
     
@@ -100,7 +100,7 @@ class MenuPlatillos: UITableViewController {
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
+                //print("Successfully retrieved \(objects!.count) scores.")
                 // Do something with the found objects
                 if let objects = objects {
                     
@@ -113,7 +113,7 @@ class MenuPlatillos: UITableViewController {
                 }
             } else {
                 // Log details of the failure
-                print("Error: \(error!) \(String(describing: error!._userInfo))")
+                //print("Error: \(error!) \(String(describing: error!._userInfo))")
             }
         }
     }
@@ -517,7 +517,7 @@ class MenuPlatillos: UITableViewController {
                             // Do something with savedValue
                             if(savedValue != "true"){
                                 UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-                                print("7 días?1")
+                                //print("7 días?1")
                                 self.abrirVentanaPop()
                             }
                             else{
@@ -542,7 +542,7 @@ class MenuPlatillos: UITableViewController {
                         // Do something with savedValue
                         if(savedValue != "true"){
                             UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-                            print("7 días?1")
+                            //print("7 días?1")
                             self.abrirVentanaPop()
                         }
                         else{
@@ -563,7 +563,7 @@ class MenuPlatillos: UITableViewController {
             }
             else
             {
-                print(error!)
+                //print(error!)
             }
         }
 

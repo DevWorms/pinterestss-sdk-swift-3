@@ -21,7 +21,6 @@
  */
 
 private let itcAccountSecret = "b7f13ceae7454c23aba22b373352337b"
-
 import Foundation
 
 public enum Result<T> {

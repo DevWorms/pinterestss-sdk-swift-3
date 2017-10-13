@@ -125,7 +125,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
             
             
             
-            print(keyString)
+            //print(keyString)
             
             
         }
@@ -373,7 +373,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                             // Do something with savedValue
                             if(savedValue != "true"){
                                 UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-                                print("7 días?1")
+                                //print("7 días?1")
                                 self.abrirVentanaPop()
                             }
                             else{
@@ -396,7 +396,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                 }
             }
             else {
-                print(error!)
+                //print(error!)
             }
         }
         
@@ -455,7 +455,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                             // Do something with savedValue
                             if(savedValue != "true"){
                                 UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-                                print("7 días?1")
+                                //print("7 días?1")
                                 self.abrirVentanaPop()
                             }
                             else{
@@ -480,7 +480,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
                         // Do something with savedValue
                         if(savedValue != "true"){
                             UserDefaults.standard.set("false", forKey: "7 dias mostrado")
-                            print("7 días?1")
+                            //print("7 días?1")
                             self.abrirVentanaPop()
                         }
                         else{
@@ -501,7 +501,7 @@ class SearchResultsViewController: SearchControllerBaseViewController, UISearchR
             }
             else
             {
-                print(error!)
+                //print(error!)
             }
         }
         }

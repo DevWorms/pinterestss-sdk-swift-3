@@ -16,7 +16,7 @@ class SubscriptionService: NSObject {
     static let restoreSuccessfulNotification = Notification.Name("SubscriptionServiceRestoreSuccessfulNotification")
     static let purchaseSuccessfulNotification = Notification.Name("SubscriptionServiceRestoreSuccessfulNotification")
     static let failNotification = Notification.Name("failNotification")
-    let productIdentifier = "CocinaMexicanaRecetasFaciles"
+    let productIdentifier = "CocinaMexicanasRecetasFaciles"
     
     static let shared = SubscriptionService()
     
@@ -65,7 +65,7 @@ class SubscriptionService: NSObject {
                     strongSelf.currentSubscription = result.currentSubscription
                     completion?(true)
                 case .failure(let error):
-                    print("🚫 Receipt Upload Failed: \(error)")
+                    //print("🚫 Receipt Upload Failed: \(error)")
                     completion?(false)
                 }
             }
@@ -82,7 +82,7 @@ class SubscriptionService: NSObject {
             let data = try Data(contentsOf: url)
             return data
         } catch {
-            print("Error loading receipt data: \(error.localizedDescription)")
+            //print("Error loading receipt data: \(error.localizedDescription)")
             return nil
         }
     }
@@ -95,7 +95,7 @@ extension SubscriptionService: SKProductsRequestDelegate {
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
         if request is SKProductsRequest {
-            print(error.localizedDescription)
+            //print(error.localizedDescription)
         }
     }
 }

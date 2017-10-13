@@ -14,9 +14,9 @@ import TwitterKit
 import Alamofire
 
 class PerfilViewController: UIViewController  {
-    let producto = "CocinaMexicanaRecetasFaciles"
+    let producto = "CocinaMexicanasRecetasFaciles"
     
-    let productIdentifiers = Set(["CocinaMexicanaRecetasFaciles"])
+    let productIdentifiers = Set(["CocinaMexicanasRecetasFaciles"])
     var product: SKProduct?
     var productsArray = Array<SKProduct>()
     
@@ -97,7 +97,7 @@ class PerfilViewController: UIViewController  {
         
         
         
-        self.lEstatus.alpha = 0
+        //self.lEstatus.alpha = 0
         
         // Do any additional setup after loading the view, typically from a nib.
         self.loadingAction.startAnimating()
@@ -142,8 +142,9 @@ class PerfilViewController: UIViewController  {
     
     func activarSuscripcion() {
         DispatchQueue.main.async {
-            self.lEstatus.text = "Suscripcion activa hasta \(String(describing: SubscriptionService.shared.currentSubscription?.expiresDate.description))"
+            self.updateDate()
         }
+ 
     }
     
     
@@ -157,7 +158,7 @@ class PerfilViewController: UIViewController  {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
                     let dict = result as! NSDictionary
-                    print(dict)
+                    //print(dict)
                     self.lCorreoElectronico.text = dict.object(forKey: "email") as? String
                 
                     //self.restorePurchases()

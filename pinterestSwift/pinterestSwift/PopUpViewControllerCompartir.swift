@@ -202,7 +202,7 @@ import TwitterKit
     
     @IBAction func btnTwitter(_ sender: AnyObject) {
         
-        print("hola")
+        //print("hola")
         
         if (Twitter.sharedInstance().sessionStore.hasLoggedInUsers()) {
             // App must have at least one logged-in user to compose a Tweet
@@ -346,7 +346,7 @@ import TwitterKit
             self.removeAnimate()
             
         }) { (error) in
-            print("pin it failed", error!)
+            //print("pin it failed", error!)
         }
        
     }

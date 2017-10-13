@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,23 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "317"
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -74,151 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "290"
@@ -234,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -250,7 +90,151 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "288"
@@ -266,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -282,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "347"
@@ -298,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -314,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "353"
@@ -330,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "354"
@@ -342,15 +326,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
             <Locations>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "436"
-            endingLineNumber = "436"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -426,23 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
-            landmarkName = "PerfilViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "405"
@@ -458,11 +442,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
+            landmarkName = "PerfilViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/PerfilViewController.swift"
+            timestampString = "529589522.607264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "PerfilViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -506,7 +506,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.359446"
+                  timestampString = "529533124.317273"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "219"
@@ -521,7 +521,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.361677"
+                  timestampString = "529533124.319643"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "220"
@@ -570,7 +570,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.371269"
+                  timestampString = "529533124.330758"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
@@ -585,7 +585,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.373486"
+                  timestampString = "529533124.333111"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "222"
@@ -602,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468452.290638"
+            timestampString = "529534519.441526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "upload(receipt:completion:)"
             landmarkType = "7">
             <Locations>
@@ -650,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468462.666224"
+            timestampString = "529534519.441526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "upload(receipt:completion:)"
             landmarkType = "7">
             <Locations>
@@ -713,23 +713,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468464.768105"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "upload(receipt:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468467.175835"
+            timestampString = "529534519.441526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -745,11 +729,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468501.076395"
+            timestampString = "529534519.441526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "upload(receipt:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -761,11 +745,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/SubService.swift"
-            timestampString = "526468503.3934"
+            timestampString = "529534519.441526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "upload(receipt:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pinterestSwift/SubService.swift"
+            timestampString = "529534519.441526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "upload(receipt:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -889,59 +889,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
+            timestampString = "529589522.607264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "activarSuscripcion()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CocinaMex.PerfilViewController.activarSuscripcion () -&gt; ()"
-                  moduleName = "CocinaMex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PerfilViewController.swift"
-                  timestampString = "528981854.379094"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CocinaMex.PerfilViewController.(activarSuscripcion () -&gt; ()).(closure #1)"
-                  moduleName = "CocinaMex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/PerfilViewController.swift"
-                  timestampString = "528981854.381469"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pinterestSwift/PerfilViewController.swift"
-            timestampString = "527188017.773777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "activarSuscripcion()"
             landmarkType = "7">
          </BreakpointContent>
@@ -985,7 +937,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.395443"
+                  timestampString = "529533124.362536"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "232"
@@ -1000,7 +952,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.397818"
+                  timestampString = "529533124.364885"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "233"
@@ -1049,7 +1001,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/MenuPlatillos.swift"
-                  timestampString = "528981854.407725"
+                  timestampString = "529533124.377097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "174"
@@ -1064,7 +1016,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/MenuPlatillos.swift"
-                  timestampString = "528981854.41026"
+                  timestampString = "529533124.379476"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "174"
@@ -1337,7 +1289,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/RootViewController.swift"
-                  timestampString = "528981854.470495"
+                  timestampString = "529533124.439937"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -1352,7 +1304,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/RootViewController.swift"
-                  timestampString = "528981854.472748"
+                  timestampString = "529533124.442344"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -1577,7 +1529,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.531538"
+                  timestampString = "529533124.50734"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "285"
@@ -1592,7 +1544,7 @@
                   moduleName = "CocinaMex"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gerardo/Desktop/pinterestss-sdk-swift-3/pinterestSwift/pinterestSwift/AppDelegate.swift"
-                  timestampString = "528981854.53397"
+                  timestampString = "529533124.5105"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "286"

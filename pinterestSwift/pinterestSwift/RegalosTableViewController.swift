@@ -160,7 +160,7 @@ class RegalosTableViewController: UITableViewController {
             }
             else
             {
-                print(error!)
+                //print(error!)
             }
         }
         

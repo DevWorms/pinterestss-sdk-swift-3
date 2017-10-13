@@ -105,7 +105,7 @@ class RegistroViewController : UIViewController {
                     self.present(alertController, animated: true, completion: nil)
 
                     
-                    print(errorString!)
+                    //print(errorString!)
                     // Show the errorString somewhere and let the user try again.
                 } else {
                     
@@ -157,7 +157,7 @@ class RegistroViewController : UIViewController {
             PFFacebookUtils.linkUser(inBackground: user, withReadPermissions: nil, block: {
                 (succeeded, error) -> Void in
                 if (error == nil) {
-                    print("Woohoo, the user is linked with Facebook!")
+                    //print("Woohoo, the user is linked with Facebook!")
                 }
             })
         }
@@ -176,16 +176,16 @@ class RegistroViewController : UIViewController {
         PFFacebookUtils.logInInBackground(withReadPermissions: readPermissions, block: { (user, error) in
             if let user = user {
                 if user.isNew {
-                    print("User signed up and logged in through Facebook!")
+                    //print("User signed up and logged in through Facebook!")
                 } else {
-                    print("User logged in through Facebook!")
+                    //print("User logged in through Facebook!")
                 }
                 
                 self.ligarFb(user)
                 self.performSegue(withIdentifier: "Home", sender: nil)
                 
             } else {
-                print("Uh oh. The user cancelled the Facebook login.")
+                //print("Uh oh. The user cancelled the Facebook login.")
             }
         })
         

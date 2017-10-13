@@ -186,14 +186,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("User Info = ",notification.request.content.userInfo)
+        //print("User Info = ",notification.request.content.userInfo)
         completionHandler([.alert, .badge, .sound])
     }
     
     //Called to let your app know which action was selected by the user for a given notification.
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("User Info = ",response.notification.request.content.userInfo)
+        //print("User Info = ",response.notification.request.content.userInfo)
         completionHandler()
     }
     
@@ -239,7 +239,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
+        //print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: SubscriptionService.failNotification, object: nil)
@@ -247,7 +247,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
+        //print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
     }
 
@@ -276,7 +276,7 @@ extension AppDelegate: SKPaymentTransactionObserver {
 extension AppDelegate: MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        print(remoteMessage.appData)
+        //print(remoteMessage.appData)
     }
     
     func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
@@ -284,9 +284,9 @@ extension AppDelegate: MessagingDelegate {
         current?.setValue("token_device", forKey: fcmToken)
         current?.saveInBackground(block: { (success: Bool, error: Error?) in
             if success {
-                print("Se guardo")
+                //print("Se guardo")
             } else {
-                print("No se guardo")
+                //print("No se guardo")
             }
         })
     }

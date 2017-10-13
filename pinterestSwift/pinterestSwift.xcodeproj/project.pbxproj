@@ -51,7 +51,7 @@
 		567C07591F61410A006A459F /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07561F61410A006A459F /* PaidSubscription.swift */; };
 		567C075A1F61410A006A459F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07571F61410A006A459F /* Session.swift */; };
 		567C075B1F61410A006A459F /* SubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07581F61410A006A459F /* SubService.swift */; };
-		56DAC0051F7E5E1B004B0599 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56DAC0041F7E5E1B004B0599 /* GoogleService-Info.plist */; };
+		56F0D2D11F90DDD00069A3A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56F0D2D01F90DDD00069A3A3 /* GoogleService-Info.plist */; };
 		E498B303570DC6C3B78DC422 /* Pods_CocinaMex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,7 +126,7 @@
 		567C07561F61410A006A459F /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
 		567C07571F61410A006A459F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		567C07581F61410A006A459F /* SubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubService.swift; sourceTree = "<group>"; };
-		56DAC0041F7E5E1B004B0599 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56F0D2D01F90DDD00069A3A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		695FC1E4CFFE7A62C0473AD6 /* Pods_CocinaMex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocinaMex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E461913766910B920393502 /* Pods-CocinaMex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.release.xcconfig"; sourceTree = "<group>"; };
 		A7183BC9363F273B69DA3BD8 /* Pods-CocinaMex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 				563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */,
 				5637873A1F5FFCC80098C12B /* SubscriptionService.swift */,
 				5637873C1F5FFD380098C12B /* Subscription.swift */,
-				56DAC0041F7E5E1B004B0599 /* GoogleService-Info.plist */,
+				56F0D2D01F90DDD00069A3A3 /* GoogleService-Info.plist */,
 			);
 			path = pinterestSwift;
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				499097AC1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib in Resources */,
-				56DAC0051F7E5E1B004B0599 /* GoogleService-Info.plist in Resources */,
+				56F0D2D11F90DDD00069A3A3 /* GoogleService-Info.plist in Resources */,
 				499097AA1E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib in Resources */,
 				497C8B631E98877200868C78 /* Main.storyboard in Resources */,
 				497C8B621E98877200868C78 /* LaunchScreen.xib in Resources */,
@@ -745,7 +745,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinasmexicanas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -762,7 +762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CocinaMex.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Editorial Toukan S.A. de C.V. (V7DJ56B5TU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = V7DJ56B5TU;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -782,7 +782,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinamexicana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinasmexicanas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

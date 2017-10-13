@@ -34,10 +34,10 @@ class MenuDeslizanteController: UITableViewController {
             
             user?.saveInBackground(block: { (bool, error) in
                 if error == nil {
-                    print("se salvó el user")
+                    //print("se salvó el user")
                     
                 } else {
-                    print("no se pudo salvar el user")
+                    //print("no se pudo salvar el user")
                 }
             })
             

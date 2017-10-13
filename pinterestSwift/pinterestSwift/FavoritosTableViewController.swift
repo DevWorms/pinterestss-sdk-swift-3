@@ -142,7 +142,7 @@ class FavoritosTableViewController: UITableViewController {
             }
             else
             {
-                print(error!)
+                //print(error!)
             }
         }
 

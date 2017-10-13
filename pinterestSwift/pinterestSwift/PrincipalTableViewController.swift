@@ -52,10 +52,10 @@ class PrincipalTableViewController: UITableViewController {
     }
     
     func showRateMe() {
-        let alert = UIAlertController(title: "Rate Us", message: "Thanks for using <APP NAME>", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Rate <APP NAME>", style: UIAlertActionStyle.default, handler: { alertAction in
+        let alert = UIAlertController(title: "Rate Us", message: "Thanks for using Cocina Mexicana", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Rate Cocina Mexicana", style: UIAlertActionStyle.default, handler: { alertAction in
             
-            UIApplication.shared.open( URL(string: "itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=<iTUNES CONNECT APP ID>")! , options: [:], completionHandler: nil)
+            UIApplication.shared.open( URL(string: "itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1295822690")! , options: [:], completionHandler: nil)
             
             alert.dismiss(animated: true, completion: nil)
         }))
@@ -163,7 +163,7 @@ class PrincipalTableViewController: UITableViewController {
                 }
                 else
                 {
-                    print(error!)
+                    //print(error!)
                 }
             }
         
@@ -272,7 +272,7 @@ class PrincipalTableViewController: UITableViewController {
                 }
                 else
                 {
-                    print(error!)
+                    //print(error!)
                 }
             }
 

@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>9297957850-lt2aa18pujhm2p1mhlm8h2gvqc0fptui.apps.googleusercontent.com</string>
+	<string>9297957850-88h389t5o2sfj0okjje1od16er9al915.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.9297957850-lt2aa18pujhm2p1mhlm8h2gvqc0fptui</string>
+	<string>com.googleusercontent.apps.9297957850-88h389t5o2sfj0okjje1od16er9al915</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD1Dcfai-P4-k48wLimPFmMYAw-5gEIsL4</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.devworms.cocinamexicana</string>
+	<string>com.devworms.cocinasmexicanas</string>
 	<key>PROJECT_ID</key>
 	<string>app-de-cocina-notifications</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:9297957850:ios:4c4c0a01d2f26776</string>
+	<string>1:9297957850:ios:b21d50b7b1847950</string>
 	<key>DATABASE_URL</key>
 	<string>https://app-de-cocina-notifications.firebaseio.com</string>
 </dict>
