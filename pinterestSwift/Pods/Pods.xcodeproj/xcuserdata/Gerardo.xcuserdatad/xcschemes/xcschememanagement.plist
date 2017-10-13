@@ -59,7 +59,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SAMKeychain.xcscheme</key>
+		<key>SSKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,12 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A52779AA0BD86BA0CEB8753126ED2FE</key>
+		<key>10BAA1349B1798B6275A2C7A2A05C8B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37ABEB37483F8EAD25CD477288A22BF6</key>
+		<key>16451E277ED02BF711807D02381966CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A52779AA0BD86BA0CEB8753126ED2FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63E1A7EA2920899BC781604887AB0A7D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B233A786C105554D2AEA92AE8517CF6C</key>
+		<key>BC5000D645EEAF961C85907CDC796FE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC5000D645EEAF961C85907CDC796FE1</key>
+		<key>BE454BA48B9318F78D24466A4D8C7DDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6603B90BA7D84C6FC31382151DB3516</key>
+		<key>CB5E72CE37C6EDFFD4DBBEC682AB4A28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3F2EAA9636EFD08F8428541D78050F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

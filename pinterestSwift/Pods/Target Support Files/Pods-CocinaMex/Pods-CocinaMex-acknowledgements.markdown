@@ -463,7 +463,7 @@ standalone and requires a support library to be linked with it.  This
 support library is itself covered by the above license.
 
 
-## SAMKeychain
+## SSKeychain
 
 Copyright (c) 2010-2016 Sam Soffes, http://soff.es
 

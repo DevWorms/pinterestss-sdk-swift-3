@@ -1,10 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 target 'CocinaMex' do
-	pod "PinterestSDK", :path => "../"
 	pod 'Parse'
 	pod 'ParseFacebookUtilsV4'
-	pod 'PinterestSDK', :path => "../"
+	pod 'PinterestSDK'
 	pod 'Alamofire', '~> 4.2.0'
 	pod 'Fabric'
 	pod 'TwitterKit'

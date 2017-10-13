@@ -11,6 +11,7 @@ import UIKit
 import QuartzCore
 import Parse
 import FBSDKShareKit
+import PinterestSDK
 
 import TwitterKit
 
@@ -311,7 +312,7 @@ import TwitterKit
         let imgURL = URL(string: urlImg)!
         let direccion  = URL(string: "http://recetasmexicanas.mx")!
         
-        PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "¡Cocina deliciosas y fáciles recetas con Frida!", from: self, withSuccess: {
+        PDKPin.pin(withImageURL: imgURL, link: direccion, suggestedBoardName: "ToukanMango", note: "¡Cocina deliciosas y fáciles recetas con Frida!", withSuccess: {
             //print("successfully pinned pin")
             if self.opcion != nil && self.opcion.lowercased() == "viral" {
                 //print("es al inicio")
@@ -341,7 +342,7 @@ import TwitterKit
                         self.context.performSegue(withIdentifier: "recetarios", sender: nil)
                     }
                     else{
-                        print("pinterest pin it failed", error!)
+                        //print("pinterest pin it failed", error!)
                     }
                 }
             }
@@ -349,7 +350,7 @@ import TwitterKit
             self.removeAnimate()
             
         }) { (error) in
-            print("pinterest pin it failed", error!)
+            //print("pinterest pin it failed", error!)
         }
        
     }

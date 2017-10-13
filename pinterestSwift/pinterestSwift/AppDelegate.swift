@@ -18,6 +18,7 @@ import StoreKit
 import Alamofire
 import Firebase
 import FirebaseMessaging
+import PinterestSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
