@@ -52,18 +52,24 @@ class PrincipalTableViewController: UITableViewController {
     }
     
     func showRateMe() {
-        let alert = UIAlertController(title: "Rate Us", message: "Thanks for using Cocina Mexicana", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Rate Cocina Mexicana", style: UIAlertActionStyle.default, handler: { alertAction in
+        let alert = UIAlertController(title: nil, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let imageView = UIImageView(frame: CGRect(x: 50, y: 5, width: 180, height: 240))
+        imageView.image = UIImage(named: "califica")
+        
+        alert.view.addSubview(imageView)
+        
+        alert.addAction(UIAlertAction(title: "Califica nuestra App", style: UIAlertActionStyle.default, handler: { alertAction in
             
             UIApplication.shared.open( URL(string: "itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1295822690")! , options: [:], completionHandler: nil)
             
             alert.dismiss(animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.default, handler: { alertAction in
+        alert.addAction(UIAlertAction(title: "No gracias", style: UIAlertActionStyle.default, handler: { alertAction in
             UserDefaults.standard.set(true, forKey: "neverRate")
             alert.dismiss(animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: "Maybe Later", style: UIAlertActionStyle.default, handler: { alertAction in
+        alert.addAction(UIAlertAction(title: "Talvez después", style: UIAlertActionStyle.default, handler: { alertAction in
             alert.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -190,7 +196,7 @@ class PrincipalTableViewController: UITableViewController {
             
         }
         
-        self.rateMe()
+        self.showRateMe()
     }
     
     override func didReceiveMemoryWarning() {
@@ -231,11 +237,11 @@ class PrincipalTableViewController: UITableViewController {
                     self.performSegue(withIdentifier: "recetarios", sender: nil)
                 }
             } else {
-                if UserDefaults.standard.bool(forKey: "carrouselSuscripcion") {
-                    showAlert(title: "Suscripcion", message: "Suscribete y obten acceso a información")
-                } else {
+                //if UserDefaults.standard.bool(forKey: "carrouselSuscripcion") {
+                //    showAlert(title: "Suscripcion", message: "Suscribete y obten acceso a información")
+                //} else {
                     presentCarrousel()
-                }
+                //}
             }
 
         }
@@ -339,7 +345,7 @@ class PrincipalTableViewController: UITableViewController {
         VC.statusView = { (value) in
             if value {
                 self.removeAnimate()
-                UserDefaults.standard.set(true, forKey: "carrouselSuscripcion")
+                //UserDefaults.standard.set(true, forKey: "carrouselSuscripcion")
                 if let suscrip = SubscriptionService.shared.options?.first {
                     SubscriptionService.shared.purchase(subscription: suscrip)
                 }

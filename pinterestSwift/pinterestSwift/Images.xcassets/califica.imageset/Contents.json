@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Pantalla 06 (Califica) PantallaCompleta.png",
+      "filename" : "califica.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pantalla 06 (Califica) PantallaCompleta-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pantalla 06 (Califica) PantallaCompleta-2.png",
       "scale" : "3x"
     }
   ],
