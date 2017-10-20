@@ -155,7 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        SKPaymentQueue.default().remove(self)
+        //SKPaymentQueue.default().remove(self)
     }
     
     
@@ -214,11 +214,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }*/
     
     func handlePurchasingState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        //print("User is attempting to purchase product id: \(transaction.payment.productIdentifier)")
+        print("User is attempting to purchase product id: \(transaction.payment.productIdentifier)")
     }
     
     func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        //print("User purchased product id: \(transaction.payment.productIdentifier)")
+        print("User purchased product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
         SubscriptionService.shared.uploadReceipt { (success) in
             if  success {
@@ -231,7 +231,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        //print("Purchase restored for product id: \(transaction.payment.productIdentifier)")
+        print("Purchase restored for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
         SubscriptionService.shared.uploadReceipt { (success) in
             if  success {
@@ -243,7 +243,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        //print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
+        print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: SubscriptionService.failNotification, object: nil)
@@ -251,7 +251,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        //print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
+        print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
         queue.finishTransaction(transaction)
     }
 

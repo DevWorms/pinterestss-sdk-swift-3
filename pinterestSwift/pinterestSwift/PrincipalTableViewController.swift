@@ -178,7 +178,7 @@ class PrincipalTableViewController: UITableViewController {
      self.tableView.delegate = self
      
         self.tableView.dataSource = self
-        NotificationCenter.default.addObserver(self, selector: #selector(PrincipalTableViewController.fail), name: SubscriptionService.failNotification, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(PrincipalTableViewController.fail), name: SubscriptionService.failNotification, object: nil)
         
         if revealViewController() != nil {
             //            revealViewController().rearViewRevealWidth = 62
@@ -230,7 +230,9 @@ class PrincipalTableViewController: UITableViewController {
         {
             self.performSegue(withIdentifier: "recetarios", sender: nil)
         } else if goto == "pago" {
-            //SubscriptionService.shared.restorePurchases()
+ //           SKPaymentQueue.default().add(self)
+   //         SubscriptionService.shared.loadSubscriptionOptions()
+     //       SubscriptionService.shared.restorePurchases()
             if let fechaEx = SubscriptionService.shared.currentSubscription?.expiresDate {
                 if fechaEx > Date() {
                     self.performSegue(withIdentifier: "recetarios", sender: nil)
@@ -644,8 +646,57 @@ class PrincipalTableViewController: UITableViewController {
 
         self.performSegue(withIdentifier: "buscador", sender: nil)
     }
+    
+    func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+        SubscriptionService.shared.uploadReceipt { (success) in
+            if  success {
+                DispatchQueue.main.async {
+                }
+            }
+        }
+        
+    }
+    
+    func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+        SubscriptionService.shared.uploadReceipt { (success) in
+            if  success {
+                DispatchQueue.main.async {
+                }
+            }
+        }
+    }
+    
+    func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+        DispatchQueue.main.async {
+            self.showAlertDefault(title: "Error", message: "No se pudo concretar la suscripción")
+        }
+    }
+    
+    func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+    }
 
     
 
 }
+
+extension PrincipalTableViewController: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased:
+                handlePurchasedState(for: transaction, in: queue)
+            case .restored:
+                handleRestoredState(for: transaction, in: queue)
+            case .failed:
+                handleFailedState(for: transaction, in: queue)
+            default: ()
+            }
+        }
+    }
+}
+
 

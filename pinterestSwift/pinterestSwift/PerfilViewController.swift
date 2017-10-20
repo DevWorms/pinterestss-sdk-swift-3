@@ -73,11 +73,13 @@ class PerfilViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //SubscriptionService.shared.restorePurchases()
+     //   SKPaymentQueue.default().add(self)
+     //   SubscriptionService.shared.loadSubscriptionOptions()
+      //  SubscriptionService.shared.restorePurchases()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.restoreSuccessfulNotification, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.restoreSuccessfulNotification, object: nil)
 //        Subdescripcion.isHidden = true
 //        btnSuscripcion.isHidden = true
 //        options = SubscriptionService.shared.options
@@ -651,5 +653,64 @@ class PerfilViewController: UIViewController  {
           
         }
     }
+    
+    func handlePurchasingState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        
+    }
+    
+    func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+    queue.finishTransaction(transaction)
+    //SubscriptionService.shared.uploadReceipt { (success) in
+    //if  success {
+    // DispatchQueue.main.async {
+    //   NotificationCenter.default.post(name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
+    //}
+    //}
+    //}
+    
+    }
+    
+    
+    func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+    //DispatchQueue.main.async {
+    //  NotificationCenter.default.post(name: SubscriptionService.failNotification, object: nil)
+    //}
+    }
+    
+    func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+      queue.finishTransaction(transaction)
+    }
+    
+    func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
+        queue.finishTransaction(transaction)
+        SubscriptionService.shared.uploadReceipt { (success) in
+            if  success {
+                DispatchQueue.main.async {
+                    self.updateDate()
+                }
+            }
+        }
+    }
+    
 
+}
+
+extension PerfilViewController: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+                case .purchasing:
+                    handlePurchasingState(for: transaction, in: queue)
+                case .purchased:
+                    handlePurchasedState(for: transaction, in: queue)
+                case .restored:
+                    handleRestoredState(for: transaction, in: queue)
+                case .failed:
+                    handleFailedState(for: transaction, in: queue)
+                case .deferred:
+                    handleDeferredState(for: transaction, in: queue)
+        }
+    }
+    }
 }

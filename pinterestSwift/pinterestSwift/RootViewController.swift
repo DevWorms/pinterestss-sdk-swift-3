@@ -32,7 +32,7 @@ class RootViewController: UIViewController {
         
         self.pageViewController?.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
 
-        self.pageViewController?.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.size.height - 112)
+        self.pageViewController?.view.frame = CGRect(x: 0, y: 57, width: self.view.frame.width, height: self.view.frame.size.height - 169)
         
         self.addChildViewController(self.pageViewController!)
         self.view.addSubview((self.pageViewController?.view)!)

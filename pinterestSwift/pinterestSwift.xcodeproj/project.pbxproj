@@ -41,7 +41,6 @@
 		499097AA1E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097A91E988D5A00FB5A35 /* PopUpViewControllerDescripcion.xib */; };
 		499097AC1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AB1E988D6500FB5A35 /* PopUpViewControllerRecuperar.xib */; };
 		499097AE1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */; };
-		49F9539A1E9B481A009E50EF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F953991E9B481A009E50EF /* StoreKit.framework */; };
 		563787191F5994C50098C12B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563787181F5994C50098C12B /* RootViewController.swift */; };
 		563787391F5F3BA40098C12B /* PaySuscriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */; };
 		5637873B1F5FFCC80098C12B /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637873A1F5FFCC80098C12B /* SubscriptionService.swift */; };
@@ -51,6 +50,7 @@
 		567C07591F61410A006A459F /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07561F61410A006A459F /* PaidSubscription.swift */; };
 		567C075A1F61410A006A459F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07571F61410A006A459F /* Session.swift */; };
 		567C075B1F61410A006A459F /* SubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C07581F61410A006A459F /* SubService.swift */; };
+		56EF87981F9AAD82008DFCE9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EF87971F9AAD82008DFCE9 /* StoreKit.framework */; };
 		56F0D2D11F90DDD00069A3A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56F0D2D01F90DDD00069A3A3 /* GoogleService-Info.plist */; };
 		C49AE749C4164C831D2D682D /* Pods_CocinaMex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9178E85965A68FA7DFE59B /* Pods_CocinaMex.framework */; };
 /* End PBXBuildFile section */
@@ -116,7 +116,6 @@
 		499097AD1E988D7600FB5A35 /* PopUpViewControllerRegistro.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewControllerRegistro.xib; sourceTree = "<group>"; };
 		499EB5DC1E957B1A00DF8A3B /* pinterestSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pinterestSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		49F953981E9B4812009E50EF /* CocinaMex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CocinaMex.entitlements; sourceTree = "<group>"; };
-		49F953991E9B481A009E50EF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4B9178E85965A68FA7DFE59B /* Pods_CocinaMex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocinaMex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563787181F5994C50098C12B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		563787381F5F3BA40098C12B /* PaySuscriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaySuscriptionTableViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +126,7 @@
 		567C07561F61410A006A459F /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
 		567C07571F61410A006A459F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		567C07581F61410A006A459F /* SubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubService.swift; sourceTree = "<group>"; };
+		56EF87971F9AAD82008DFCE9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		56F0D2D01F90DDD00069A3A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6233B53D71C82A7ADBA59A8B /* Pods-CocinaMex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.debug.xcconfig"; sourceTree = "<group>"; };
 		F79EE04625C9095529646A15 /* Pods-CocinaMex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocinaMex.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocinaMex/Pods-CocinaMex.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,8 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EF87981F9AAD82008DFCE9 /* StoreKit.framework in Frameworks */,
 				497C8B671E98886F00868C78 /* FBSDKShareKit.framework in Frameworks */,
-				49F9539A1E9B481A009E50EF /* StoreKit.framework in Frameworks */,
 				C49AE749C4164C831D2D682D /* Pods_CocinaMex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +280,7 @@
 		C0D8786353A9836D1825A2A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49F953991E9B481A009E50EF /* StoreKit.framework */,
+				56EF87971F9AAD82008DFCE9 /* StoreKit.framework */,
 				497C8B661E98886F00868C78 /* FBSDKShareKit.framework */,
 				4B9178E85965A68FA7DFE59B /* Pods_CocinaMex.framework */,
 			);
@@ -361,7 +361,7 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = V7DJ56B5TU;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -728,8 +728,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CocinaMex.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = V7DJ56B5TU;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -795,8 +795,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinasmexicanas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1e72cb30-14d5-44a4-b8fa-56b3bfb2d963";
-				PROVISIONING_PROFILE_SPECIFIER = cocina;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pinterestSwift/pinterestSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -811,8 +811,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CocinaMex.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Editorial Toukan S.A. de C.V. (V7DJ56B5TU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = V7DJ56B5TU;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -878,8 +878,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.cocinasmexicanas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1e72cb30-14d5-44a4-b8fa-56b3bfb2d963";
-				PROVISIONING_PROFILE_SPECIFIER = cocina;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "pinterestSwift/pinterestSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
