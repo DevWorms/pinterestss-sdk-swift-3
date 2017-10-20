@@ -34,7 +34,8 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="Yzs-Va-5jq"/>
                             </constraints>
-                            <state key="normal" image="recupera contraseña">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                            <state key="normal" title="¡Recupera tu contraseña!">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -52,7 +53,8 @@
                                 <action selector="btnCancelar:" destination="-1" eventType="touchUpInside" id="p70-Zu-2CF"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olvidaste tu contraseña" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-f3-sOd">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olv" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-f3-sOd">
+                            <rect key="frame" x="27" y="8" width="240" height="29"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="29" id="US3-fs-t8P"/>
                             </constraints>
@@ -108,7 +110,6 @@
         <image name="cancelar" width="99" height="19"/>
         <image name="fondo" width="400" height="640"/>
         <image name="frida" width="246" height="316"/>
-        <image name="olvidaste tu contraseña" width="401" height="40"/>
-        <image name="recupera contraseña" width="487" height="49"/>
+        <image name="olv" width="628" height="66"/>
     </resources>
 </document>
