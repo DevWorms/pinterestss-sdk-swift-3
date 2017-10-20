@@ -91,7 +91,7 @@ class PrincipalTableViewController: UITableViewController {
         
         
         let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
-        backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!], for: UIControlState())
+        backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 20)!], for: UIControlState())
         navigationItem.backBarButtonItem = backButton
         
       ///  navigationController?.navigationBar.topItem?.title = "¿Qué se te antoja comer?"

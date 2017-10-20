@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
         SKPaymentQueue.default().add(self)
-        //SubscriptionService.shared.loadSubscriptionOptions()
+        SubscriptionService.shared.loadSubscriptionOptions()
         SubscriptionService.shared.restorePurchases()
         
         let vc : UIViewController

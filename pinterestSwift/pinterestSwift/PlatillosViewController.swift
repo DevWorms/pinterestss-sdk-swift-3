@@ -83,6 +83,10 @@ class PlatillosViewController: UIViewController{
         let pangesture = UIPanGestureRecognizer(target: self, action: #selector(PlatillosViewController.dragview(_:)))
         contenidoDeLaRecetaView.addGestureRecognizer(pangesture)
         self.posicionInicialContenedor = CGFloat(0.0)
+        
+        let backButton = UIBarButtonItem(title: "atrás", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 20)!], for: UIControlState())
+        navigationItem.backBarButtonItem = backButton
        
     }
 
