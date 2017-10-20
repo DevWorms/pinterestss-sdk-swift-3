@@ -73,7 +73,7 @@ class PerfilViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SubscriptionService.shared.restorePurchases()
+        //SubscriptionService.shared.restorePurchases()
         
         NotificationCenter.default.addObserver(self, selector: #selector(PerfilViewController.activarSuscripcion), name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
         

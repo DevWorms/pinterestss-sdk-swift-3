@@ -77,9 +77,7 @@ class PrincipalTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-       SubscriptionService.shared.restorePurchases()
-        
-        //Image Background Navigation Bar
+       //Image Background Navigation Bar
         
         let img = pantallaSizeWeight()
         
@@ -196,7 +194,7 @@ class PrincipalTableViewController: UITableViewController {
             
         }
         
-        self.showRateMe()
+        self.rateMe()
     }
     
     override func didReceiveMemoryWarning() {
@@ -232,6 +230,7 @@ class PrincipalTableViewController: UITableViewController {
         {
             self.performSegue(withIdentifier: "recetarios", sender: nil)
         } else if goto == "pago" {
+            //SubscriptionService.shared.restorePurchases()
             if let fechaEx = SubscriptionService.shared.currentSubscription?.expiresDate {
                 if fechaEx > Date() {
                     self.performSegue(withIdentifier: "recetarios", sender: nil)

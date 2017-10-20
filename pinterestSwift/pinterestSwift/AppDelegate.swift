@@ -46,8 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
-        SubscriptionService.shared.loadSubscriptionOptions()
         SKPaymentQueue.default().add(self)
+        //SubscriptionService.shared.loadSubscriptionOptions()
         SubscriptionService.shared.restorePurchases()
         
         let vc : UIViewController
@@ -155,6 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        SKPaymentQueue.default().remove(self)
     }
     
     
