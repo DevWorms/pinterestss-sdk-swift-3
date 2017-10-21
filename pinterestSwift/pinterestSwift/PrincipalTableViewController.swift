@@ -75,6 +75,15 @@ class PrincipalTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if UserDefaults.standard.bool(forKey: "paymentObserver") {
+            SKPaymentQueue.default().remove(self)
+            UserDefaults.standard.set(false, forKey: "paymentObserver")
+        }
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
        //Image Background Navigation Bar
@@ -230,9 +239,15 @@ class PrincipalTableViewController: UITableViewController {
         {
             self.performSegue(withIdentifier: "recetarios", sender: nil)
         } else if goto == "pago" {
- //           SKPaymentQueue.default().add(self)
-   //         SubscriptionService.shared.loadSubscriptionOptions()
-     //       SubscriptionService.shared.restorePurchases()
+            if UserDefaults.standard.bool(forKey: "paymentObserver") {
+                SubscriptionService.shared.restorePurchases()
+            } else {
+                SKPaymentQueue.default().add(self)
+                SubscriptionService.shared.loadSubscriptionOptions()
+                SubscriptionService.shared.restorePurchases()
+                UserDefaults.standard.set(true, forKey: "paymentObserver")
+            }
+            
             if let fechaEx = SubscriptionService.shared.currentSubscription?.expiresDate {
                 if fechaEx > Date() {
                     self.performSegue(withIdentifier: "recetarios", sender: nil)
@@ -677,6 +692,9 @@ class PrincipalTableViewController: UITableViewController {
     
     func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
         queue.finishTransaction(transaction)
+        DispatchQueue.main.async {
+            self.showAlertDefault(title: "Error", message: "Se pospuso la compra de la suscripción")
+        }
     }
 
     
@@ -693,6 +711,8 @@ extension PrincipalTableViewController: SKPaymentTransactionObserver {
                 handleRestoredState(for: transaction, in: queue)
             case .failed:
                 handleFailedState(for: transaction, in: queue)
+            case .deferred:
+                handleDeferredState(for: transaction, in: queue)
             default: ()
             }
         }

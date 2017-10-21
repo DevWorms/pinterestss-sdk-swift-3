@@ -14,7 +14,6 @@ import ParseFacebookUtilsV4
 import Fabric
 import TwitterKit
 import UserNotifications
-import StoreKit
 import Alamofire
 import Firebase
 import FirebaseMessaging
@@ -46,9 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
-        SKPaymentQueue.default().add(self)
-        SubscriptionService.shared.loadSubscriptionOptions()
-        SubscriptionService.shared.restorePurchases()
         
         let vc : UIViewController
         
@@ -213,69 +209,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return PDKClient.sharedInstance().handleCallbackURL(url)
     }*/
     
-    func handlePurchasingState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("User is attempting to purchase product id: \(transaction.payment.productIdentifier)")
-    }
-    
-    func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("User purchased product id: \(transaction.payment.productIdentifier)")
-        queue.finishTransaction(transaction)
-        SubscriptionService.shared.uploadReceipt { (success) in
-            if  success {
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: SubscriptionService.purchaseSuccessfulNotification, object: nil)
-                }
-            }
-        }
-        
-    }
-    
-    func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("Purchase restored for product id: \(transaction.payment.productIdentifier)")
-        queue.finishTransaction(transaction)
-        SubscriptionService.shared.uploadReceipt { (success) in
-            if  success {
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: SubscriptionService.restoreSuccessfulNotification, object: nil)
-                }
-            }
-        }
-    }
-    
-    func handleFailedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("Purchase failed for product id: \(transaction.payment.productIdentifier)")
-        queue.finishTransaction(transaction)
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: SubscriptionService.failNotification, object: nil)
-        }
-    }
-    
-    func handleDeferredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
-        print("Purchase deferred for product id: \(transaction.payment.productIdentifier)")
-        queue.finishTransaction(transaction)
-    }
 
 }
 
-
-extension AppDelegate: SKPaymentTransactionObserver {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions {
-            switch transaction.transactionState {
-            case .purchasing:
-                handlePurchasingState(for: transaction, in: queue)
-            case .purchased:
-                handlePurchasedState(for: transaction, in: queue)
-            case .restored:
-                handleRestoredState(for: transaction, in: queue)
-            case .failed:
-                handleFailedState(for: transaction, in: queue)
-            case .deferred:
-                handleDeferredState(for: transaction, in: queue)
-            }
-        }
-    }
-}
 
 extension AppDelegate: MessagingDelegate {
     
