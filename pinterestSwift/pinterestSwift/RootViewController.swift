@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import SafariServices
 
 class RootViewController: UIViewController {
 
     @IBOutlet weak var boton: UIButton!
+    @IBOutlet weak var labelTerminos: UILabel!
+    @IBOutlet weak var labelPoliticas: UILabel!
+    
+    let urlStringTerminos = "http://recetasmexicanas.mx/terminos.html"
+    let urlStringPoliticas = "http://recetasmexicanas.mx/politica.html"
     
     var statusView: ((Bool) -> Void)?
     
@@ -32,17 +38,30 @@ class RootViewController: UIViewController {
         
         self.pageViewController?.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
 
-        self.pageViewController?.view.frame = CGRect(x: 0, y: 57, width: self.view.frame.width, height: self.view.frame.size.height - 169)
+        self.pageViewController?.view.frame = CGRect(x: 0, y: 57, width: self.view.frame.width, height: self.view.frame.size.height - 175)
         
         self.addChildViewController(self.pageViewController!)
         self.view.addSubview((self.pageViewController?.view)!)
         self.pageViewController?.didMove(toParentViewController: self)
         
+        let tapTerminos = UITapGestureRecognizer(target: self, action: #selector(tapTerminosCondiciones))
+        let tapPoliticas = UITapGestureRecognizer(target: self, action: #selector(tapPoliticasPrivacidad))
+        labelTerminos.isUserInteractionEnabled = true
+        labelPoliticas.isUserInteractionEnabled = true
+        labelTerminos.addGestureRecognizer(tapTerminos)
+        labelPoliticas.addGestureRecognizer(tapPoliticas)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tapTerminosCondiciones() {
+        guard let urlTerminos = URL(string: urlStringTerminos) else { return }
+        let safari = SFSafariViewController(url: urlTerminos)
+        present(safari, animated: true, completion: nil)
+    }
+    
+    func tapPoliticasPrivacidad() {
+        guard let urlPoliticas = URL(string: urlStringPoliticas) else { return }
+        let safari = SFSafariViewController(url: urlPoliticas)
+        present(safari, animated: true, completion: nil)
     }
     
     @IBAction func suscripcion(_ sender: Any) {

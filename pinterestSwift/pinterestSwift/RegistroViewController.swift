@@ -45,9 +45,17 @@ class RegistroViewController : UIViewController {
             nav!.setBackgroundImage(navBackgroundImage, for:.default)
         }
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapGes))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tap)
+        
     }
     
-    
+    func tapGes() {
+        textfMail.resignFirstResponder()
+        textfPassword.resignFirstResponder()
+        textfPasswordConfirmation.resignFirstResponder()
+    }
   
     
     @IBAction func btnEnviar(_ sender: AnyObject) {
@@ -74,7 +82,7 @@ class RegistroViewController : UIViewController {
             user.signUpInBackground {
                 (succeeded, error)  in
                 if let error = error {
-                    let errorString = (error._userInfo as! [String:String])["error"] 
+                    //let errorString = (error._userInfo as! [String:String])["error"]
                     
                     var mensaje = ""
                     
@@ -85,9 +93,9 @@ class RegistroViewController : UIViewController {
                         mensaje = "El nombre de usuario ya ha sido tomado"
                     }
                     
-                    if mensaje == ""{
+                    /*if mensaje == ""{
                         mensaje = errorString!
-                    }
+                    }*/
                     
                     if  mensaje == ""{
                         mensaje = "codigo: " + String(error._code)
