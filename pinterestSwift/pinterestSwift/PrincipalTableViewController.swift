@@ -664,6 +664,7 @@ class PrincipalTableViewController: UITableViewController {
     
     func handlePurchasedState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
         queue.finishTransaction(transaction)
+        UserDefaults.standard.set(true, forKey: "7days")
         SubscriptionService.shared.uploadReceipt { (success) in
             if  success {
                 DispatchQueue.main.async {
@@ -675,6 +676,7 @@ class PrincipalTableViewController: UITableViewController {
     
     func handleRestoredState(for transaction: SKPaymentTransaction, in queue: SKPaymentQueue) {
         queue.finishTransaction(transaction)
+        UserDefaults.standard.set(true, forKey: "7days")
         SubscriptionService.shared.uploadReceipt { (success) in
             if  success {
                 DispatchQueue.main.async {

@@ -23,7 +23,11 @@ class SuscripcionViewController: UIViewController {
         super.viewDidLoad()
         titulo.text = tituloText
         subtitulo.text = subtituloText
-        imagen.image = UIImage(named: imagenName)
+        if imagenName == "" {
+            imagen.isHidden = true
+        }else {
+            imagen.image = UIImage(named: imagenName)
+        }
     }
 
     override func didReceiveMemoryWarning() {

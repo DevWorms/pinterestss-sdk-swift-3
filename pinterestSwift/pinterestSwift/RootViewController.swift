@@ -1,4 +1,4 @@
-//
+	//
 //  RootViewController.swift
 //  pinterestSwift
 //
@@ -21,13 +21,18 @@ class RootViewController: UIViewController {
     var statusView: ((Bool) -> Void)?
     
     var pageViewController: UIPageViewController?
-    let imagenes = ["Carrusel01png", "Carrusel02", "Carrusel03", "Carrusel04"]
-    let titulos = ["Más de 200 recetas", "Nuevas recetas", "Cocina Tradicional", "¡Irresistibles!"]
-    let subtitulos = ["Sencillas de preparar y que ¡si salen!", "Descubre cada semana los platillos agregados", "Lo mejor de la cocina mexicana", "Prepara los platillos mas deliciosos desde hoy"]
+    let imagenes = ["Carrusel01png", "Carrusel02", "Carrusel03", "Carrusel04", ""]
+    let titulos = ["Más de 200 recetas", "Nuevas recetas", "Cocina Tradicional", "¡Irresistibles!", "Terminos y condiciones"]
+    let subtitulos = ["Sencillas de preparar y que ¡si salen!", "Descubre cada semana los platillos agregados", "Lo mejor de la cocina mexicana", "Prepara los platillos mas deliciosos desde hoy", "Suscripción Mensual. \nAcceso a contenido de recetas premium cada semana contenido nuevo. \nEl pago se cargará a la cuenta de iTunes en la confirmación de la compra. \nLa suscripción se renueva automáticamente a menos que la renovación automática esté desactivada al menos 24 horas antes del final del período actual. \nSe cobrará la cuenta por la renovación dentro de las 24 horas previas al final del período actual, e identificará el costo de la renovación. \nLa renovación automática puede desactivarse yendo a la configuración de la cuenta del usuario después de la compra. \nCualquier parte no utilizada en el período de prueba gratuito, se perderá cuando el usuario compre una suscripción a la app."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //boton.isHidden = true
+        if UserDefaults.standard.bool(forKey: "7days") {
+            boton.imageView?.image = nil
+            boton.titleLabel?.text = "Suscribete"
+        }
+        
         pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController
         
         self.pageViewController?.dataSource = self
